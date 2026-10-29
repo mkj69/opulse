@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 362 762" width="362" height="762" role="img" aria-label="Older ideas and the Opulse feature each one corresponds to">
+<title>Older ideas and the Opulse feature each one corresponds to</title>
+<rect x="0.0" y="0.0" width="360.0" height="84.2" rx="8" fill="#f8fafc" stroke="#d5dbe3" stroke-width="1"/>
+<text x="14.0" y="25.2" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="700" fill="#0f172a" text-anchor="start">Kleene; McCarthy</text>
+<text x="346.0" y="25.2" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#475569" text-anchor="end">1936, 1963</text>
+<text x="14.0" y="44.5" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#475569" text-anchor="start">composition, cases and recursion</text>
+<line x1="14.0" y1="53.8" x2="346.0" y2="53.8" stroke="#d5dbe3" stroke-width="1"/>
+<line x1="14.0" y1="66.3" x2="24.0" y2="66.3" stroke="#4f46e5" stroke-width="1.25"/>
+<polygon points="24.0,66.3 18.8,69.3 18.8,63.3" fill="#4f46e5"/>
+<text x="30.0" y="71.0" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="400" fill="#4f46e5" text-anchor="start">three composition forms</text>
+<rect x="0.0" y="96.2" width="360.0" height="84.2" rx="8" fill="#f8fafc" stroke="#d5dbe3" stroke-width="1"/>
+<text x="14.0" y="121.5" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="700" fill="#0f172a" text-anchor="start">Gold; Angluin's L*</text>
+<text x="346.0" y="121.5" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#475569" text-anchor="end">1967, 1987</text>
+<text x="14.0" y="140.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#475569" text-anchor="start">learning a language from data or queries</text>
+<line x1="14.0" y1="150.0" x2="346.0" y2="150.0" stroke="#d5dbe3" stroke-width="1"/>
+<line x1="14.0" y1="162.6" x2="24.0" y2="162.6" stroke="#4f46e5" stroke-width="1.25"/>
+<polygon points="24.0,162.6 18.8,165.6 18.8,159.6" fill="#4f46e5"/>
+<text x="30.0" y="167.2" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="400" fill="#4f46e5" text-anchor="start">value queries and counterexamples</text>
+<rect x="0.0" y="192.5" width="360.0" height="84.2" rx="8" fill="#f8fafc" stroke="#d5dbe3" stroke-width="1"/>
+<text x="14.0" y="217.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="700" fill="#0f172a" text-anchor="start">Lenat's AM</text>
+<text x="346.0" y="217.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#475569" text-anchor="end">1976</text>
+<text x="14.0" y="236.9" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#475569" text-anchor="start">concepts made by changing small programs</text>
+<line x1="14.0" y1="246.2" x2="346.0" y2="246.2" stroke="#d5dbe3" stroke-width="1"/>
+<line x1="14.0" y1="258.8" x2="24.0" y2="258.8" stroke="#4f46e5" stroke-width="1.25"/>
+<polygon points="24.0,258.8 18.8,261.8 18.8,255.8" fill="#4f46e5"/>
+<text x="30.0" y="263.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="400" fill="#4f46e5" text-anchor="start">concepts grown from a small grammar</text>
+<rect x="0.0" y="288.8" width="360.0" height="84.2" rx="8" fill="#f8fafc" stroke="#d5dbe3" stroke-width="1"/>
+<text x="14.0" y="313.9" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="700" fill="#0f172a" text-anchor="start">Doyle</text>
+<text x="346.0" y="313.9" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#475569" text-anchor="end">1979</text>
+<text x="14.0" y="333.2" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#475569" text-anchor="start">truth maintenance: a reason kept for each belief</text>
+<line x1="14.0" y1="342.5" x2="346.0" y2="342.5" stroke="#d5dbe3" stroke-width="1"/>
+<line x1="14.0" y1="355.1" x2="24.0" y2="355.1" stroke="#4f46e5" stroke-width="1.25"/>
+<polygon points="24.0,355.1 18.8,358.1 18.8,352.1" fill="#4f46e5"/>
+<text x="30.0" y="359.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="400" fill="#4f46e5" text-anchor="start">edits traced through dependencies</text>
+<rect x="0.0" y="385.0" width="360.0" height="84.2" rx="8" fill="#f8fafc" stroke="#d5dbe3" stroke-width="1"/>
+<text x="14.0" y="410.2" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="700" fill="#0f172a" text-anchor="start">Anderson's ACT</text>
+<text x="346.0" y="410.2" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#475569" text-anchor="end">1982</text>
+<text x="14.0" y="429.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#475569" text-anchor="start">knowledge compilation</text>
+<line x1="14.0" y1="438.8" x2="346.0" y2="438.8" stroke="#d5dbe3" stroke-width="1"/>
+<line x1="14.0" y1="451.3" x2="24.0" y2="451.3" stroke="#4f46e5" stroke-width="1.25"/>
+<polygon points="24.0,451.3 18.8,454.3 18.8,448.3" fill="#4f46e5"/>
+<text x="30.0" y="455.9" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="400" fill="#4f46e5" text-anchor="start">derivations at any granularity</text>
+<rect x="0.0" y="481.2" width="360.0" height="84.2" rx="8" fill="#f8fafc" stroke="#d5dbe3" stroke-width="1"/>
+<text x="14.0" y="506.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="700" fill="#0f172a" text-anchor="start">Elman</text>
+<text x="346.0" y="506.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#475569" text-anchor="end">1993</text>
+<text x="14.0" y="525.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#475569" text-anchor="start">training that starts with simple sentences</text>
+<line x1="14.0" y1="535.0" x2="346.0" y2="535.0" stroke="#d5dbe3" stroke-width="1"/>
+<line x1="14.0" y1="547.6" x2="24.0" y2="547.6" stroke="#4f46e5" stroke-width="1.25"/>
+<polygon points="24.0,547.6 18.8,550.6 18.8,544.6" fill="#4f46e5"/>
+<text x="30.0" y="552.2" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="400" fill="#4f46e5" text-anchor="start">curricula ordered by layer</text>
+<rect x="0.0" y="577.5" width="360.0" height="84.2" rx="8" fill="#f8fafc" stroke="#d5dbe3" stroke-width="1"/>
+<text x="14.0" y="602.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="700" fill="#0f172a" text-anchor="start">Schmidhuber</text>
+<text x="346.0" y="602.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#475569" text-anchor="end">2003</text>
+<text x="14.0" y="622.0" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#475569" text-anchor="start">the Gödel machine, which proves a rewrite useful first</text>
+<line x1="14.0" y1="631.2" x2="346.0" y2="631.2" stroke="#d5dbe3" stroke-width="1"/>
+<line x1="14.0" y1="643.8" x2="24.0" y2="643.8" stroke="#4f46e5" stroke-width="1.25"/>
+<polygon points="24.0,643.8 18.8,646.8 18.8,640.8" fill="#4f46e5"/>
+<text x="30.0" y="648.5" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="400" fill="#4f46e5" text-anchor="start">the interpreter as referee</text>
+<rect x="0.0" y="673.8" width="360.0" height="84.2" rx="8" fill="#f8fafc" stroke="#d5dbe3" stroke-width="1"/>
+<text x="14.0" y="699.0" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="700" fill="#0f172a" text-anchor="start">bAbI</text>
+<text x="346.0" y="699.0" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#475569" text-anchor="end">2015</text>
+<text x="14.0" y="718.2" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#475569" text-anchor="start">diagnostic tasks, later solved</text>
+<line x1="14.0" y1="727.5" x2="346.0" y2="727.5" stroke="#d5dbe3" stroke-width="1"/>
+<line x1="14.0" y1="740.1" x2="24.0" y2="740.1" stroke="#4f46e5" stroke-width="1.25"/>
+<polygon points="24.0,740.1 18.8,743.1 18.8,737.1" fill="#4f46e5"/>
+<text x="30.0" y="744.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="400" fill="#4f46e5" text-anchor="start">fresh seeds and a leakage check</text>
+</svg>

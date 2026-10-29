@@ -1,0 +1,3377 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+  
+  
+  
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Compose new mathematics from atomic operations, and generate exactly verified data about it.">
+  <link rel="canonical" href="https://mkj69.github.io/opulse/guide/compiled-models/">
+  <link rel="prev" href="../interpretability/">
+  <link rel="next" href="../handwired/">
+  
+  <link rel="icon" href="../../assets/images/logo.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Opulse">
+  
+  <meta property="og:title" content="Compiled models | Opulse">
+  <meta property="og:description" content="Compose new mathematics from atomic operations, and generate exactly verified data about it.">
+  <meta property="og:url" content="https://mkj69.github.io/opulse/guide/compiled-models/">
+  <meta property="og:image" content="https://mkj69.github.io/opulse/assets/images/social/opulse-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Compiled models | Opulse">
+  <meta name="twitter:description" content="Compose new mathematics from atomic operations, and generate exactly verified data about it.">
+  <meta name="twitter:image" content="https://mkj69.github.io/opulse/assets/images/social/opulse-preview.png">
+
+    
+      
+        <title>Compiled models - Opulse</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../assets/css/atoms-legend.css">
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+      <link rel="stylesheet" href="../../assets/css/kinds-legend.css">
+    
+      <link rel="stylesheet" href="../../assets/css/opulse-vis.css">
+    
+      <link rel="stylesheet" href="../../assets/css/stepview.css">
+    
+      <link rel="stylesheet" href="../../assets/css/playground.css">
+    
+      <link rel="stylesheet" href="../../assets/css/worlds.css">
+    
+      <link rel="stylesheet" href="../../assets/css/worlds-tasks.css">
+    
+      <link rel="stylesheet" href="../../assets/css/granularity.css">
+    
+      <link rel="stylesheet" href="../../assets/css/granularity-anim.css">
+    
+      <link rel="stylesheet" href="../../assets/css/home-examples.css">
+    
+      <link rel="stylesheet" href="../../assets/css/lineage.css">
+    
+      <link rel="stylesheet" href="../../assets/css/expviz.css">
+    
+      <link rel="stylesheet" href="../../assets/css/blogfig.css">
+    
+      <link rel="stylesheet" href="../../assets/css/stitch.css">
+    
+      <link rel="stylesheet" href="../../assets/css/opulse-video.css">
+    
+      <link rel="stylesheet" href="../../assets/css/scales.css">
+    
+      <link rel="stylesheet" href="../../assets/css/opgraph.css">
+    
+      <link rel="stylesheet" href="../../assets/css/challenge.css">
+    
+      <link rel="stylesheet" href="../../assets/css/learn.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../../assets/images/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#compiled-models" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Opulse" class="md-header__button md-logo" aria-label="Opulse" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Opulse
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Compiled models
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mkj69/opulse" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mkj69/opulse
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../why/" class="md-tabs__link">
+          
+  
+  
+  Why
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learn/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learn
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../visual-tour/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tour
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../challenge/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Challenge
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../worlds/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Worlds
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../playground/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Playground
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../glossary/" class="md-tabs__link">
+          
+  
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contribute/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Join us
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Opulse" class="md-nav__button md-logo" aria-label="Opulse" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    Opulse
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mkj69/opulse" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mkj69/opulse
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Why
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../why/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why Opulse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lineage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lineage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visual-tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tour
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../challenge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Challenge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../worlds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Worlds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playground/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playground
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Laboratory for Data Laws
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stitching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stitching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../experiments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experiment ideas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/notebooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notebooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../atoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atoms and presets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preset worlds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Typed values
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../definitions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Definitions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../views/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Views of a definition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../skeletons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skeletons
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../expressions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expressions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../step-by-step/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivations at any granularity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../benchmark/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmark
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../discovery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Discovery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3_12" id="__nav_10_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Training integrations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Training integrations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluation frameworks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hugging Face dataset export
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../corpora/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pretraining corpora and probes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pretraining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pretraining
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../environments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Environments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3_14" id="__nav_10_3_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exact checks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Exact checks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solving/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solving for unknowns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../properties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laws and equivalence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SMT-LIB export
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interpretability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interpretability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiled models
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiled models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-compiler-builds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the compiler builds
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compile-run-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compile, run, check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stitching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stitching
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-verified" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is verified
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is verified">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#separate-operators-and-stitched-compositions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Separate operators and stitched compositions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-generated-operator-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A generated operator set
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trained-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trained blocks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspecting-with-nnsight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspecting with nnsight
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limits
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../handwired/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Handwired language model studies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../naming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operator names
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports and tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_4" id="__nav_10_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/semantics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Semantics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_5" id="__nav_10_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/correctness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Correctness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Join us
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-compiler-builds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the compiler builds
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compile-run-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compile, run, check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stitching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stitching
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-verified" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is verified
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is verified">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#separate-operators-and-stitched-compositions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Separate operators and stitched compositions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-generated-operator-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A generated operator set
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trained-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trained blocks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspecting-with-nnsight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspecting with nnsight
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limits
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+    
+                  
+
+
+  
+  
+
+
+<h1 id="compiled-models">Compiled models<a class="headerlink" href="#compiled-models" title="Permanent link">&para;</a></h1>
+<p><code>opulse.compile</code> turns an operator definition into a small residual network whose weights are set by hand, not trained. Networks compiled separately can be joined into one network by copying their weights, and the joined network computes the composition of the operators. Every network is checked slot by slot against the reference interpreter. The package needs numpy for compiling and torch for building, joining and checking networks.</p>
+<h2 id="what-the-compiler-builds">What the compiler builds<a class="headerlink" href="#what-the-compiler-builds" title="Permanent link">&para;</a></h2>
+<p>Inputs range over the integers <code>0 .. n-1</code>. Every value the network stores lives in its own <strong>slot</strong>, a named range of coordinates in the residual stream that holds one one-hot token. An integer slot has a token for each integer from <code>lo</code> to <code>hi</code> and two more tokens:</p>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NaN</code></td>
+<td>the value is undefined, as in the <a href="../../reference/semantics/">semantics</a></td>
+</tr>
+<tr>
+<td><code>OOV</code></td>
+<td>the value is a defined integer outside <code>lo .. hi</code>, so the network no longer knows it</td>
+</tr>
+</tbody>
+</table>
+<p>A condition slot holds <code>F</code>, <code>T</code>, <code>NaN</code> (the comparison saw an undefined value) or <code>OOV</code>.</p>
+<p>Each layer computes <code>x + down(relu(up(x)))</code> at a single stream position. There is no attention. The compiler produces three kinds of blocks, and every block reads some slots and writes one new slot:</p>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Built for</th>
+<th>Hidden units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>unary table</td>
+<td>a base operation or comparison with one slot argument (the other argument, if any, is a constant)</td>
+<td>one per input token</td>
+</tr>
+<tr>
+<td>binary table</td>
+<td>a base operation, comparison, <code>and</code> or <code>or</code> with two slot arguments</td>
+<td>one per pair of input tokens</td>
+</tr>
+<tr>
+<td>select</td>
+<td>one branch of a definition: the branch value if the condition holds, the rest of the chain otherwise</td>
+<td>at most two per output token, plus two</td>
+</tr>
+</tbody>
+</table>
+<p>A hidden unit that tests k coordinates has weight 2 on each and bias <code>1 - 2k</code>. It is 1 when all k coordinates are set and at most <code>-1</code> otherwise.</p>
+<p>Other forms are handled at compile time:</p>
+<ul>
+<li>Constant subexpressions fold with the reference interpreter.</li>
+<li>A call of a defined operator is compiled inline. Its parameters become the argument slots.</li>
+<li>A recursive call is unrolled. Each inlined call is compiled only for the argument tokens that can reach it on an evaluated path, so the unrolling stops when no argument reaches a deeper call. A branch that no reaching argument takes is left out. The slots that this leaves behind hold values that are never read, and the verifier marks them "don't care".</li>
+<li>Equal subexpressions with equal argument slots share one block.</li>
+</ul>
+<p>Blocks go into the first layer after all the slots they read are written. Blocks in the same layer share one MLP.</p>
+<h2 id="compile-run-check">Compile, run, check<a class="headerlink" href="#compile-run-check" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">itertools</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">opulse.compile</span><span class="w"> </span><span class="kn">import</span> <span class="n">Compiler</span><span class="p">,</span> <span class="n">Vocab</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">opulse.compile.demo</span><span class="w"> </span><span class="kn">import</span> <span class="n">operator_set</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">opulse.compile.network</span><span class="w"> </span><span class="kn">import</span> <span class="n">build_network</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">opulse.compile.verify</span><span class="w"> </span><span class="kn">import</span> <span class="n">verify</span>
+
+<span class="n">ops</span> <span class="o">=</span> <span class="n">operator_set</span><span class="p">([</span><span class="s2">"a ◆₁ = { (a % 5) * 3 }"</span><span class="p">,</span>
+                    <span class="s2">"a ▲₂ b = { a - b, if a &gt; b; b - a, else }"</span><span class="p">])</span>
+<span class="n">triangle</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">op</span> <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">ops</span><span class="o">.</span><span class="n">registry</span> <span class="k">if</span> <span class="n">op</span><span class="o">.</span><span class="n">symbol</span> <span class="o">==</span> <span class="s2">"▲₂"</span><span class="p">)</span>
+<span class="n">network</span> <span class="o">=</span> <span class="n">build_network</span><span class="p">(</span><span class="n">Compiler</span><span class="p">(</span><span class="n">ops</span><span class="o">.</span><span class="n">oracle</span><span class="p">,</span> <span class="n">Vocab</span><span class="p">(</span><span class="o">-</span><span class="mi">16</span><span class="p">,</span> <span class="mi">31</span><span class="p">))</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">triangle</span><span class="p">))</span>
+
+<span class="n">rows</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">),</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">report</span> <span class="o">=</span> <span class="n">verify</span><span class="p">(</span><span class="n">network</span><span class="p">,</span> <span class="n">ops</span><span class="o">.</span><span class="n">oracle</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">ops</span><span class="o">.</span><span class="n">oracle</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">triangle</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">report</span><span class="o">.</span><span class="n">exact</span><span class="p">,</span> <span class="n">network</span><span class="o">.</span><span class="n">stats</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">slot_map</span><span class="p">)</span>  <span class="c1"># slot name -&gt; (start, stop) in the residual stream</span>
+</code></pre></div>
+<p><code>operator_set</code> adds definition texts to the base operations and returns the registry, a parser and an oracle. Any <code>OperatorRegistry</code> with an <code>Oracle</code> works the same way. <code>network.run(rows)</code> returns the output values. <code>network.decode(x, slot)</code> reads one slot of a residual stream.</p>
+<p>The whole experiment on this page runs with:</p>
+<div class="language-bash highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>opulse.compile<span class="w"> </span>--n<span class="w"> </span><span class="m">16</span><span class="w"> </span>--trained<span class="w"> </span>--json<span class="w"> </span>results.json
+python<span class="w"> </span>examples/compile/verify_generated.py<span class="w"> </span>ops.jsonl<span class="w"> </span>--n<span class="w"> </span><span class="m">8</span>
+</code></pre></div>
+<h2 id="stitching">Stitching<a class="headerlink" href="#stitching" title="Permanent link">&para;</a></h2>
+<p><code>stitch(parts, wiring, output)</code> joins finished networks. It reads only their weight matrices. Each part keeps its weights unchanged. They are copied into a wider residual stream, and a wired input slot of a later part takes the coordinates of the slot it is wired to, so no copy layer is needed. The layers of the parts run one after the other.</p>
+<div class="language-python highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">opulse.compile.network</span><span class="w"> </span><span class="kn">import</span> <span class="n">compact</span><span class="p">,</span> <span class="n">stitch</span>
+
+<span class="n">compiler</span> <span class="o">=</span> <span class="n">Compiler</span><span class="p">(</span><span class="n">ops</span><span class="o">.</span><span class="n">oracle</span><span class="p">,</span> <span class="n">Vocab</span><span class="p">(</span><span class="o">-</span><span class="mi">16</span><span class="p">,</span> <span class="mi">31</span><span class="p">))</span>
+<span class="n">diamond</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">op</span> <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">ops</span><span class="o">.</span><span class="n">registry</span> <span class="k">if</span> <span class="n">op</span><span class="o">.</span><span class="n">symbol</span> <span class="o">==</span> <span class="s2">"◆₁"</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">build_network</span><span class="p">(</span><span class="n">compiler</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">diamond</span><span class="p">))</span>    <span class="c1"># a ◆₁</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">build_network</span><span class="p">(</span><span class="n">compiler</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">triangle</span><span class="p">))</span>   <span class="c1"># a ▲₂ b</span>
+<span class="n">joined</span> <span class="o">=</span> <span class="n">stitch</span><span class="p">([(</span><span class="s2">"f"</span><span class="p">,</span> <span class="n">f</span><span class="p">),</span> <span class="p">(</span><span class="s2">"g"</span><span class="p">,</span> <span class="n">g</span><span class="p">)],</span> <span class="p">{</span><span class="s2">"g.in0_a"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"f.</span><span class="si">{</span><span class="n">f</span><span class="o">.</span><span class="n">output</span><span class="si">}</span><span class="s2">"</span><span class="p">},</span> <span class="sa">f</span><span class="s2">"g.</span><span class="si">{</span><span class="n">g</span><span class="o">.</span><span class="n">output</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">joined</span><span class="o">.</span><span class="n">inputs</span>                                     <span class="c1"># ['f.in0_a', 'g.in1_b']</span>
+<span class="n">packed</span> <span class="o">=</span> <span class="n">compact</span><span class="p">(</span><span class="n">joined</span><span class="p">)</span>
+</code></pre></div>
+<p><code>compact</code> moves every layer to the first position after the layers that write what it reads, again using only the weight matrices, and joins layers that land at the same position. <code>stitch(..., snap=True)</code> puts one extra layer in front of each wired input. It computes <code>relu(4x - 1.5) - relu(4x - 2.5)</code> on every coordinate, which is exactly 0 below 0.375 and exactly 1 above 0.625. An approximate one-hot vector becomes an exact one when its largest coordinate is above 0.625 and all others are below 0.375.</p>
+<h2 id="what-is-verified">What is verified<a class="headerlink" href="#what-is-verified" title="Permanent link">&para;</a></h2>
+<p><code>verify</code> runs the network on every input row. For every slot, it computes the exact value the slot stands for with the reference interpreter alone: the subexpression, condition, rest of a branch chain or call recorded for that slot, evaluated on the reference values of the slots it was bound to. Then it compares the tokens. A slot may differ from its reference value in only two ways, both counted:</p>
+<ul>
+<li>it holds <code>OOV</code>, and the block that wrote it read an <code>OOV</code> token or a don't care constant;</li>
+<li>it lies in a branch or inlined call that its parameter values do not reach.</li>
+</ul>
+<p>All other differences are failures. The output is also compared with a separate reference function, by default the interpreter applied to the operator. The check also confirms that every slot holds an exact one-hot vector.</p>
+<h3 id="separate-operators-and-stitched-compositions">Separate operators and stitched compositions<a class="headerlink" href="#separate-operators-and-stitched-compositions" title="Permanent link">&para;</a></h3>
+<p>Domain <code>0 .. 15</code>, slot values <code>-16 .. 31</code>, so an integer slot has 50 tokens.</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Definition</th>
+<th>Layers</th>
+<th>Max hidden</th>
+<th>Non-zero weights</th>
+<th>Exact outputs</th>
+<th>Slot checks failed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>◆₁</code></td>
+<td><code>(a % 5) * 3</code></td>
+<td>2</td>
+<td>50</td>
+<td>300</td>
+<td>16 of 16</td>
+<td>0 of 32</td>
+</tr>
+<tr>
+<td><code>▲₂</code></td>
+<td><code>a - b</code> if <code>a &gt; b</code>, else <code>b - a</code></td>
+<td>2</td>
+<td>7500</td>
+<td>30406</td>
+<td>256 of 256</td>
+<td>0 of 768</td>
+</tr>
+<tr>
+<td><code>★₃</code></td>
+<td><code>(a ◆₁) ▲₂ b</code></td>
+<td>4</td>
+<td>7500</td>
+<td>30706</td>
+<td>256 of 256</td>
+<td>0 of 1280</td>
+</tr>
+<tr>
+<td><code>⬢₄</code></td>
+<td><code>(a ◆₁) ▲₂ (b ◆₁)</code></td>
+<td>4</td>
+<td>7500</td>
+<td>31006</td>
+<td>256 of 256</td>
+<td>0 of 1792</td>
+</tr>
+<tr>
+<td><code>⬟₅</code></td>
+<td><code>((a ◆₁) ▲₂ b) ◆₁</code></td>
+<td>6</td>
+<td>7500</td>
+<td>31006</td>
+<td>256 of 256</td>
+<td>0 of 1792</td>
+</tr>
+<tr>
+<td><code>⬡₆</code></td>
+<td><code>(a ◆₁) ▲₂ 7</code></td>
+<td>4</td>
+<td>150</td>
+<td>1156</td>
+<td>16 of 16</td>
+<td>0 of 80</td>
+</tr>
+<tr>
+<td><code>♣₇</code></td>
+<td>recursive, <code>a % 6</code> steps</td>
+<td>20</td>
+<td>300</td>
+<td>8141</td>
+<td>16 of 16</td>
+<td>0 of 250</td>
+</tr>
+</tbody>
+</table>
+<p>Each composite was also built by stitching the separately compiled <code>◆₁</code> and <code>▲₂</code> networks:</p>
+<table>
+<thead>
+<tr>
+<th>Composite</th>
+<th>Form</th>
+<th>Layers</th>
+<th>Residual width</th>
+<th>Exact outputs</th>
+<th>Same outputs as whole compile</th>
+<th>Same blocks as whole compile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>★₃</code></td>
+<td>whole compile</td>
+<td>4</td>
+<td>354</td>
+<td>256 of 256</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>★₃</code></td>
+<td>stitched</td>
+<td>4</td>
+<td>354</td>
+<td>256 of 256</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>⬢₄</code></td>
+<td>whole compile</td>
+<td>4</td>
+<td>454</td>
+<td>256 of 256</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>⬢₄</code></td>
+<td>stitched</td>
+<td>6</td>
+<td>454</td>
+<td>256 of 256</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>⬢₄</code></td>
+<td>stitched, then <code>compact</code></td>
+<td>4</td>
+<td>454</td>
+<td>256 of 256</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>⬟₅</code></td>
+<td>whole compile</td>
+<td>6</td>
+<td>454</td>
+<td>256 of 256</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>⬟₅</code></td>
+<td>stitched</td>
+<td>6</td>
+<td>454</td>
+<td>256 of 256</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>⬡₆</code></td>
+<td>whole compile</td>
+<td>4</td>
+<td>304</td>
+<td>16 of 16</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>⬡₆</code></td>
+<td>stitched, <code>b</code> fed 7</td>
+<td>4</td>
+<td>354</td>
+<td>16 of 16</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<p>For <code>★₃</code>, <code>⬢₄</code> and <code>⬟₅</code> the stitched network holds the same multiset of blocks as the whole compile, with every weight equal. Only the slot positions differ. Stitching <code>⬢₄</code> places the two <code>◆₁</code> copies one after the other, and <code>compact</code> puts them back side by side. For <code>⬡₆</code> the whole compile knows that <code>b</code> is 7 and turns each <code>▲₂</code> table into a unary one (max hidden width 150 instead of 7500). A stitched <code>▲₂</code> cannot do this.</p>
+<h3 id="a-generated-operator-set">A generated operator set<a class="headerlink" href="#a-generated-operator-set" title="Permanent link">&para;</a></h3>
+<p>Generated with <code>opulse operators --layers 20 10 6 --seed 3</code>, then checked with <code>examples/compile/verify_generated.py</code> on the domain <code>0 .. 7</code> with slot values <code>-16 .. 15</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Definition kind</th>
+<th>Operators</th>
+<th>No <code>OOV</code> in place of an in-range answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>simple</td>
+<td>19</td>
+<td>14</td>
+</tr>
+<tr>
+<td>branch</td>
+<td>14</td>
+<td>9</td>
+</tr>
+<tr>
+<td>recursive</td>
+<td>3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Over all 36 operators, 1098 of 1240 outputs equal the reference value clamped to the vocabulary: 810 are the exact integer or <code>NaN</code>, and 288 are <code>OOV</code> because the answer itself lies outside <code>-16 .. 15</code>. The other 142 are <code>OOV</code> although the answer is in range, because an intermediate value left <code>-16 .. 15</code>. No output and none of the 33846 checked slot values is wrong. The largest network, for the recursive <code>♤₇₉</code>, has 241 layers and 1263 blocks.</p>
+<h3 id="trained-blocks">Trained blocks<a class="headerlink" href="#trained-blocks" title="Permanent link">&para;</a></h3>
+<p><code>opulse.compile.trained.train_operator</code> fits one MLP layer by gradient descent, with the same input and output slots, until it writes the right token for every input token combination. Measured on the domain <code>0 .. 15</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Network</th>
+<th>Correct tokens on the domain</th>
+<th>Largest distance from one-hot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>trained <code>◆₁</code> (64 hidden units)</td>
+<td>16 of 16</td>
+<td>0.0004</td>
+</tr>
+<tr>
+<td>trained <code>▲₂</code> (512 hidden units)</td>
+<td>256 of 256</td>
+<td>0.029</td>
+</tr>
+<tr>
+<td>trained <code>◆₁</code> stitched to trained <code>▲₂</code></td>
+<td>256 of 256</td>
+<td>0.026</td>
+</tr>
+<tr>
+<td>trained <code>◆₁</code> stitched to compiled <code>▲₂</code></td>
+<td>256 of 256</td>
+<td>0.0001</td>
+</tr>
+<tr>
+<td>compiled <code>◆₁</code> stitched to trained <code>▲₂</code></td>
+<td>256 of 256</td>
+<td>0.026</td>
+</tr>
+</tbody>
+</table>
+<p>A token counts as correct when the largest coordinate of the slot is the right one. Trained slots are close to one-hot vectors but not equal to them, so <code>verify</code> reports them as not one-hot.</p>
+<p>To see how errors combine, Gaussian noise with standard deviation σ was added to every non-zero weight and bias of both parts (5 seeds, mean fraction of correct tokens). "Product" multiplies the two parts' fractions, each measured alone on exact one-hot inputs. σ is absolute, and compiled and trained weights have different scales, so compare rows of one kind only.</p>
+<table>
+<thead>
+<tr>
+<th>Parts</th>
+<th>σ</th>
+<th><code>◆₁</code> alone</th>
+<th><code>▲₂</code> alone</th>
+<th>Product</th>
+<th>Stitched</th>
+<th>Stitched with <code>snap=True</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>compiled</td>
+<td>0.05</td>
+<td>1.000</td>
+<td>1.000</td>
+<td>1.000</td>
+<td>0.682</td>
+<td>0.976</td>
+</tr>
+<tr>
+<td>compiled</td>
+<td>0.10</td>
+<td>1.000</td>
+<td>0.946</td>
+<td>0.946</td>
+<td>0.467</td>
+<td>0.778</td>
+</tr>
+<tr>
+<td>compiled</td>
+<td>0.20</td>
+<td>0.875</td>
+<td>0.726</td>
+<td>0.635</td>
+<td>0.223</td>
+<td>0.469</td>
+</tr>
+<tr>
+<td>trained</td>
+<td>0.05</td>
+<td>1.000</td>
+<td>0.988</td>
+<td>0.988</td>
+<td>0.883</td>
+<td>0.988</td>
+</tr>
+<tr>
+<td>trained</td>
+<td>0.10</td>
+<td>0.925</td>
+<td>0.299</td>
+<td>0.282</td>
+<td>0.088</td>
+<td>0.259</td>
+</tr>
+<tr>
+<td>trained</td>
+<td>0.20</td>
+<td>0.275</td>
+<td>0.045</td>
+<td>0.013</td>
+<td>0.015</td>
+<td>0.014</td>
+</tr>
+</tbody>
+</table>
+<p>Without the snap layer, the stitched pair is correct less often than the product of its parts. The second part reads the first part's noisy output, and that deviation adds to its own noise. With the snap layer the stitched pair is correct more often. For the trained parts it is within 0.03 of the product; for the compiled parts it stays below the product.</p>
+<h2 id="inspecting-with-nnsight">Inspecting with nnsight<a class="headerlink" href="#inspecting-with-nnsight" title="Permanent link">&para;</a></h2>
+<p>A compiled network is an ordinary <code>torch.nn.Module</code>, so nnsight can wrap it:</p>
+<div class="language-python highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">nnsight</span><span class="w"> </span><span class="kn">import</span> <span class="n">NNsight</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">NNsight</span><span class="p">(</span><span class="n">network</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">model</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="n">rows</span><span class="p">)):</span>
+    <span class="n">after_first</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<span class="n">start</span><span class="p">,</span> <span class="n">stop</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">slot_map</span><span class="p">[</span><span class="s2">"s2"</span><span class="p">]</span>  <span class="c1"># one slot; network.slots["s2"].text says what it holds</span>
+</code></pre></div>
+<p><code>network.blocks</code> lists each block with its layer, its hidden unit range and the slot it writes.</p>
+<h2 id="limits">Limits<a class="headerlink" href="#limits" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Domain size.</strong> The vocabulary has <code>hi - lo + 3</code> tokens. A binary table has one hidden unit per pair of tokens, so its width grows with the square of the vocabulary: 2500 units at 50 tokens. The weight matrices are dense, so <code>▲₂</code> above has 3.9 million parameters of which 30406 are non-zero.</li>
+<li><strong>Values outside <code>lo .. hi</code>.</strong> They become <code>OOV</code>, and every value computed from them is <code>OOV</code> too. The network never gives a wrong integer for them, but an operator whose intermediate values leave the range is exact only on part of the domain. Choose <code>lo</code> and <code>hi</code> to cover the intermediate values.</li>
+<li><strong>Supported forms.</strong> Integer operators with simple, branch and recursive definitions; comparisons, <code>and</code>, <code>or</code>, <code>not</code>; calls of defined operators; integer literals and <code>NaN</code>. Not supported: <code>search(...)</code>, string and list values, bool-valued conditions, and atoms with more than two arguments. Operators with three or more arguments compile in principle but were not tested.</li>
+<li><strong>Recursion.</strong> Unrolling follows every argument that can reach a call, so the size grows with the number of distinct reachable arguments, not only with the recursion depth. <code>max_depth</code> (64 nested calls) and <code>max_blocks</code> stop runaway cases with <code>CompileError</code>.</li>
+<li><strong>Stitching.</strong> Stitched depth is the sum of the part depths until <code>compact</code> runs. Folding constants, sharing blocks and leaving out unreached branches across a call boundary happen only in a whole compile. Stitched parts must use the same vocabulary.</li>
+<li><strong>One position.</strong> All values sit in one residual stream position. Nothing is routed between token positions.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../interpretability/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Interpretability">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Interpretability
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../handwired/" class="md-footer__link md-footer__link--next" aria-label="Next: Handwired language model studies">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Handwired language model studies
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 The Opulse Authors · Code: <a href="https://github.com/mkj69/opulse/blob/main/LICENSE">Apache 2.0</a> · Docs and data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/mkj69/opulse" target="_blank" rel="noopener" title="Opulse on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../assets/js/kinds-legend.js"></script>
+      
+        <script src="../../assets/js/layout.js"></script>
+      
+        <script src="../../assets/js/atoms-legend.js"></script>
+      
+        <script src="../../assets/js/opulse-anim.js"></script>
+      
+        <script src="../../assets/js/opulse-vis.js"></script>
+      
+        <script src="../../assets/js/stepview.js"></script>
+      
+        <script src="../../assets/js/playground.js"></script>
+      
+        <script src="../../assets/js/worlds/core.js"></script>
+      
+        <script src="../../assets/js/granularity.js"></script>
+      
+        <script src="../../assets/js/granularity-anim.js"></script>
+      
+        <script src="../../assets/js/home-examples.js"></script>
+      
+        <script src="../../assets/js/lineage.js"></script>
+      
+        <script src="../../assets/js/expviz.js"></script>
+      
+        <script src="../../assets/js/blogfig.js"></script>
+      
+        <script src="../../assets/js/stitch.js"></script>
+      
+        <script src="../../assets/js/opulse-video.js"></script>
+      
+        <script src="../../assets/js/challenge-answer.js"></script>
+      
+        <script src="../../assets/js/challenge-modes.js"></script>
+      
+        <script src="../../assets/js/challenge.js"></script>
+      
+        <script src="../../assets/js/learn.js"></script>
+      
+    
+  </body>
+</html>

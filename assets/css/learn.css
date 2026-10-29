@@ -1,0 +1,45 @@
+/* Phone-first Learn cards. Step colours and controls come from playground.css. */
+.ol-page { max-width: 54rem; margin: 1.5rem auto; }
+.md-typeset .ol-card { margin: 0 0 1.2rem; padding: 1rem; border: 1px solid var(--op-card-border);
+  border-radius: var(--op-radius); background: var(--op-card-bg); }
+.md-typeset .ol-card h2 { margin: 0 0 .65rem; font-size: 1.25rem; }
+.ol-example { padding: .75rem; margin: .7rem 0; border: 1px solid var(--op-card-border);
+  border-radius: 10px; background: var(--md-default-bg-color); }
+.ol-edit { display: grid; gap: .55rem; }
+.ol-edit label { display: grid; gap: .25rem; min-width: 0; font-weight: 600; font-size: .8rem; }
+.ol-rule { width: 100%; min-height: 3.1rem; border: 1px solid var(--op-card-border); border-radius: 8px;
+  background: var(--opg-field-bg); color: var(--md-default-fg-color); resize: vertical; }
+.ol-rule-hint { font-size: .75rem; font-weight: 400; color: var(--md-default-fg-color--light); }
+.ol-atoms { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); gap: .5rem; margin: .7rem 0; }
+.ol-atom { display: grid; gap: .15rem; padding: .55rem .65rem; border: 1px solid var(--op-card-border);
+  border-radius: 8px; background: var(--md-default-bg-color); font-size: .8rem; }
+.ol-atom code { width: fit-content; font-size: 1.05em; }
+.ol-atom strong { font-size: .95rem; }
+.ol-atom span { color: var(--md-default-fg-color--light); }
+.ol-more-atoms { margin: .8rem 0 .35rem; font-size: 1rem; }
+.ol-edit .opg-expr { margin: 0; }
+.ol-run { justify-self: start; }
+.ol-status { min-height: 1.1em; margin: .3rem 0; font-size: .78rem; color: var(--md-default-fg-color--light); }
+.ol-result { display: flex; align-items: baseline; flex-wrap: wrap; gap: .4rem; margin: .35rem 0 .5rem;
+  font-size: 1rem; overflow-wrap: anywhere; }
+.ol-result code { white-space: normal; }
+.ol-result strong { color: var(--op-cyan); font-size: 1.1em; }
+.ol-world { margin: .4rem 0 .8rem; min-height: 0; }
+.ol-world:empty { display: none; }
+.ol-count { min-width: 5rem; text-align: right; font-size: .75rem; }
+.ol-stepview { min-width: 0; }
+.ol-stepview .opg-detail { min-height: 5rem; }
+.ol-stepview .opg-steps { max-height: 11rem; }
+.ol-answer { margin-top: .65rem; font-size: .8rem; }
+.ol-answer summary { cursor: pointer; color: var(--op-cyan); }
+.op-hero-learn { margin: 1rem 0 0; font-weight: 700; }
+.op-hero-learn a { color: var(--op-cyan); }
+@media (min-width: 40rem) {
+  .ol-edit { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) auto; align-items: end; }
+  .ol-edit-atoms { grid-template-columns: minmax(0, 1fr) auto; }
+  .ol-edit .ol-run { align-self: end; margin-bottom: .12rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ol-page *, .ol-page *::before, .ol-page *::after { animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}

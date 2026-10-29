@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 942 222" width="942" height="222" role="img" aria-label="Overview of Opulse: atoms, three composition forms, layered growth, the reference interpreter, and what it produces">
+<title>Overview of Opulse: atoms, three composition forms, layered growth, the reference interpreter, and what it produces</title>
+<rect x="0.0" y="0.0" width="132.0" height="217.6" rx="8" fill="#f8fafc" stroke="#d5dbe3" stroke-width="1"/>
+<g transform="translate(0.0,0.0)">
+<circle cx="23.0" cy="20.1" r="8.99" fill="#0f172a" stroke="none" stroke-width="0"/>
+<text x="23.0" y="24.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="700" fill="#f8fafc" text-anchor="middle">1</text>
+<text x="39.0" y="25.3" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="700" fill="#0f172a" text-anchor="start">Atoms</text>
+</g>
+<g transform="translate(14.0,38.5)">
+<rect x="0.0" y="0.0" width="26.0" height="26.0" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+<text x="13.0" y="17.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">+</text>
+<rect x="32.0" y="0.0" width="26.0" height="26.0" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+<text x="45.0" y="17.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">-</text>
+<rect x="64.0" y="0.0" width="26.0" height="26.0" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+<text x="77.0" y="17.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">*</text>
+<rect x="0.0" y="32.0" width="26.0" height="26.0" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+<text x="13.0" y="49.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">/</text>
+<rect x="32.0" y="32.0" width="26.0" height="26.0" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+<text x="45.0" y="49.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">%</text>
+<rect x="64.0" y="32.0" width="26.0" height="26.0" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+<text x="77.0" y="49.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">@</text>
+<rect x="0.0" y="64.0" width="26.0" height="26.0" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+<text x="13.0" y="81.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">#</text>
+<rect x="32.0" y="64.0" width="26.0" height="26.0" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+<text x="45.0" y="81.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">$</text>
+<rect x="64.0" y="64.0" width="26.0" height="26.0" rx="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+<text x="77.0" y="81.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">&amp;</text>
+<text x="0.0" y="108.0" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="400" fill="#475569" text-anchor="start">chosen by the</text>
+<text x="0.0" y="124.6" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="400" fill="#475569" text-anchor="start">user; any integer</text>
+<text x="0.0" y="141.1" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="400" fill="#475569" text-anchor="start">function can join</text>
+</g>
+<line x1="136.0" y1="108.8" x2="148.0" y2="108.8" stroke="#475569" stroke-width="1.25"/>
+<polygon points="148.0,108.8 142.8,111.8 142.8,105.8" fill="#475569"/>
+<rect x="152.0" y="0.0" width="214.0" height="217.6" rx="8" fill="#f8fafc" stroke="#d5dbe3" stroke-width="1"/>
+<g transform="translate(152.0,0.0)">
+<circle cx="23.0" cy="20.1" r="8.99" fill="#0f172a" stroke="none" stroke-width="0"/>
+<text x="23.0" y="24.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="700" fill="#f8fafc" text-anchor="middle">2</text>
+<text x="39.0" y="25.3" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="700" fill="#0f172a" text-anchor="start">Combine</text>
+</g>
+<g transform="translate(166.0,38.5)">
+<rect x="0.0" y="0.0" width="186.0" height="45.5" rx="8" fill="#0e7490" stroke="none" stroke-width="0" fill-opacity="0.09"/>
+<rect x="0.0" y="0.0" width="186.0" height="45.5" rx="8" fill="none" stroke="#0e7490" stroke-width="1.25"/>
+<text x="10.0" y="18.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="700" fill="#0e7490" text-anchor="start">Substitution</text>
+<text x="10.0" y="35.1" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="400" fill="#0f172a" text-anchor="start">passes one result into another</text>
+<rect x="0.0" y="53.5" width="186.0" height="45.5" rx="8" fill="#b45309" stroke="none" stroke-width="0" fill-opacity="0.09"/>
+<rect x="0.0" y="53.5" width="186.0" height="45.5" rx="8" fill="none" stroke="#b45309" stroke-width="1.25"/>
+<text x="10.0" y="72.3" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="700" fill="#b45309" text-anchor="start">Conditional choice</text>
+<text x="10.0" y="88.6" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="400" fill="#0f172a" text-anchor="start">takes the first case that holds</text>
+<rect x="0.0" y="107.0" width="186.0" height="45.5" rx="8" fill="#a21caf" stroke="none" stroke-width="0" fill-opacity="0.09"/>
+<rect x="0.0" y="107.0" width="186.0" height="45.5" rx="8" fill="none" stroke="#a21caf" stroke-width="1.25"/>
+<text x="10.0" y="125.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="700" fill="#a21caf" text-anchor="start">Bounded recursion</text>
+<text x="10.0" y="142.1" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="400" fill="#0f172a" text-anchor="start">calls itself on a smaller value</text>
+</g>
+<line x1="370.0" y1="108.8" x2="382.0" y2="108.8" stroke="#475569" stroke-width="1.25"/>
+<polygon points="382.0,108.8 376.8,111.8 376.8,105.8" fill="#475569"/>
+<rect x="386.0" y="0.0" width="238.0" height="217.6" rx="8" fill="#f8fafc" stroke="#d5dbe3" stroke-width="1"/>
+<g transform="translate(386.0,0.0)">
+<circle cx="23.0" cy="20.1" r="8.99" fill="#0f172a" stroke="none" stroke-width="0"/>
+<text x="23.0" y="24.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="700" fill="#f8fafc" text-anchor="middle">3</text>
+<text x="39.0" y="25.3" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="700" fill="#0f172a" text-anchor="start">Grow in layers</text>
+</g>
+<g transform="translate(400.0,38.5)">
+<text x="0.0" y="16.2" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="400" fill="#475569" text-anchor="start">layer 1</text>
+<text x="0.0" y="60.2" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="400" fill="#475569" text-anchor="start">layer 0</text>
+<text x="0.0" y="104.2" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="400" fill="#475569" text-anchor="start">atoms</text>
+<line x1="108.7" y1="12.0" x2="96.0" y2="56.0" stroke="#94a3b8" stroke-width="1"/>
+<line x1="108.7" y1="12.0" x2="121.3" y2="56.0" stroke="#94a3b8" stroke-width="1"/>
+<line x1="134.0" y1="12.0" x2="146.7" y2="56.0" stroke="#94a3b8" stroke-width="1"/>
+<line x1="134.0" y1="12.0" x2="108.7" y2="12.0" stroke="#94a3b8" stroke-width="1"/>
+<line x1="159.3" y1="12.0" x2="172.0" y2="56.0" stroke="#94a3b8" stroke-width="1"/>
+<line x1="159.3" y1="12.0" x2="121.3" y2="56.0" stroke="#94a3b8" stroke-width="1"/>
+<line x1="96.0" y1="56.0" x2="70.7" y2="100.0" stroke="#94a3b8" stroke-width="1"/>
+<line x1="96.0" y1="56.0" x2="96.0" y2="100.0" stroke="#94a3b8" stroke-width="1"/>
+<line x1="121.3" y1="56.0" x2="121.3" y2="100.0" stroke="#94a3b8" stroke-width="1"/>
+<line x1="121.3" y1="56.0" x2="96.0" y2="100.0" stroke="#94a3b8" stroke-width="1"/>
+<line x1="146.7" y1="56.0" x2="146.7" y2="100.0" stroke="#94a3b8" stroke-width="1"/>
+<line x1="146.7" y1="56.0" x2="172.0" y2="100.0" stroke="#94a3b8" stroke-width="1"/>
+<line x1="172.0" y1="56.0" x2="197.3" y2="100.0" stroke="#94a3b8" stroke-width="1"/>
+<line x1="172.0" y1="56.0" x2="146.7" y2="56.0" stroke="#94a3b8" stroke-width="1"/>
+<circle cx="108.7" cy="12.0" r="8" fill="#ffffff" stroke="#a21caf" stroke-width="2"/>
+<circle cx="134.0" cy="12.0" r="8" fill="#ffffff" stroke="#0e7490" stroke-width="2"/>
+<circle cx="159.3" cy="12.0" r="8" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+<circle cx="96.0" cy="56.0" r="8" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+<circle cx="121.3" cy="56.0" r="8" fill="#ffffff" stroke="#0e7490" stroke-width="2"/>
+<circle cx="146.7" cy="56.0" r="8" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+<circle cx="172.0" cy="56.0" r="8" fill="#ffffff" stroke="#0e7490" stroke-width="2"/>
+<circle cx="70.7" cy="100.0" r="5.5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.25"/>
+<circle cx="96.0" cy="100.0" r="5.5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.25"/>
+<circle cx="121.3" cy="100.0" r="5.5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.25"/>
+<circle cx="146.7" cy="100.0" r="5.5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.25"/>
+<circle cx="172.0" cy="100.0" r="5.5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.25"/>
+<circle cx="197.3" cy="100.0" r="5.5" fill="#ffffff" stroke="#94a3b8" stroke-width="1.25"/>
+<circle cx="5.0" cy="122.0" r="5.5" fill="none" stroke="#94a3b8" stroke-width="1.25" stroke-dasharray="2.5 2"/>
+<line x1="2.0" y1="119.0" x2="8.0" y2="125.0" stroke="#475569" stroke-width="1.25"/>
+<line x1="2.0" y1="125.0" x2="8.0" y2="119.0" stroke="#475569" stroke-width="1.25"/>
+<text x="16.0" y="126.0" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="400" fill="#475569" text-anchor="start">a draft that fails a check is</text>
+<text x="16.0" y="142.6" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="400" fill="#475569" text-anchor="start">discarded</text>
+<circle cx="5.0" cy="157.1" r="5.5" fill="none" stroke="#a21caf" stroke-width="2"/>
+<text x="16.0" y="161.1" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="400" fill="#a21caf" text-anchor="start">recursion starts a new layer</text>
+</g>
+<line x1="628.0" y1="108.8" x2="640.0" y2="108.8" stroke="#475569" stroke-width="1.25"/>
+<polygon points="640.0,108.8 634.8,111.8 634.8,105.8" fill="#475569"/>
+<rect x="644.0" y="0.0" width="152.0" height="217.6" rx="8" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+<g transform="translate(644.0,0.0)">
+<circle cx="23.0" cy="20.1" r="8.99" fill="#0f172a" stroke="none" stroke-width="0"/>
+<text x="23.0" y="24.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="700" fill="#f8fafc" text-anchor="middle">4</text>
+<text x="39.0" y="25.3" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="700" fill="#0f172a" text-anchor="start">Referee</text>
+</g>
+<g transform="translate(658.0,38.5)">
+<text x="0.0" y="10.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">computes the exact</text>
+<text x="0.0" y="29.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">value of every</text>
+<text x="0.0" y="48.1" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">expression and</text>
+<text x="0.0" y="66.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">checks every step</text>
+<text x="0.0" y="85.3" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">before anything is</text>
+<text x="0.0" y="103.9" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">written</text>
+</g>
+<line x1="800.0" y1="108.8" x2="812.0" y2="108.8" stroke="#475569" stroke-width="1.25"/>
+<polygon points="812.0,108.8 806.8,111.8 806.8,105.8" fill="#475569"/>
+<rect x="816.0" y="0.0" width="124.0" height="217.6" rx="8" fill="#f8fafc" stroke="#d5dbe3" stroke-width="1"/>
+<g transform="translate(816.0,0.0)">
+<circle cx="23.0" cy="20.1" r="8.99" fill="#0f172a" stroke="none" stroke-width="0"/>
+<text x="23.0" y="24.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="700" fill="#f8fafc" text-anchor="middle">5</text>
+<text x="39.0" y="25.3" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="700" fill="#0f172a" text-anchor="start">Outputs</text>
+</g>
+<g transform="translate(830.0,38.5)">
+<rect x="0.0" y="0.0" width="96.0" height="28.0" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+<text x="48.0" y="18.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="middle">Tasks</text>
+<rect x="0.0" y="35.0" width="96.0" height="28.0" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+<text x="48.0" y="53.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="middle">Step grading</text>
+<rect x="0.0" y="70.0" width="96.0" height="28.0" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+<text x="48.0" y="88.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="middle">Rewards</text>
+<rect x="0.0" y="105.0" width="96.0" height="28.0" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+<text x="48.0" y="123.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="middle">Corpora</text>
+</g>
+</svg>

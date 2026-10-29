@@ -1,0 +1,3860 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+  
+  
+  
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Compose new mathematics from atomic operations, and generate exactly verified data about it.">
+  <link rel="canonical" href="https://mkj69.github.io/opulse/reference/configuration/">
+  <link rel="prev" href="../cli/">
+  <link rel="next" href="../semantics/">
+  
+  <link rel="icon" href="../../assets/images/logo.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Opulse">
+  
+  <meta property="og:title" content="Configuration | Opulse">
+  <meta property="og:description" content="Compose new mathematics from atomic operations, and generate exactly verified data about it.">
+  <meta property="og:url" content="https://mkj69.github.io/opulse/reference/configuration/">
+  <meta property="og:image" content="https://mkj69.github.io/opulse/assets/images/social/opulse-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Configuration | Opulse">
+  <meta name="twitter:description" content="Compose new mathematics from atomic operations, and generate exactly verified data about it.">
+  <meta name="twitter:image" content="https://mkj69.github.io/opulse/assets/images/social/opulse-preview.png">
+
+    
+      
+        <title>Configuration - Opulse</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../assets/css/atoms-legend.css">
+    
+      <link rel="stylesheet" href="../../assets/css/custom.css">
+    
+      <link rel="stylesheet" href="../../assets/css/kinds-legend.css">
+    
+      <link rel="stylesheet" href="../../assets/css/opulse-vis.css">
+    
+      <link rel="stylesheet" href="../../assets/css/stepview.css">
+    
+      <link rel="stylesheet" href="../../assets/css/playground.css">
+    
+      <link rel="stylesheet" href="../../assets/css/worlds.css">
+    
+      <link rel="stylesheet" href="../../assets/css/worlds-tasks.css">
+    
+      <link rel="stylesheet" href="../../assets/css/granularity.css">
+    
+      <link rel="stylesheet" href="../../assets/css/granularity-anim.css">
+    
+      <link rel="stylesheet" href="../../assets/css/home-examples.css">
+    
+      <link rel="stylesheet" href="../../assets/css/lineage.css">
+    
+      <link rel="stylesheet" href="../../assets/css/expviz.css">
+    
+      <link rel="stylesheet" href="../../assets/css/blogfig.css">
+    
+      <link rel="stylesheet" href="../../assets/css/stitch.css">
+    
+      <link rel="stylesheet" href="../../assets/css/opulse-video.css">
+    
+      <link rel="stylesheet" href="../../assets/css/scales.css">
+    
+      <link rel="stylesheet" href="../../assets/css/opgraph.css">
+    
+      <link rel="stylesheet" href="../../assets/css/challenge.css">
+    
+      <link rel="stylesheet" href="../../assets/css/learn.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../../assets/images/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuration-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Opulse" class="md-header__button md-logo" aria-label="Opulse" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Opulse
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mkj69/opulse" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mkj69/opulse
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../why/" class="md-tabs__link">
+          
+  
+  
+  Why
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learn/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learn
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guide/visual-tour/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tour
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../challenge/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Challenge
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../worlds/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Worlds
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guide/playground/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Playground
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../glossary/" class="md-tabs__link">
+          
+  
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contribute/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Join us
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Opulse" class="md-nav__button md-logo" aria-label="Opulse" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.svg" alt="logo">
+
+    </a>
+    Opulse
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mkj69/opulse" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mkj69/opulse
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Why
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../why/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why Opulse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lineage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lineage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/visual-tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tour
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../challenge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Challenge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../worlds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Worlds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/playground/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playground
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Laboratory for Data Laws
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stitching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stitching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../experiments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experiment ideas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/notebooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notebooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/atoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atoms and presets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/presets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preset worlds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Typed values
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/definitions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Definitions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/views/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Views of a definition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/skeletons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skeletons
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/generation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/expressions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expressions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/step-by-step/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivations at any granularity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/benchmark/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmark
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/discovery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Discovery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3_12" id="__nav_10_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Training integrations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Training integrations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluation frameworks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hugging Face dataset export
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/corpora/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pretraining corpora and probes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/pretraining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pretraining
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/environments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Environments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3_14" id="__nav_10_3_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exact checks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Exact checks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/solving/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solving for unknowns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/properties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laws and equivalence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/smt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SMT-LIB export
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/interpretability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interpretability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/compiled-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiled models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/handwired/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Handwired language model studies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/notation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/naming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operator names
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/visualization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports and tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/python-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10_4" id="__nav_10_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        preset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        semantics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        symbols
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numerals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        numerals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        operators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#named-symbol-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Named symbol sets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        recursion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        expressions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        solver
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        interest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expressiveness-switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expressiveness switches
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semantics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Semantics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_5" id="__nav_10_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/correctness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Correctness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Join us
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        preset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        semantics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        symbols
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numerals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        numerals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        operators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#named-symbol-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Named symbol sets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        recursion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        expressions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        solver
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        interest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expressiveness-switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expressiveness switches
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+    
+                  
+
+
+  
+  
+
+
+<h1 id="configuration-reference">Configuration reference<a class="headerlink" href="#configuration-reference" title="Permanent link">&para;</a></h1>
+<p>Generated from <code>opulse.config</code> by <code>tools/docs_reference.py</code>. A configuration is one YAML file;
+every key is optional and omitted keys take the defaults below.</p>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Opulse generation settings. Every key is optional; omitted keys use the</span>
+<span class="c1"># defaults in src/opulse/config.py.</span>
+
+<span class="nt">semantics</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exact</span><span class="w">              </span><span class="c1"># exact: overflow and division by zero give NaN; legacy: reproduce old data</span>
+<span class="w">  </span><span class="nt">bound</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2147483647</span><span class="w">        </span><span class="c1"># largest absolute value; every command (equivalences included) uses it</span>
+
+<span class="nt">symbols</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">left_operand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">a</span>
+<span class="w">  </span><span class="nt">right_operand</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">b</span>
+<span class="w">  </span><span class="nt">left_paren</span><span class="p">:</span><span class="w"> </span><span class="s">"("</span>
+<span class="w">  </span><span class="nt">right_paren</span><span class="p">:</span><span class="w"> </span><span class="s">")"</span>
+<span class="w">  </span><span class="nt">equals</span><span class="p">:</span><span class="w"> </span><span class="s">"="</span>
+<span class="w">  </span><span class="nt">nan</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NaN</span>
+<span class="w">  </span><span class="nt">inf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Inf</span>
+<span class="w">  </span><span class="nt">neg_inf</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-Inf</span>
+
+<span class="nt">numerals</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">max_base</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">16</span>
+<span class="w">  </span><span class="nt">digits</span><span class="p">:</span><span class="w"> </span><span class="s">"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>
+
+<span class="nt">operators</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">naming</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shape_index</span><span class="w">       </span><span class="c1"># shape_index or legacy</span>
+<span class="w">  </span><span class="nt">shape_sets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">shapes</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">suits</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">shape_chars</span><span class="p">:</span><span class="w"> </span><span class="s">""</span><span class="w">            </span><span class="c1"># additional shape glyphs</span>
+<span class="w">  </span><span class="nt">index_chars</span><span class="p">:</span><span class="w"> </span><span class="s">"₀₁₂₃₄₅₆₇₈₉"</span><span class="w">  </span><span class="c1"># ordered index alphabet</span>
+<span class="w">  </span><span class="nt">definition_layout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">compact</span><span class="w"> </span><span class="c1"># compact or piecewise</span>
+<span class="w">  </span><span class="nt">piecewise_min_length</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">120</span>
+<span class="w">  </span><span class="nt">symbol_min_len</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">  </span><span class="nt">symbol_max_len</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">symbol_sets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">math</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">arrows</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">shapes</span><span class="p p-Indicator">]</span><span class="w">   </span><span class="c1"># legacy mode named sets</span>
+<span class="w">  </span><span class="nt">symbol_chars</span><span class="p">:</span><span class="w"> </span><span class="s">""</span><span class="w">             </span><span class="c1"># more legacy characters, listed directly</span>
+<span class="w">  </span><span class="nt">symbol_blocks</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w">            </span><span class="c1"># legacy mode raw Unicode ranges</span>
+<span class="w">  </span><span class="nt">symbol_ascii</span><span class="p">:</span><span class="w"> </span><span class="s">""</span><span class="w">             </span><span class="c1"># extra ASCII characters in legacy mode</span>
+<span class="w">  </span><span class="nt">exclude_confusable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">     </span><span class="c1"># filter lookalikes in legacy mode</span>
+<span class="w">  </span><span class="nt">max_if_branches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">  </span><span class="nt">condition_min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">         </span><span class="c1"># branch thresholds are non-negative; prefix "-" supplies negatives</span>
+<span class="w">  </span><span class="nt">condition_max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+
+<span class="nt">recursion</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">modulus_min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w">           </span><span class="c1"># recursive operators unfold at most modulus-1 times</span>
+<span class="w">  </span><span class="nt">modulus_max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9</span>
+<span class="w">  </span><span class="nt">constant_min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-100</span>
+<span class="w">  </span><span class="nt">constant_max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+
+<span class="nt">expressions</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">variables</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">a</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">b</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">value_min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">value_max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+<span class="w">  </span><span class="nt">max_depth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">type_weights</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">binary</span><span class="p">:</span><span class="w"> </span><span class="nv">0.7</span><span class="p p-Indicator">,</span><span class="nt"> unary_prefix</span><span class="p">:</span><span class="w"> </span><span class="nv">0.2</span><span class="p p-Indicator">,</span><span class="nt"> unary_postfix</span><span class="p">:</span><span class="w"> </span><span class="nv">0.1</span><span class="p p-Indicator">,</span><span class="nt"> atom</span><span class="p">:</span><span class="w"> </span><span class="nv">0.1</span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="nt">atom_weights</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">variable</span><span class="p">:</span><span class="w"> </span><span class="nv">0.8</span><span class="p p-Indicator">,</span><span class="nt"> number</span><span class="p">:</span><span class="w"> </span><span class="nv">0.2</span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="nt">numeral_base</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">  </span><span class="nt">random_numeral_base</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">result_base</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">  </span><span class="nt">random_result_base</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">cot_base</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+</code></pre></div>
+<h2 id="preset"><code>preset</code><a class="headerlink" href="#preset" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>preset</code></td>
+<td><code>str \| None</code></td>
+<td><code>None</code></td>
+<td>Selects a named world and its generation defaults, including the numeric, typed, and action presets.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="semantics"><code>semantics</code><a class="headerlink" href="#semantics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mode</code></td>
+<td><code>str</code></td>
+<td><code>'exact'</code></td>
+<td><code>exact</code>: overflow and division by zero give NaN. <code>legacy</code>: reproduce old datasets (symmetric folding, zero divisor treated as 1). <code>modular</code>: reduce integer results modulo <code>semantics.modulus</code>.</td>
+</tr>
+<tr>
+<td><code>bound</code></td>
+<td><code>int \| None</code></td>
+<td><code>2147483647</code></td>
+<td>Largest absolute value B of a base-operation result. <code>null</code>: no bound (exact mode only).</td>
+</tr>
+<tr>
+<td><code>max_string_length</code></td>
+<td><code>int</code></td>
+<td><code>256</code></td>
+<td>Largest number of characters a registered string atom can return before its result becomes NaN.</td>
+</tr>
+<tr>
+<td><code>max_list_length</code></td>
+<td><code>int</code></td>
+<td><code>256</code></td>
+<td>Largest number of elements a registered list atom can return before its result becomes NaN.</td>
+</tr>
+<tr>
+<td><code>modulus</code></td>
+<td><code>int \| None</code></td>
+<td><code>None</code></td>
+<td>Integer modulus of at least 2 in modular mode. <code>null</code> in other modes.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="symbols"><code>symbols</code><a class="headerlink" href="#symbols" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>left_operand</code></td>
+<td><code>str</code></td>
+<td><code>'a'</code></td>
+<td>Name of the first parameter in definitions.</td>
+</tr>
+<tr>
+<td><code>right_operand</code></td>
+<td><code>str</code></td>
+<td><code>'b'</code></td>
+<td>Name of the second parameter in definitions.</td>
+</tr>
+<tr>
+<td><code>left_paren</code></td>
+<td><code>str</code></td>
+<td><code>'('</code></td>
+<td>Opening bracket.</td>
+</tr>
+<tr>
+<td><code>right_paren</code></td>
+<td><code>str</code></td>
+<td><code>')'</code></td>
+<td>Closing bracket.</td>
+</tr>
+<tr>
+<td><code>equals</code></td>
+<td><code>str</code></td>
+<td><code>'='</code></td>
+<td>Sign between the left-hand side and the body of a definition.</td>
+</tr>
+<tr>
+<td><code>nan</code></td>
+<td><code>str</code></td>
+<td><code>'NaN'</code></td>
+<td>Spelling of the undefined value.</td>
+</tr>
+<tr>
+<td><code>inf</code></td>
+<td><code>str</code></td>
+<td><code>'Inf'</code></td>
+<td>Spelling of positive infinity (legacy data only).</td>
+</tr>
+<tr>
+<td><code>neg_inf</code></td>
+<td><code>str</code></td>
+<td><code>'-Inf'</code></td>
+<td>Spelling of negative infinity (legacy data only).</td>
+</tr>
+<tr>
+<td><code>operand_names</code></td>
+<td><code>tuple[str, ...]</code></td>
+<td><code>[]</code></td>
+<td>All parameter names, in order; their number is the largest arity. Empty: <code>left_operand</code>, <code>right_operand</code>, then <code>c d e f g h</code>. When set, its first two names are the left and right operands.</td>
+</tr>
+<tr>
+<td><code>argument_separator</code></td>
+<td><code>str</code></td>
+<td><code>','</code></td>
+<td>Separates the arguments of an operator with three or more arguments, written in call form <code>⊕(a, b, c)</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="numerals"><code>numerals</code><a class="headerlink" href="#numerals" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_base</code></td>
+<td><code>int</code></td>
+<td><code>16</code></td>
+<td>Largest numeral base used for random bases.</td>
+</tr>
+<tr>
+<td><code>digits</code></td>
+<td><code>str</code></td>
+<td><code>'0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'</code></td>
+<td>Digit alphabet for numerals in bases above 10.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="operators"><code>operators</code><a class="headerlink" href="#operators" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>naming</code></td>
+<td><code>str</code></td>
+<td><code>'shape_index'</code></td>
+<td>Generated name style. <code>shape_index</code> joins a shape and an index; <code>legacy</code> uses random symbol strings.</td>
+</tr>
+<tr>
+<td><code>shape_sets</code></td>
+<td><code>tuple[str, ...]</code></td>
+<td><code>['shapes', 'suits']</code></td>
+<td>Named shape sets used in <code>shape_index</code> mode: <code>shapes</code> and <code>suits</code>.</td>
+</tr>
+<tr>
+<td><code>shape_chars</code></td>
+<td><code>str</code></td>
+<td><code>''</code></td>
+<td>Additional shape glyphs used in <code>shape_index</code> mode.</td>
+</tr>
+<tr>
+<td><code>index_chars</code></td>
+<td><code>str</code></td>
+<td><code>'₀₁₂₃₄₅₆₇₈₉'</code></td>
+<td>Ordered index alphabet. A zero first alphabet with ten characters writes decimal indices.</td>
+</tr>
+<tr>
+<td><code>definition_layout</code></td>
+<td><code>str</code></td>
+<td><code>'compact'</code></td>
+<td><code>compact</code> uses one line. <code>piecewise</code> puts each branch on a line when long.</td>
+</tr>
+<tr>
+<td><code>piecewise_min_length</code></td>
+<td><code>int</code></td>
+<td><code>120</code></td>
+<td>Minimum compact definition length for piecewise rendering.</td>
+</tr>
+<tr>
+<td><code>definedness</code></td>
+<td><code>bool</code></td>
+<td><code>False</code></td>
+<td>Adds the <code>defined</code> atom to the starting operator set so branch conditions can test whether a value is defined.</td>
+</tr>
+<tr>
+<td><code>symbol_min_len</code></td>
+<td><code>int</code></td>
+<td><code>1</code></td>
+<td>Shortest generated operator symbol in <code>legacy</code> mode.</td>
+</tr>
+<tr>
+<td><code>symbol_max_len</code></td>
+<td><code>int</code></td>
+<td><code>3</code></td>
+<td>Longest generated operator symbol in <code>legacy</code> mode.</td>
+</tr>
+<tr>
+<td><code>symbol_sets</code></td>
+<td><code>tuple[str, ...]</code></td>
+<td><code>['math', 'arrows', 'shapes']</code></td>
+<td>Named character sets for <code>legacy</code> symbols; see the table below.</td>
+</tr>
+<tr>
+<td><code>symbol_chars</code></td>
+<td><code>str</code></td>
+<td><code>''</code></td>
+<td>More characters for <code>legacy</code> symbols, listed directly, e.g. <code>"♪♫"</code>.</td>
+</tr>
+<tr>
+<td><code>symbol_blocks</code></td>
+<td><code>tuple[str, ...]</code></td>
+<td><code>[]</code></td>
+<td>Advanced <code>legacy</code> mode: raw Unicode ranges (<code>start-end</code>, hex), e.g. <code>2200-22FF</code>. Symbols and non-ASCII letters are accepted.</td>
+</tr>
+<tr>
+<td><code>symbol_ascii</code></td>
+<td><code>str</code></td>
+<td><code>''</code></td>
+<td>Extra ASCII characters allowed in <code>legacy</code> symbols.</td>
+</tr>
+<tr>
+<td><code>exclude_confusable</code></td>
+<td><code>bool</code></td>
+<td><code>True</code></td>
+<td>Drop legacy glyphs that look like ASCII arithmetic, comparisons or bars.</td>
+</tr>
+<tr>
+<td><code>arity_weights</code></td>
+<td><code>dict[int, float]</code></td>
+<td><code>{1: 0.5, 2: 0.5}</code></td>
+<td>Relative number of new operators per arity, e.g. <code>{1: 0.25, 2: 0.5, 3: 0.25}</code>; unary operators are prefix or postfix with equal chance, arity 3 and more is written in call form. The default draws exactly as before (no call-form operators).</td>
+</tr>
+<tr>
+<td><code>allow_simple</code></td>
+<td><code>bool</code></td>
+<td><code>True</code></td>
+<td>Permits generated definitions with one unconditional body.</td>
+</tr>
+<tr>
+<td><code>allow_branches</code></td>
+<td><code>bool</code></td>
+<td><code>True</code></td>
+<td>Permits generated definitions with conditional branches.</td>
+</tr>
+<tr>
+<td><code>max_substitution_depth</code></td>
+<td><code>int \| None</code></td>
+<td><code>None</code></td>
+<td>Limits the depth of sampled simple and branch bodies; <code>null</code> uses <code>expressions.max_depth</code>.</td>
+</tr>
+<tr>
+<td><code>max_arity</code></td>
+<td><code>int \| None</code></td>
+<td><code>None</code></td>
+<td>Limits generated operator arity; <code>null</code> retains every arity with a positive weight in <code>operators.arity_weights</code>.</td>
+</tr>
+<tr>
+<td><code>max_if_branches</code></td>
+<td><code>int</code></td>
+<td><code>10</code></td>
+<td>Most branches in a branch definition.</td>
+</tr>
+<tr>
+<td><code>max_condition_comparisons</code></td>
+<td><code>int \| None</code></td>
+<td><code>None</code></td>
+<td>Limits comparisons in each branch condition; <code>null</code> uses the default region sampler.</td>
+</tr>
+<tr>
+<td><code>condition_atoms</code></td>
+<td><code>tuple[str, ...]</code></td>
+<td><code>[]</code></td>
+<td>Names unary or binary starting atoms applied to parameters in branch conditions; an empty list uses the parameters directly.</td>
+</tr>
+<tr>
+<td><code>partial_probability</code></td>
+<td><code>float</code></td>
+<td><code>0.0</code></td>
+<td>Probability that a branch definition has no <code>else</code> (undefined outside its regions).</td>
+</tr>
+<tr>
+<td><code>reject_dead_branches</code></td>
+<td><code>bool</code></td>
+<td><code>True</code></td>
+<td>Reject definitions in which z3 proves a branch unreachable or always NaN.</td>
+</tr>
+<tr>
+<td><code>reject_degenerate</code></td>
+<td><code>bool</code></td>
+<td><code>True</code></td>
+<td>Reject subexpressions that use a parameter yet take one value wherever defined, such as <code>a - a</code> or <code>a % a</code> (proved with z3).</td>
+</tr>
+<tr>
+<td><code>min_defined_share</code></td>
+<td><code>float</code></td>
+<td><code>0.95</code></td>
+<td>Total definitions must be defined on at least this share of inputs from the expression value range (0 disables).</td>
+</tr>
+<tr>
+<td><code>undefined_branch_check</code></td>
+<td><code>bool</code></td>
+<td><code>True</code></td>
+<td>Also reject branches whose body z3 proves always NaN (costlier; consider turning it off for very large runs).</td>
+</tr>
+<tr>
+<td><code>dead_branch_budget</code></td>
+<td><code>int</code></td>
+<td><code>600</code></td>
+<td>Deterministic effort of that check (encoding nodes; z3 gets a proportional resource limit). Undecided branches are accepted.</td>
+</tr>
+<tr>
+<td><code>degenerate_budget</code></td>
+<td><code>int</code></td>
+<td><code>200</code></td>
+<td>Deterministic effort of the degenerate subexpression check (encoding nodes; z3 gets a proportional resource limit). Undecided suspects are accepted.</td>
+</tr>
+<tr>
+<td><code>safety_timeout_ms</code></td>
+<td><code>int</code></td>
+<td><code>30000</code></td>
+<td>Wall clock safety limit per solver check during generation. Reaching it stops the run with an error; it never decides a check. Raise it on slow machines.</td>
+</tr>
+<tr>
+<td><code>condition_min</code></td>
+<td><code>int</code></td>
+<td><code>0</code></td>
+<td>Smallest threshold in branch conditions.</td>
+</tr>
+<tr>
+<td><code>condition_max</code></td>
+<td><code>int</code></td>
+<td><code>100</code></td>
+<td>Largest threshold in branch conditions.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="named-symbol-sets">Named symbol sets<a class="headerlink" href="#named-symbol-sets" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Characters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>circled</code></td>
+<td>⊕ ⊗ ⊝</td>
+</tr>
+<tr>
+<td><code>squared</code></td>
+<td>⊞ ⊟ ⊠</td>
+</tr>
+<tr>
+<td><code>logic</code></td>
+<td>∧ ∨ ⊻ ⊼ ⊽ ¬ ∀ ∃ ∄</td>
+</tr>
+<tr>
+<td><code>sets</code></td>
+<td>∩ ∪ ⊂ ⊃ ∈ ∋ ∉ ⊎ ⊓ ⊔</td>
+</tr>
+<tr>
+<td><code>calculus</code></td>
+<td>∑ ∏ ∐ ∫ ∮ √ ∛ ∜ ∞ ∂ ∇ ∆</td>
+</tr>
+<tr>
+<td><code>arrows</code></td>
+<td>← → ↑ ↓ ↔ ↕ ↖ ↗ ↘ ↙ ⇐ ⇒ ⇑ ⇓ ⇔ ↦ ↩ ↪ ↺ ↻ ⇄ ⇆</td>
+</tr>
+<tr>
+<td><code>shapes</code></td>
+<td>■ □ ▲ △ ▼ ▽ ◆ ◇ ● ○ ★ ☆</td>
+</tr>
+<tr>
+<td><code>suits</code></td>
+<td>♠ ♣ ♥ ♦ ♤ ♧ ♡ ♢</td>
+</tr>
+<tr>
+<td><code>greek</code></td>
+<td>Γ Δ Θ Λ Ξ Π Σ Φ Ψ Ω</td>
+</tr>
+<tr>
+<td><code>math</code></td>
+<td>⊕ ⊗ ⊝ ⊞ ⊟ ⊠ ∧ ∨ ⊻ ⊼ ⊽ ¬ ∀ ∃ ∄ ∩ ∪ ⊂ ⊃ ∈ ∋ ∉ ⊎ ⊓ ⊔ ∑ ∏ ∐ ∫ ∮ √ ∛ ∜ ∞ ∂ ∇ ∆</td>
+</tr>
+</tbody>
+</table>
+<h2 id="recursion"><code>recursion</code><a class="headerlink" href="#recursion" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>style</code></td>
+<td><code>str</code></td>
+<td><code>'bounded_mod'</code></td>
+<td>Selects the <code>bounded_mod</code>, <code>direct</code>, <code>peano</code>, <code>bits</code>, or <code>primitive</code> recursion template when <code>recursion.styles</code> is <code>null</code>.</td>
+</tr>
+<tr>
+<td><code>enabled</code></td>
+<td><code>bool</code></td>
+<td><code>True</code></td>
+<td>Permits recursive definitions and generated layers above zero.</td>
+</tr>
+<tr>
+<td><code>styles</code></td>
+<td><code>tuple[str, ...] \| None</code></td>
+<td><code>None</code></td>
+<td>Samples recursive definitions from these templates; <code>null</code> uses <code>recursion.style</code>.</td>
+</tr>
+<tr>
+<td><code>max_recursive_calls</code></td>
+<td><code>int</code></td>
+<td><code>2</code></td>
+<td>Sets the maximum number of recursive result slots in a binary callee to one or two.</td>
+</tr>
+<tr>
+<td><code>modulus_min</code></td>
+<td><code>int</code></td>
+<td><code>3</code></td>
+<td>Smallest modulus m of <code>bounded_mod</code> (unfolds at most m - 1 times).</td>
+</tr>
+<tr>
+<td><code>modulus_max</code></td>
+<td><code>int</code></td>
+<td><code>9</code></td>
+<td>Largest modulus m of <code>bounded_mod</code>.</td>
+</tr>
+<tr>
+<td><code>direct_bound</code></td>
+<td><code>int</code></td>
+<td><code>8</code></td>
+<td>Largest absolute control value allowed by <code>direct</code>, <code>peano</code>, <code>bits</code>, and <code>primitive</code> recursive definitions.</td>
+</tr>
+<tr>
+<td><code>search_enabled</code></td>
+<td><code>bool</code></td>
+<td><code>False</code></td>
+<td>Allows simple definitions to search for the first index equal to a sampled expression.</td>
+</tr>
+<tr>
+<td><code>search_bound</code></td>
+<td><code>int</code></td>
+<td><code>8</code></td>
+<td>Largest index examined by generated bounded searches, from zero through at most 32.</td>
+</tr>
+<tr>
+<td><code>constant_min</code></td>
+<td><code>int</code></td>
+<td><code>-100</code></td>
+<td>Smallest constant in the base case.</td>
+</tr>
+<tr>
+<td><code>constant_max</code></td>
+<td><code>int</code></td>
+<td><code>100</code></td>
+<td>Largest constant in the base case.</td>
+</tr>
+<tr>
+<td><code>step_down</code></td>
+<td><code>str</code></td>
+<td><code>'⁻'</code></td>
+<td>Symbol of the postfix predecessor atom used for decreasing <code>peano</code> recursion.</td>
+</tr>
+<tr>
+<td><code>step_up</code></td>
+<td><code>str</code></td>
+<td><code>'⁺'</code></td>
+<td>Symbol of the postfix successor atom used for increasing <code>peano</code> recursion.</td>
+</tr>
+<tr>
+<td><code>nonnegative</code></td>
+<td><code>bool</code></td>
+<td><code>False</code></td>
+<td>Omits the negative input branch from generated <code>bounded_mod</code>, <code>direct</code>, <code>peano</code>, and <code>bits</code> recursive definitions.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="expressions"><code>expressions</code><a class="headerlink" href="#expressions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>variables</code></td>
+<td><code>tuple[str, ...]</code></td>
+<td><code>['a', 'b']</code></td>
+<td>Variable names used in sampled expressions with variables.</td>
+</tr>
+<tr>
+<td><code>value_min</code></td>
+<td><code>int</code></td>
+<td><code>0</code></td>
+<td>Smallest sampled number.</td>
+</tr>
+<tr>
+<td><code>value_max</code></td>
+<td><code>int</code></td>
+<td><code>100</code></td>
+<td>Largest sampled number.</td>
+</tr>
+<tr>
+<td><code>max_depth</code></td>
+<td><code>int</code></td>
+<td><code>3</code></td>
+<td>Largest expression depth.</td>
+</tr>
+<tr>
+<td><code>type_weights</code></td>
+<td><code>dict[str, float]</code></td>
+<td><code>{'binary': 0.7, 'unary_prefix': 0.2, 'unary_postfix': 0.1, 'atom': 0.1}</code></td>
+<td>Relative weights of binary, prefix, postfix applications and atoms; an optional <code>call</code> weight for operators with three or more arguments (default: the <code>binary</code> weight).</td>
+</tr>
+<tr>
+<td><code>atom_weights</code></td>
+<td><code>dict[str, float]</code></td>
+<td><code>{'variable': 0.8, 'number': 0.2}</code></td>
+<td>Relative weights of variables and numbers among atoms.</td>
+</tr>
+<tr>
+<td><code>numeral_base</code></td>
+<td><code>int</code></td>
+<td><code>10</code></td>
+<td>Base of numerals in expressions.</td>
+</tr>
+<tr>
+<td><code>random_numeral_base</code></td>
+<td><code>bool</code></td>
+<td><code>False</code></td>
+<td>Draw a random base (2..max_base) for every numeral.</td>
+</tr>
+<tr>
+<td><code>result_base</code></td>
+<td><code>int</code></td>
+<td><code>10</code></td>
+<td>Base in which results are written.</td>
+</tr>
+<tr>
+<td><code>random_result_base</code></td>
+<td><code>bool</code></td>
+<td><code>False</code></td>
+<td>Draw a random base for every result.</td>
+</tr>
+<tr>
+<td><code>cot_base</code></td>
+<td><code>int</code></td>
+<td><code>10</code></td>
+<td>Base of numbers in evaluation steps.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="solver"><code>solver</code><a class="headerlink" href="#solver" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fallback_range</code></td>
+<td><code>tuple[int, int] \| None</code></td>
+<td><code>None</code></td>
+<td>Inclusive integer input range checked by the reference interpreter when a solver analysis cannot encode an operator.</td>
+</tr>
+<tr>
+<td><code>rlimit</code></td>
+<td><code>int</code></td>
+<td><code>5000000</code></td>
+<td>Deterministic z3 resource limit per solver question; a question it cannot decide within the limit is reported as unknown, the same way on every machine.</td>
+</tr>
+<tr>
+<td><code>max_nodes</code></td>
+<td><code>int</code></td>
+<td><code>300</code></td>
+<td>Largest formula, in encoding nodes, that the z3 encoder builds before giving up on a question.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="interest"><code>interest</code><a class="headerlink" href="#interest" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dedup</code></td>
+<td><code>bool</code></td>
+<td><code>False</code></td>
+<td>Reject a candidate whose value table on the probe grid equals an existing operator's, also after permuting arguments or negating arguments or the result.</td>
+</tr>
+<tr>
+<td><code>selection</code></td>
+<td><code>str</code></td>
+<td><code>'off'</code></td>
+<td><code>off</code>, <code>best</code> or <code>sample</code>: draw <code>pool</code> accepted candidates per operator and keep the highest scoring one, or one drawn with weight exp(score / temperature).</td>
+</tr>
+<tr>
+<td><code>pool</code></td>
+<td><code>int</code></td>
+<td><code>4</code></td>
+<td>Accepted candidates drawn per operator when <code>selection</code> is on.</td>
+</tr>
+<tr>
+<td><code>temperature</code></td>
+<td><code>float</code></td>
+<td><code>0.1</code></td>
+<td>Temperature of <code>selection: sample</code>.</td>
+</tr>
+<tr>
+<td><code>weights</code></td>
+<td><code>dict[str, float]</code></td>
+<td><code>{'novelty': 1.0, 'regularity': 1.0, 'reuse': 1.0, 'non_degeneracy': 1.0, 'compression': 1.0}</code></td>
+<td>Weights of the score components <code>novelty</code>, <code>regularity</code>, <code>reuse</code>, <code>non_degeneracy</code> and <code>compression</code>; unnamed components keep weight 1.</td>
+</tr>
+<tr>
+<td><code>probe_ints</code></td>
+<td><code>tuple[int, ...]</code></td>
+<td><code>[0, 1, 2, 3, 5, 7, 10, 17, 31, 50, 64, 83, 100, -1, -2, -3, -5, -7, -10, -17, -31, -50, -64, -83, -100]</code></td>
+<td>Integer probe values, closed under negation; the probe grid is their product over the integer arguments.</td>
+</tr>
+<tr>
+<td><code>max_probe_points</code></td>
+<td><code>int</code></td>
+<td><code>729</code></td>
+<td>Largest probe grid; high arities use fewer, evenly spread values.</td>
+</tr>
+<tr>
+<td><code>regularity_range</code></td>
+<td><code>int</code></td>
+<td><code>12</code></td>
+<td>Monotonicity, periodicity and fixed points are read on [-R, R] (monotonicity also on the probe values).</td>
+</tr>
+<tr>
+<td><code>max_period</code></td>
+<td><code>int</code></td>
+<td><code>8</code></td>
+<td>Largest period looked for.</td>
+</tr>
+<tr>
+<td><code>solver_timeout_ms</code></td>
+<td><code>int</code></td>
+<td><code>1000</code></td>
+<td>z3 time limit per question when <code>opulse interest --solver</code> confirms regularities.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="expressiveness-switches">Expressiveness switches<a class="headerlink" href="#expressiveness-switches" title="Permanent link">&para;</a></h2>
+<p>These settings control numeric definitions written by <code>opulse operators</code>. A CLI flag with the same meaning overrides its YAML key for that run. The default values keep the existing generation behavior.</p>
+<table>
+<thead>
+<tr>
+<th>Form</th>
+<th>YAML key</th>
+<th>CLI flag</th>
+<th>Default</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simple definitions</td>
+<td><code>operators.allow_simple</code></td>
+<td><code>--no-simple</code></td>
+<td><code>true</code></td>
+<td>Permit definitions with one unconditional body.</td>
+</tr>
+<tr>
+<td>Substitution</td>
+<td><code>operators.max_substitution_depth</code></td>
+<td><code>--max-substitution-depth</code></td>
+<td><code>null</code></td>
+<td>Maximum depth of sampled simple or branch bodies. <code>null</code> uses <code>expressions.max_depth</code>.</td>
+</tr>
+<tr>
+<td>Branch definitions</td>
+<td><code>operators.allow_branches</code></td>
+<td><code>--no-branches</code></td>
+<td><code>true</code></td>
+<td>Permit conditional definitions.</td>
+</tr>
+<tr>
+<td>Branch count</td>
+<td><code>operators.max_if_branches</code></td>
+<td><code>--max-if-branches</code></td>
+<td><code>10</code></td>
+<td>Maximum bodies in one branch definition.</td>
+</tr>
+<tr>
+<td>Condition complexity</td>
+<td><code>operators.max_condition_comparisons</code></td>
+<td><code>--max-condition-comparisons</code></td>
+<td><code>null</code></td>
+<td>Maximum comparisons in each condition of a branch definition. <code>null</code> keeps the original region sampling.</td>
+</tr>
+<tr>
+<td>Condition thresholds</td>
+<td><code>operators.condition_min</code>, <code>operators.condition_max</code></td>
+<td>config only</td>
+<td><code>0</code>, <code>100</code></td>
+<td>Inclusive range of thresholds in branch conditions.</td>
+</tr>
+<tr>
+<td>Condition atoms</td>
+<td><code>operators.condition_atoms</code></td>
+<td><code>--condition-atoms</code></td>
+<td><code>[]</code></td>
+<td>Atom names allowed in branch conditions. An empty list uses raw parameters. Each named atom must be in the starting set. Binary atoms receive the parameter and the constant 2.</td>
+</tr>
+<tr>
+<td>Arity</td>
+<td><code>operators.max_arity</code></td>
+<td><code>--max-arity</code></td>
+<td><code>null</code></td>
+<td>Largest arity of a generated operator. <code>null</code> keeps every arity that <code>operators.arity_weights</code> gives a positive weight.</td>
+</tr>
+<tr>
+<td>Recursion</td>
+<td><code>recursion.enabled</code></td>
+<td><code>--no-recursion</code></td>
+<td><code>true</code></td>
+<td>Permit recursive definitions and layers above zero.</td>
+</tr>
+<tr>
+<td>Recursion template</td>
+<td><code>recursion.style</code></td>
+<td><code>--recursion-style</code></td>
+<td><code>bounded_mod</code></td>
+<td>Template used when <code>recursion.styles</code> is <code>null</code>.</td>
+</tr>
+<tr>
+<td>Recursion templates</td>
+<td><code>recursion.styles</code></td>
+<td><code>--recursion-styles</code></td>
+<td><code>null</code></td>
+<td>List of templates sampled for recursive definitions: <code>bounded_mod</code>, <code>direct</code>, <code>peano</code>, <code>bits</code>, <code>primitive</code>.</td>
+</tr>
+<tr>
+<td>Recursion calls</td>
+<td><code>recursion.max_recursive_calls</code></td>
+<td><code>--max-recursive-calls</code></td>
+<td><code>2</code></td>
+<td>Maximum recursive result slots in a binary callee of a generated recursive definition.</td>
+</tr>
+<tr>
+<td>Remainder bound</td>
+<td><code>recursion.modulus_min</code>, <code>recursion.modulus_max</code></td>
+<td><code>--recursion-modulus-min</code>, <code>--recursion-modulus-max</code></td>
+<td><code>3</code>, <code>9</code></td>
+<td>Inclusive modulus range for <code>bounded_mod</code>; unfolding is at most modulus minus 1.</td>
+</tr>
+<tr>
+<td>Direct bound</td>
+<td><code>recursion.direct_bound</code></td>
+<td><code>--recursion-direct-bound</code></td>
+<td><code>8</code></td>
+<td>Maximum unfolding depth for <code>direct</code>, <code>peano</code>, <code>bits</code>, and <code>primitive</code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">operators</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">allow_branches</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">max_substitution_depth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">recursion</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+<p>This example generates simple definitions with bodies sampled at depth one and keeps all generated operators on layer zero.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../cli/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Command line">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Command line
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../semantics/" class="md-footer__link md-footer__link--next" aria-label="Next: Semantics">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Semantics
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 The Opulse Authors · Code: <a href="https://github.com/mkj69/opulse/blob/main/LICENSE">Apache 2.0</a> · Docs and data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/mkj69/opulse" target="_blank" rel="noopener" title="Opulse on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../assets/js/kinds-legend.js"></script>
+      
+        <script src="../../assets/js/layout.js"></script>
+      
+        <script src="../../assets/js/atoms-legend.js"></script>
+      
+        <script src="../../assets/js/opulse-anim.js"></script>
+      
+        <script src="../../assets/js/opulse-vis.js"></script>
+      
+        <script src="../../assets/js/stepview.js"></script>
+      
+        <script src="../../assets/js/playground.js"></script>
+      
+        <script src="../../assets/js/worlds/core.js"></script>
+      
+        <script src="../../assets/js/granularity.js"></script>
+      
+        <script src="../../assets/js/granularity-anim.js"></script>
+      
+        <script src="../../assets/js/home-examples.js"></script>
+      
+        <script src="../../assets/js/lineage.js"></script>
+      
+        <script src="../../assets/js/expviz.js"></script>
+      
+        <script src="../../assets/js/blogfig.js"></script>
+      
+        <script src="../../assets/js/stitch.js"></script>
+      
+        <script src="../../assets/js/opulse-video.js"></script>
+      
+        <script src="../../assets/js/challenge-answer.js"></script>
+      
+        <script src="../../assets/js/challenge-modes.js"></script>
+      
+        <script src="../../assets/js/challenge.js"></script>
+      
+        <script src="../../assets/js/learn.js"></script>
+      
+    
+  </body>
+</html>

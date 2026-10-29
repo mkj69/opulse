@@ -1,0 +1,3933 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+  
+  
+  
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="An essay on Opulse as a controlled laboratory for regularities about training data.">
+  <link rel="canonical" href="https://mkj69.github.io/opulse/blog/">
+  <link rel="prev" href="../glossary/">
+  <link rel="next" href="../stitching/">
+  
+  <link rel="icon" href="../assets/images/logo.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Opulse">
+  
+  <meta property="og:title" content="A Laboratory for Data Laws | Opulse">
+  <meta property="og:description" content="An essay on Opulse as a controlled laboratory for regularities about training data.">
+  <meta property="og:url" content="https://mkj69.github.io/opulse/blog/">
+  <meta property="og:image" content="https://mkj69.github.io/opulse/assets/images/social/opulse-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="A Laboratory for Data Laws | Opulse">
+  <meta name="twitter:description" content="An essay on Opulse as a controlled laboratory for regularities about training data.">
+  <meta name="twitter:image" content="https://mkj69.github.io/opulse/assets/images/social/opulse-preview.png">
+
+    
+      
+        <title>A Laboratory for Data Laws - Opulse</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../assets/css/atoms-legend.css">
+    
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
+      <link rel="stylesheet" href="../assets/css/kinds-legend.css">
+    
+      <link rel="stylesheet" href="../assets/css/opulse-vis.css">
+    
+      <link rel="stylesheet" href="../assets/css/stepview.css">
+    
+      <link rel="stylesheet" href="../assets/css/playground.css">
+    
+      <link rel="stylesheet" href="../assets/css/worlds.css">
+    
+      <link rel="stylesheet" href="../assets/css/worlds-tasks.css">
+    
+      <link rel="stylesheet" href="../assets/css/granularity.css">
+    
+      <link rel="stylesheet" href="../assets/css/granularity-anim.css">
+    
+      <link rel="stylesheet" href="../assets/css/home-examples.css">
+    
+      <link rel="stylesheet" href="../assets/css/lineage.css">
+    
+      <link rel="stylesheet" href="../assets/css/expviz.css">
+    
+      <link rel="stylesheet" href="../assets/css/blogfig.css">
+    
+      <link rel="stylesheet" href="../assets/css/stitch.css">
+    
+      <link rel="stylesheet" href="../assets/css/opulse-video.css">
+    
+      <link rel="stylesheet" href="../assets/css/scales.css">
+    
+      <link rel="stylesheet" href="../assets/css/opgraph.css">
+    
+      <link rel="stylesheet" href="../assets/css/challenge.css">
+    
+      <link rel="stylesheet" href="../assets/css/learn.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a-laboratory-for-data-laws" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Opulse" class="md-header__button md-logo" aria-label="Opulse" data-md-component="logo">
+      
+  <img src="../assets/images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Opulse
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              A Laboratory for Data Laws
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mkj69/opulse" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mkj69/opulse
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../why/" class="md-tabs__link">
+          
+  
+  
+  Why
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../learn/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learn
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../guide/visual-tour/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tour
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../challenge/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Challenge
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../worlds/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Worlds
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../guide/playground/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Playground
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../glossary/" class="md-tabs__link">
+          
+  
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../contribute/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Join us
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Opulse" class="md-nav__button md-logo" aria-label="Opulse" data-md-component="logo">
+      
+  <img src="../assets/images/logo.svg" alt="logo">
+
+    </a>
+    Opulse
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mkj69/opulse" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mkj69/opulse
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Why
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../why/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why Opulse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lineage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lineage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/visual-tour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tour
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../challenge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Challenge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../worlds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Worlds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/playground/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playground
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Laboratory for Data Laws
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A Laboratory for Data Laws
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-data-questions-resist-natural-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why data questions resist natural data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-idea-of-a-laboratory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The idea of a laboratory
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-laboratory-is-built" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the laboratory is built
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How the laboratory is built">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atoms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atoms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-ways-to-combine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Three ways to combine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layers-and-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layers and checks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-referee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The referee
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seeing-inside-a-derivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seeing inside a derivation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-can-be-measured" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What can be measured
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What can be measured">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-should-a-rule-live-in-the-weights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When should a rule live in the weights?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#should-common-concepts-subsidise-rare-ones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Should common concepts subsidise rare ones?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-many-derivation-tokens-is-a-training-example-worth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How many derivation tokens is a training example worth?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#does-an-edit-reach-what-was-built-on-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Does an edit reach what was built on it?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-interpretability-methods-be-tested-against-exact-reference-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Can interpretability methods be tested against exact reference values?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-this-comes-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where this comes from
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acknowledgements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stitching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stitching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experiments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experiment ideas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quickstart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/notebooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notebooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/atoms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atoms and presets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/presets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preset worlds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Typed values
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/definitions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Definitions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/views/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Views of a definition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/skeletons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skeletons
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/generation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Generation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/expressions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expressions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/step-by-step/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derivations at any granularity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/benchmark/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmark
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/discovery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Discovery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3_12" id="__nav_10_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Training integrations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Training integrations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Evaluation frameworks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/export/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hugging Face dataset export
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/corpora/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pretraining corpora and probes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/pretraining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pretraining
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/environments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Environments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_3_14" id="__nav_10_3_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exact checks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Exact checks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/solving/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solving for unknowns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/properties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laws and equivalence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/smt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SMT-LIB export
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/interpretability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interpretability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/compiled-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiled models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/handwired/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Handwired language model studies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/notation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/naming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operator names
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/visualization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports and tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/python-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_4" id="__nav_10_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/semantics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Semantics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_5" id="__nav_10_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/correctness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Correctness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Join us
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-data-questions-resist-natural-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why data questions resist natural data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-idea-of-a-laboratory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The idea of a laboratory
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-laboratory-is-built" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the laboratory is built
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How the laboratory is built">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atoms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atoms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-ways-to-combine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Three ways to combine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layers-and-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layers and checks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-referee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The referee
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seeing-inside-a-derivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seeing inside a derivation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-can-be-measured" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What can be measured
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What can be measured">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-should-a-rule-live-in-the-weights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When should a rule live in the weights?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#should-common-concepts-subsidise-rare-ones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Should common concepts subsidise rare ones?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-many-derivation-tokens-is-a-training-example-worth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How many derivation tokens is a training example worth?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#does-an-edit-reach-what-was-built-on-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Does an edit reach what was built on it?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-interpretability-methods-be-tested-against-exact-reference-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Can interpretability methods be tested against exact reference values?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-this-comes-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where this comes from
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acknowledgements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citation
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+    
+                  
+
+
+  
+  
+
+
+<h1 id="a-laboratory-for-data-laws">A Laboratory for Data Laws<a class="headerlink" href="#a-laboratory-for-data-laws" title="Permanent link">&para;</a></h1>
+<p><em>Ma Kaijing · October 24, 2026</em></p>
+<p>Here are two definitions that did not exist before the command that printed them.</p>
+<div class="language-text highlight"><pre><span></span><code>◆₁ a = { ((a + a) $) * (# (&amp; 5)) }
+
+a ◆₂ b = { b,                        if a % 9 == 0;
+           ◆₁ (((a % 9) - 1) ◆₂ b),  if a % 9 &gt; 0;
+           ◆₁ (((a % 9) + 1) ◆₂ b),  if a % 9 &lt; 0 }
+</code></pre></div>
+<p>The atoms are ordinary. <code>$</code> counts the 1 bits of a number, <code>#</code> gives the triangular number, <code>&amp;</code>
+sums decimal digits and <code>%</code> takes the remainder. Since <code># (&amp; 5)</code> is <code># 5</code>, which is 15, <code>◆₁</code> counts
+the 1 bits of <code>2a</code> and multiplies by 15. The second definition calls itself. For positive <code>a</code> it
+says: apply <code>◆₁</code> to <code>b</code> exactly <code>a % 9</code> times. The generator paired the definitions with this
+question:</p>
+<div class="language-text highlight"><pre><span></span><code>What is the value of 43 * (&amp; (31 ◆₂ 50))?
+</code></pre></div>
+<p>Since 31 % 9 is 4, the answer applies <code>◆₁</code> four times to 50. Fifty has three 1 bits, so the first
+application gives 45. Forty five has four, so the second gives 60. Sixty also has four, so the third
+and fourth applications return 60 again. The digit sum of 60 is 6, and 43 · 6 is 258. The reference
+derivation takes 39 lines, one rewrite per line, and the interpreter checks every line before
+writing it.</p>
+<p>Now apply <code>◆₁</code> three times instead of four. The answer is still 258.</p>
+<table>
+<thead>
+<tr>
+<th>times <code>◆₁</code> is applied</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th><strong>4</strong></th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value of the inner part</td>
+<td>50</td>
+<td>45</td>
+<td>60</td>
+<td>60</td>
+<td><strong>60</strong></td>
+<td>60</td>
+</tr>
+<tr>
+<td>final answer</td>
+<td>215</td>
+<td>387</td>
+<td>258</td>
+<td>258</td>
+<td><strong>258</strong></td>
+<td>258</td>
+</tr>
+</tbody>
+</table>
+<p>Sixty is a fixed point of <code>◆₁</code>, so every count from two upward lands on the right number. A solver
+that miscounts the recursion by one or two earns the same final answer as one that counts
+correctly, and no check of the answer can tell them apart. The derivation can. If the solver writes
+31 % 9 as 3, Opulse's step checker stops at that line and reports that it "changes the value of a
+part from 4 to 3". If it skips from <code>31 ◆₂ 50</code> straight to three nested <code>◆₁</code>, the checker rejects
+that line as a wrong unfolding of <code>◆₂</code>.</p>
+<details class="note">
+<summary>Reproduce the opening example</summary>
+<p><div class="language-bash highlight"><pre><span></span><code>opulse<span class="w"> </span>operators<span class="w"> </span>--out<span class="w"> </span>ops12.jsonl<span class="w"> </span>--layers<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">6</span><span class="w"> </span>--seed<span class="w"> </span><span class="m">12</span><span class="w"> </span>--check-variety
+opulse<span class="w"> </span>bench<span class="w"> </span>build<span class="w"> </span>--operators<span class="w"> </span>ops12.jsonl<span class="w"> </span>--out<span class="w"> </span>st12.jsonl<span class="w"> </span>--format<span class="w"> </span>steps<span class="w"> </span><span class="se">\</span>
+<span class="w">                   </span>--count<span class="w"> </span><span class="m">40</span><span class="w"> </span>--min-definitions<span class="w"> </span><span class="m">2</span><span class="w"> </span>--max-definitions<span class="w"> </span><span class="m">2</span><span class="w"> </span>--seed<span class="w"> </span><span class="m">1</span>
+<span class="c1"># task compute-000025; in the file, ◆₁ is ∏∆¬ and ◆₂ is ∨∀◆</span>
+python<span class="w"> </span>tools/blog_visuals.py<span class="w">   </span><span class="c1"># rebuilds Figure 3, the step checker on the opening question</span>
+python<span class="w"> </span>tools/blog_figures.py<span class="w">   </span><span class="c1"># redraws Figures 1, 2, 4, 5 and 6</span>
+</code></pre></div>
+The other numbers in this post come from the linked pages, which show their commands and output.</p>
+</details>
+<p>Generating definitions fresh closes one shortcut and leaves others open. A seeded generator produced
+<code>◆₂</code> for this post from atoms chosen in advance and gave it a name of arbitrary glyphs (the file spells it <code>∨∀◆</code>; this
+post relabels generated operators as a shape and a digit). A model trained before this library
+existed has never seen this item. It may have met an equivalent function under another name, or
+similar computations, and the table shows that a sloppy procedure can still score.</p>
+<p>The opening example shows why a final answer alone is a weak measure. Whether a model applies such
+definitions correctly depends on its training data: how often it saw
+recursion of this shape, whether it practised applying rules it had just read, how long its
+training derivations were. Opulse is built to vary those properties one at a time. It
+generates new computable concepts from atoms the user chooses and computes the exact value of every
+expression and every step. The regularities it looks for are <em>data laws</em>: statements of the form
+"under these conditions, changing this property of the training data changes learning in this
+way". A data law found in Opulse describes learning on Opulse data. It can guide the training of
+real models only once it predicts results on tasks outside Opulse, and that requirement shapes
+everything below.</p>
+<p>The argument runs in order. Questions about training data have no clean answer on natural data,
+because the factors of interest move together, intermediate steps have no ground truth and
+benchmarks leak. Answering them needs a laboratory that changes one factor at a time and knows the
+exact value of every answer and every step. Opulse builds one from atoms, three ways of combining
+them and a reference interpreter that acts as referee (Figure 1). Exact steps make derivations
+gradable line by line and writable at any granularity, and those two properties support a set of
+proposed experiments on training data. The post then traces the older ideas behind the design and
+ends with its limits and the questions to answer first.</p>
+<figure class="op-blogfig">
+<p><img alt="Overview of Opulse" class="op-fig-d" src="../assets/blog/fig1.svg#only-light" />
+<img alt="Overview of Opulse" class="op-fig-d" src="../assets/blog/fig1-dark.svg#only-dark" />
+<img alt="Overview of Opulse" class="op-fig-m" src="../assets/blog/fig1-m.svg#only-light" />
+<img alt="Overview of Opulse" class="op-fig-m" src="../assets/blog/fig1-m-dark.svg#only-dark" /></p>
+<figcaption><b>Figure 1.</b> Opulse in one picture. Concepts grow from user chosen atoms in three ways, and one reference interpreter checks every value and step, so everything Opulse produces can be audited against one written semantics.</figcaption>
+</figure>
+<h2 id="why-data-questions-resist-natural-data">Why data questions resist natural data<a class="headerlink" href="#why-data-questions-resist-natural-data" title="Permanent link">&para;</a></h2>
+<p>Pretraining teams face questions like this one: if a rule is rare in the corpus, how much does a
+model lose on problems that need it, and does a skewed frequency distribution help or hurt the rare
+cases? Frequency does matter. <a href="https://arxiv.org/abs/2211.08411">Kandpal et al.</a> <a href="#ref-1">1</a> related question
+answering accuracy to the number of pretraining documents relevant to each question and found
+correlational and causal evidence for the link. On the web, though, the number of relevant
+documents varies together with topic, source and surrounding text, and a frequency comparison on
+web data cannot hold those fixed by itself.</p>
+<p>That is the first of three recurring problems, <strong>confounding</strong>: on natural data, the factors one
+wants to study move together. Longer derivations come from harder topics, rarer concepts from
+sparser explanations, deeper compositions from more specialised documents.</p>
+<p>The second is <strong>missing ground truth for intermediate steps</strong>. Final answers are often checkable;
+the steps in between rarely are. <a href="https://arxiv.org/abs/2412.06559">ProcessBench</a> <a href="#ref-2">2</a> contains 3,400
+solutions whose earliest wrong step was marked by human experts. Such labels cover the solutions
+that were labelled, not every step of every new problem. Labels on written solutions, however
+careful, also do not say which intermediate values a trained model represents or uses.</p>
+<p>The third is <strong>leakage</strong>. A public benchmark can enter training corpora, and from then on prior
+exposure is hard to rule out. <a href="https://arxiv.org/abs/2405.00332">Zhang et al.</a> <a href="#ref-3">3</a> wrote GSM1k, a fresh
+set of problems matched to GSM8K <a href="#ref-4">4</a>, and observed accuracy drops of up to 8% for some models while
+finding little sign of overfitting in many frontier models. Measuring the gap took a new benchmark
+written by hand.</p>
+<p>The <a href="https://physics.allen-zhu.com/">Physics of Language Models</a> <a href="#ref-5">5</a> project argued for another route.
+In Part 2.1, <a href="https://arxiv.org/abs/2407.20311">Ye, Xu, Li and Allen-Zhu</a> <a href="#ref-6">6</a> explain why they did not
+fine tune an existing model on GSM8K: its pretraining data "is a pile of mess", and without control
+of that data one cannot tell "whether a model truly learns the reasoning skills or it simply
+memorizes problem templates". So they generated grade school problems from random dependency
+graphs and trained small models from scratch. Generated data can avoid all three problems, provided
+the generator controls each factor, knows the answer to everything it writes, and can make test
+rules that no training set contains.</p>
+<h2 id="the-idea-of-a-laboratory">The idea of a laboratory<a class="headerlink" href="#the-idea-of-a-laboratory" title="Permanent link">&para;</a></h2>
+<p>A laboratory, in this sense, does three jobs. It computes the correct answer to every question
+under a written semantics, so every answer can be audited. It records the properties of every task,
+so an experimenter who changes one property of the data can check what else changed in the sample.
+And it makes fresh test rules and checks them for overlap with the rules used in training.
+Model measurements still vary with seeds, sampled tasks and prompts, and need repetitions and error
+bars.</p>
+<p>Controlled synthetic data has already yielded regularities of this kind. In the biography experiments
+of <a href="https://arxiv.org/abs/2309.14316">Part 3.1</a> <a href="#ref-7">7</a>, Allen-Zhu and Li changed how many ways each invented
+person's facts were written, and found that for knowledge to be reliably extracted by questions, it
+"must be sufficiently augmented (e.g., through paraphrasing, sentence shuffling, translations)
+during pretraining". In <a href="https://arxiv.org/abs/2408.16293">Part 2.2</a> <a href="#ref-8">8</a>, pretraining data containing
+mistakes followed by corrections gave higher reasoning accuracy than the same amount of error free
+data. Each result is a regularity about training data, established in its own setting, that
+suggests a choice for real corpora and can be tested there.</p>
+<p>These synthetic settings keep their schema or their operations fixed. The biographies share one schema of attributes. The
+grade school problems use arithmetic mod 23 over random dependency graphs, so the graph changes and
+the operations do not. Grokking experiments such as <a href="https://arxiv.org/abs/2201.02177">Power et al.</a> <a href="#ref-9">9</a>
+train on the table of a single binary operation. For the questions those papers ask, that is the
+right design. But because the operations never change, such datasets cannot isolate what
+introducing or changing an operation does: how a model learns a new one, how it composes ones
+learned separately, how it updates what was built on a definition that changed.</p>
+<p>Opulse generates the operations. Each seed grows a new library of concepts from the chosen atoms,
+with a recorded dependency graph, and each structural factor of the data has its own option:</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>What it sets</th>
+<th>Option</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>atoms</td>
+<td>the primitive operations</td>
+<td>starting set, <code>--plugin</code></td>
+</tr>
+<tr>
+<td>composition</td>
+<td>plain, branching and recursive definitions</td>
+<td><code>--proportions</code>, <code>recursion.*</code></td>
+</tr>
+<tr>
+<td>depth</td>
+<td>definitions a problem needs, depth of dependency</td>
+<td><code>--min-definitions</code>, <code>--max-definitions</code>, <code>--max-layer</code>, <code>--max-depth</code></td>
+</tr>
+<tr>
+<td>frequency</td>
+<td>how often each concept appears</td>
+<td><code>--operator-frequency uniform</code> or <code>zipf:ALPHA</code></td>
+</tr>
+<tr>
+<td>notation</td>
+<td>symbols, invented words or English names; numeral base</td>
+<td><code>--naming</code>, <code>expressions.numeral_base</code></td>
+</tr>
+<tr>
+<td>granularity</td>
+<td>how much of a derivation is written out</td>
+<td><code>--cot</code>, <code>--cot-depth</code>, <code>--cot-known-layers</code></td>
+</tr>
+</tbody>
+</table>
+<p>An option can still move things it does not name, so every task records what it actually
+contains. In two <a href="../why/#one-option">runnable checks</a>, writing 50 tasks with
+English words in place of symbols kept all 50 answers and 13 of the 14 recorded task features; the
+fourteenth is the naming itself. The prompts, and so their token counts, did change. Sampling 2,000
+expressions with <code>zipf:1.5</code> instead of uniform frequencies raised the Gini coefficient of operator
+usage from 0.112 to 0.658, while the minimum, median, 90th percentile and maximum of expression size
+and depth stayed the same. Which operators were drawn, and so which answers came up, did change.
+Figure 2 summarises the design: one option changes, the other options stay fixed, and the
+recorded features show what else moved.</p>
+<figure class="op-blogfig">
+<p><img alt="The laboratory design" class="op-fig-d" src="../assets/blog/fig2.svg#only-light" />
+<img alt="The laboratory design" class="op-fig-d" src="../assets/blog/fig2-dark.svg#only-dark" />
+<img alt="The laboratory design" class="op-fig-m" src="../assets/blog/fig2-m.svg#only-light" />
+<img alt="The laboratory design" class="op-fig-m" src="../assets/blog/fig2-m-dark.svg#only-dark" /></p>
+<figcaption><b>Figure 2.</b> The laboratory. One option changes while the other options, the semantics and the evaluation stay fixed. Because every task records its features, a sample can be checked for side effects of the change.</figcaption>
+</figure>
+<p>What remains is to build a generator whose every value is exact.</p>
+<h2 id="how-the-laboratory-is-built">How the laboratory is built<a class="headerlink" href="#how-the-laboratory-is-built" title="Permanent link">&para;</a></h2>
+<p>Three parts make every value exact: the atoms, three ways of combining them, and a referee that
+recomputes everything the generator writes (Figure 1).</p>
+<h3 id="atoms">Atoms<a class="headerlink" href="#atoms" title="Permanent link">&para;</a></h3>
+<p>Everything starts from atoms, operations computed directly and never unfolded. The shipped integer
+set has <code>+ - * / %</code>, negation, digit reversal <code>@</code>, triangular number <code>#</code>, bit count <code>$</code> and digit
+sum <code>&amp;</code>. A second shipped set is deliberately spare: negation, successor, predecessor, doubling,
+halving and lowest bit. It has no addition, so the generator must build arithmetic from these
+pieces, within the recursion bound. Any integer function can be registered as an atom with a symbol
+and a one sentence rule. Generation, evaluation and step checking then use it like a shipped atom,
+and the solver analyses use it once it has a z3 <a href="#ref-10">10</a> encoding (<a href="../guide/atoms/">Atoms</a>). The choice of
+atoms is the first experimental factor, because it decides what counts as primitive.</p>
+<h3 id="three-ways-to-combine">Three ways to combine<a class="headerlink" href="#three-ways-to-combine" title="Permanent link">&para;</a></h3>
+<p>Opulse builds definitions from atoms in three ways. <strong>Substitution</strong> passes the result of one
+operation to another, and arguments can be chosen, copied or dropped: <code>a ◆₃ b = { (a + b) * 2 }</code>.
+<strong>Conditional choice</strong> tries branches in order and evaluates only the first whose condition holds:
+<code>a ◇₁ = { a * 41, if a &lt; 21; # a, if a &lt; 83; 4 / a, else }</code>. <strong>Bounded self reference</strong> lets a
+definition call itself on a value that moves toward zero, as <code>◆₂</code> does.</p>
+<p>The three forms follow McCarthy's trio of composition, conditional expressions and recursive
+definition, with recursion confined to templates that always terminate; the section on
+<a href="#where-this-comes-from">sources</a> gives the history.</p>
+<p>Each form does a job in the generated definitions. Substitution builds nested applications.
+Conditional choice selects a case from the input, and it supplies the base case without which a
+self referential definition could not stop. Self reference lets the number of operator applications
+grow with the input. Conditional choice adds no expressive power on its own, since a function
+defined by cases with primitive recursive conditions is primitive recursive; the recursion
+templates need it all the same.</p>
+<p>What is left out matters as much. Unbounded search can run forever, so the generator never writes
+it. Every recursion follows one of a few templates in which the controlling value walks toward zero
+and its size is limited; with the defaults, a recursive operator unfolds at most eight times. With
+the shipped atoms, every value is therefore computable, every derivation is finite, and the
+generated concepts form a subset of the primitive recursive functions. A registered atom must
+itself terminate for those guarantees to carry over. By default operators take one or two arguments;
+<code>operators.arity_weights</code> adds operators with three or more, written in call form <code>⊕(a, b, c)</code>. Values
+are integers here, and typed presets add booleans, strings and lists of integers. No operator takes
+another operator as an argument (<a href="../why/#current-scope">Scope</a>).</p>
+<h3 id="layers-and-checks">Layers and checks<a class="headerlink" href="#layers-and-checks" title="Permanent link">&para;</a></h3>
+<p>The generator builds operators from these forms in layers. A recursive operator over a layer k operator starts layer k + 1, so
+the layer counts the recursions stacked beneath a concept. Each operator record lists the
+operators its definition calls. That graph says which definitions may call which; a particular
+input decides which branches are taken and which calls run.</p>
+<p>A draft definition survives only if it passes a list of checks. The generator rejects it if a
+parameter is unused, if it merely renames another operator, if two branches have the same body, if
+its compiled code disagrees with the interpreter on any tested input, or if the solver z3 proves a
+branch unreachable or always undefined. With <code>--check-variety</code>, it also rejects drafts that are
+nearly constant or mostly return an input. <code>◆₂</code> passed that check, yet with its first argument fixed
+at 31 it returns 60 for every second argument from 1 to 19. Generated concepts can be degenerate on
+part of their domain. That is why <code>bench build --max-answer-share</code> caps the share of tasks with the
+same answer, and why an experiment should measure answer diversity in its own sample. The
+<a href="../guide/visual-tour/#growing-an-operator-set">visual tour</a> animates a real operator set
+growing, with each rejected draft and the reason its check gave.</p>
+<h3 id="the-referee">The referee<a class="headerlink" href="#the-referee" title="Permanent link">&para;</a></h3>
+<p>The reference interpreter implements a <a href="../reference/semantics/">written semantics</a> directly:
+integers, NaN, truncating division and a value bound. Before Opulse writes a dataset record or a
+narrated solution step, the interpreter recomputes it. Compiled code, z3 encodings and SMT-LIB exports
+are compared with it on boundary and random inputs, and it checks again every counterexample a
+solver returns. <code>opulse bench build</code> also rebuilds the operators from the prompt text alone and
+recomputes each answer, so what the model reads and what it is graded against cannot drift apart. A
+test sweep runs these checks in 298 configurations covering notation, operator alphabet, numeric mode,
+recursion template, partial definitions and numeral base, and all pass
+(<a href="../about/correctness/">Correctness</a>).</p>
+<p>The checks exist because an earlier dataset, the one Opulse was rebuilt from, failed them. Run
+through the interpreter, 53 of its recursive operators computed something other than their written
+definitions, and through dependencies 449 of its 1,106 operators disagreed with their own
+definitions (<a href="../about/correctness/#legacy-data">Correctness</a>). A model trained or graded on that
+data would have been measured, in part, against answers its prompts did not support, and no accuracy number
+would have shown it.</p>
+<p>Because the referee knows the exact value after every rewrite, a derivation can be graded line by
+line, which is what the next section shows.</p>
+<h2 id="seeing-inside-a-derivation">Seeing inside a derivation<a class="headerlink" href="#seeing-inside-a-derivation" title="Permanent link">&para;</a></h2>
+<p>The final answer of the opening question concealed a miscounted recursion; the written
+derivation exposed it.</p>
+<p>The reducer rewrites an expression one step at a time, at the leftmost application whose arguments
+are already numbers. A defined operator becomes the body of the branch its arguments select, with the
+arguments substituted, and an atom with number arguments becomes its value. In the opening question, lines 1 to 13 unfold the
+recursion into four nested calls of <code>◆₁</code>, and the remaining lines evaluate them. The
+<a href="../guide/visual-tour/#unfold-to-atoms">visual tour</a> animates such a reduction one rewrite at a
+time.</p>
+<p>With <code>bench build --format steps</code>, a model writes one rewrite per line, and the checker names the
+first wrong line. In Figure 3, the second derivation writes 31 % 9 as 3 and then proceeds
+correctly from there. It ends at 258, the right answer, and the checker flags line 2. Rewrites that
+keep the value but skip work, such as replacing an application directly by its value, count as
+jumps: they are accepted and earn no step credit
+(<a href="../guide/benchmark/#grading-the-reasoning-not-only-the-answer">grading rules</a>). A derivation
+that passes shows that its lines follow the rules. It does not show that the model computed its
+answer that way.</p>
+<figure class="op-blogfig">
+<div class="opv" data-kind="steps">
+<script type="application/json">{"question":"43 * (& (31 ◆₂ 50))","answer":258,"runs":[{"label":"reference derivation","rows":[{"line":"43 * (& (◆₁ (((31 % 9) - 1) ◆₂ 50)))","status":"single"},{"line":"43 * (& (◆₁ ((4 - 1) ◆₂ 50)))","status":"single"},{"line":"43 * (& (◆₁ (3 ◆₂ 50)))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (((3 % 9) - 1) ◆₂ 50))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ ((3 - 1) ◆₂ 50))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (2 ◆₂ 50))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (◆₁ (((2 % 9) - 1) ◆₂ 50)))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (◆₁ ((2 - 1) ◆₂ 50)))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (◆₁ (1 ◆₂ 50)))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (◆₁ (◆₁ (((1 % 9) - 1) ◆₂ 50))))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (◆₁ (◆₁ ((1 - 1) ◆₂ 50))))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (◆₁ (◆₁ (0 ◆₂ 50))))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (◆₁ (◆₁ 50)))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (◆₁ (((50 + 50) $) * (# (& 5)))))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (◆₁ ((100 $) * (# (& 5)))))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (◆₁ (3 * (# (& 5)))))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (◆₁ (3 * (# 5))))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (◆₁ (3 * 15)))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (◆₁ 45))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (((45 + 45) $) * (# (& 5))))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ ((90 $) * (# (& 5))))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (4 * (# (& 5))))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (4 * (# 5)))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ (4 * 15))))","status":"single"},{"line":"43 * (& (◆₁ (◆₁ 60)))","status":"single"},{"line":"43 * (& (◆₁ (((60 + 60) $) * (# (& 5)))))","status":"single"},{"line":"43 * (& (◆₁ ((120 $) * (# (& 5)))))","status":"single"},{"line":"43 * (& (◆₁ (4 * (# (& 5)))))","status":"single"},{"line":"43 * (& (◆₁ (4 * (# 5))))","status":"single"},{"line":"43 * (& (◆₁ (4 * 15)))","status":"single"},{"line":"43 * (& (◆₁ 60))","status":"single"},{"line":"43 * (& (((60 + 60) $) * (# (& 5))))","status":"single"},{"line":"43 * (& ((120 $) * (# (& 5))))","status":"single"},{"line":"43 * (& (4 * (# (& 5))))","status":"single"},{"line":"43 * (& (4 * (# 5)))","status":"single"},{"line":"43 * (& (4 * 15))","status":"single"},{"line":"43 * (& 60)","status":"single"},{"line":"43 * 6","status":"single"},{"line":"258","status":"single"}],"report":{"steps":39,"valid_steps":39,"first_error":null,"final_correct":true,"single_steps":39,"credit":1.0}},{"label":"recursion count written wrong on line 2","rows":[{"line":"43 * (& (◆₁ (((31 % 9) - 1) ◆₂ 50)))","status":"single"},{"line":"43 * (& (◆₁ ((3 - 1) ◆₂ 50)))","status":"error","message":"step 2 changes the value of a part from 4 to 3"},{"line":"43 * (& (◆₁ (2 ◆₂ 50)))","status":"skipped"},{"line":"43 * (& (◆₁ (◆₁ (((2 % 9) - 1) ◆₂ 50))))","status":"skipped"},{"line":"43 * (& (◆₁ (◆₁ ((2 - 1) ◆₂ 50))))","status":"skipped"},{"line":"43 * (& (◆₁ (◆₁ (1 ◆₂ 50))))","status":"skipped"},{"line":"43 * (& (◆₁ (◆₁ (◆₁ (((1 % 9) - 1) ◆₂ 50)))))","status":"skipped"},{"line":"43 * (& (◆₁ (◆₁ (◆₁ ((1 - 1) ◆₂ 50)))))","status":"skipped"},{"line":"43 * (& (◆₁ (◆₁ (◆₁ (0 ◆₂ 50)))))","status":"skipped"},{"line":"43 * (& (◆₁ (◆₁ (◆₁ 50))))","status":"skipped"},{"line":"43 * (& (◆₁ (◆₁ (((50 + 50) $) * (# (& 5))))))","status":"skipped"},{"line":"43 * (& (◆₁ (◆₁ ((100 $) * (# (& 5))))))","status":"skipped"},{"line":"43 * (& (◆₁ (◆₁ (3 * (# (& 5))))))","status":"skipped"},{"line":"43 * (& (◆₁ (◆₁ (3 * (# 5)))))","status":"skipped"},{"line":"43 * (& (◆₁ (◆₁ (3 * 15))))","status":"skipped"},{"line":"43 * (& (◆₁ (◆₁ 45)))","status":"skipped"},{"line":"43 * (& (◆₁ (((45 + 45) $) * (# (& 5)))))","status":"skipped"},{"line":"43 * (& (◆₁ ((90 $) * (# (& 5)))))","status":"skipped"},{"line":"43 * (& (◆₁ (4 * (# (& 5)))))","status":"skipped"},{"line":"43 * (& (◆₁ (4 * (# 5))))","status":"skipped"},{"line":"43 * (& (◆₁ (4 * 15)))","status":"skipped"},{"line":"43 * (& (◆₁ 60))","status":"skipped"},{"line":"43 * (& (((60 + 60) $) * (# (& 5))))","status":"skipped"},{"line":"43 * (& ((120 $) * (# (& 5))))","status":"skipped"},{"line":"43 * (& (4 * (# (& 5))))","status":"skipped"},{"line":"43 * (& (4 * (# 5)))","status":"skipped"},{"line":"43 * (& (4 * 15))","status":"skipped"},{"line":"43 * (& 60)","status":"skipped"},{"line":"43 * 6","status":"skipped"},{"line":"258","status":"skipped"}],"report":{"steps":30,"valid_steps":1,"first_error":1,"final_correct":false,"single_steps":1,"credit":0.03333333333333333},"slip":1,"wrong_answer":258}]}</script>
+<div class="opv-static">
+<pre class="opv-pre">43 * (&amp; (31 ◆₂ 50))
+= 43 * (&amp; (◆₁ (((31 % 9) - 1) ◆₂ 50)))   [single]
+= 43 * (&amp; (◆₁ ((4 - 1) ◆₂ 50)))   [single]
+= 43 * (&amp; (◆₁ (3 ◆₂ 50)))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (((3 % 9) - 1) ◆₂ 50))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ ((3 - 1) ◆₂ 50))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (2 ◆₂ 50))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (◆₁ (((2 % 9) - 1) ◆₂ 50)))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (◆₁ ((2 - 1) ◆₂ 50)))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (◆₁ (1 ◆₂ 50)))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (◆₁ (◆₁ (((1 % 9) - 1) ◆₂ 50))))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (◆₁ (◆₁ ((1 - 1) ◆₂ 50))))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (◆₁ (◆₁ (0 ◆₂ 50))))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (◆₁ (◆₁ 50)))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (◆₁ (((50 + 50) $) * (# (&amp; 5)))))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (◆₁ ((100 $) * (# (&amp; 5)))))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (◆₁ (3 * (# (&amp; 5)))))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (◆₁ (3 * (# 5))))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (◆₁ (3 * 15)))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (◆₁ 45))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (((45 + 45) $) * (# (&amp; 5))))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ ((90 $) * (# (&amp; 5))))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (4 * (# (&amp; 5))))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (4 * (# 5)))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ (4 * 15))))   [single]
+= 43 * (&amp; (◆₁ (◆₁ 60)))   [single]
+= 43 * (&amp; (◆₁ (((60 + 60) $) * (# (&amp; 5)))))   [single]
+= 43 * (&amp; (◆₁ ((120 $) * (# (&amp; 5)))))   [single]
+= 43 * (&amp; (◆₁ (4 * (# (&amp; 5)))))   [single]
+= 43 * (&amp; (◆₁ (4 * (# 5))))   [single]
+= 43 * (&amp; (◆₁ (4 * 15)))   [single]
+= 43 * (&amp; (◆₁ 60))   [single]
+= 43 * (&amp; (((60 + 60) $) * (# (&amp; 5))))   [single]
+= 43 * (&amp; ((120 $) * (# (&amp; 5))))   [single]
+= 43 * (&amp; (4 * (# (&amp; 5))))   [single]
+= 43 * (&amp; (4 * (# 5)))   [single]
+= 43 * (&amp; (4 * 15))   [single]
+= 43 * (&amp; 60)   [single]
+= 43 * 6   [single]
+= 258   [single]
+recursion count written wrong on line 2:
+= 43 * (&amp; (◆₁ (((31 % 9) - 1) ◆₂ 50)))   [single]
+= 43 * (&amp; (◆₁ ((3 - 1) ◆₂ 50)))   [error: step 2 changes the value of a part from 4 to 3]
+= 43 * (&amp; (◆₁ (2 ◆₂ 50)))   [skipped]
+= 43 * (&amp; (◆₁ (◆₁ (((2 % 9) - 1) ◆₂ 50))))   [skipped]
+= 43 * (&amp; (◆₁ (◆₁ ((2 - 1) ◆₂ 50))))   [skipped]
+= 43 * (&amp; (◆₁ (◆₁ (1 ◆₂ 50))))   [skipped]
+= 43 * (&amp; (◆₁ (◆₁ (◆₁ (((1 % 9) - 1) ◆₂ 50)))))   [skipped]
+= 43 * (&amp; (◆₁ (◆₁ (◆₁ ((1 - 1) ◆₂ 50)))))   [skipped]
+= 43 * (&amp; (◆₁ (◆₁ (◆₁ (0 ◆₂ 50)))))   [skipped]
+= 43 * (&amp; (◆₁ (◆₁ (◆₁ 50))))   [skipped]
+= 43 * (&amp; (◆₁ (◆₁ (((50 + 50) $) * (# (&amp; 5))))))   [skipped]
+= 43 * (&amp; (◆₁ (◆₁ ((100 $) * (# (&amp; 5))))))   [skipped]
+= 43 * (&amp; (◆₁ (◆₁ (3 * (# (&amp; 5))))))   [skipped]
+= 43 * (&amp; (◆₁ (◆₁ (3 * (# 5)))))   [skipped]
+= 43 * (&amp; (◆₁ (◆₁ (3 * 15))))   [skipped]
+= 43 * (&amp; (◆₁ (◆₁ 45)))   [skipped]
+= 43 * (&amp; (◆₁ (((45 + 45) $) * (# (&amp; 5)))))   [skipped]
+= 43 * (&amp; (◆₁ ((90 $) * (# (&amp; 5)))))   [skipped]
+= 43 * (&amp; (◆₁ (4 * (# (&amp; 5)))))   [skipped]
+= 43 * (&amp; (◆₁ (4 * (# 5))))   [skipped]
+= 43 * (&amp; (◆₁ (4 * 15)))   [skipped]
+= 43 * (&amp; (◆₁ 60))   [skipped]
+= 43 * (&amp; (((60 + 60) $) * (# (&amp; 5))))   [skipped]
+= 43 * (&amp; ((120 $) * (# (&amp; 5))))   [skipped]
+= 43 * (&amp; (4 * (# (&amp; 5))))   [skipped]
+= 43 * (&amp; (4 * (# 5)))   [skipped]
+= 43 * (&amp; (4 * 15))   [skipped]
+= 43 * (&amp; 60)   [skipped]
+= 43 * 6   [skipped]
+= 258   [skipped]</pre>
+</div>
+</div>
+<figcaption><b>Figure 3.</b> The step checker on the reference derivation of the opening question and on
+the same derivation with the recursion count written wrong on line 2. Both end at 258; only the
+derivation shows the error.</figcaption>
+</figure>
+<p>How much of a derivation is written out is a setting. An operator the learner is assumed to know is
+computed in one step, and that step is checked like the others. For the opening question:</p>
+<table>
+<thead>
+<tr>
+<th>Granularity</th>
+<th>Option</th>
+<th>Lines</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>everything unfolded to atoms</td>
+<td>default</td>
+<td>39</td>
+</tr>
+<tr>
+<td><code>◆₁</code> treated as known</td>
+<td><code>--cot-known</code></td>
+<td>19</td>
+</tr>
+<tr>
+<td>only the operators written in the question unfolded</td>
+<td><code>--cot-depth 1</code></td>
+<td>7</td>
+</tr>
+<tr>
+<td>nothing unfolded</td>
+<td><code>--cot-depth 0</code></td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Figure 4 shows how the settings nest: one coarse step stands for a block of finer steps, each of
+which can be checked.</p>
+<figure class="op-blogfig">
+<p><img alt="Derivation granularity as nested blocks" class="op-fig-d" src="../assets/blog/fig4.svg#only-light" />
+<img alt="Derivation granularity as nested blocks" class="op-fig-d" src="../assets/blog/fig4-dark.svg#only-dark" />
+<img alt="Derivation granularity as nested blocks" class="op-fig-m" src="../assets/blog/fig4-m.svg#only-light" />
+<img alt="Derivation granularity as nested blocks" class="op-fig-m" src="../assets/blog/fig4-m-dark.svg#only-dark" /></p>
+<figcaption><b>Figure 4.</b> Granularity. One coarse step stands for a block of finer steps, down to atoms; every block is the same computation written at a finer grain.</figcaption>
+</figure>
+<p>A learner that moves down this table with practice resembles, in its written behaviour, what
+<a href="https://doi.org/10.1037/0033-295X.89.4.369">Anderson's ACT theory</a> <a href="#ref-11">11</a> calls knowledge compilation. A
+skill interpreted step by step becomes one applied directly: composition collapses a sequence of
+productions into one, and proceduralization builds facts that were looked up into the procedure
+that uses them. The four settings give four correct written views of one computation. Training on
+them can test whether data should move down the table as a concept becomes familiar; by
+themselves, they say nothing about what a model compiles internally.</p>
+<p>Exact values, gradable steps and adjustable granularity are what the experiments in the next
+section rely on.</p>
+<h2 id="what-can-be-measured">What can be measured<a class="headerlink" href="#what-can-be-measured" title="Permanent link">&para;</a></h2>
+<p>Exact values and separately controlled factors make experiments on training data possible.
+None of the experiments below has been run for this post, and their outcomes are unknown. Each
+states the property it changes, what it holds fixed, what it measures, and what a team training a
+model would do with either result.</p>
+<p>The four proposals that compare training data share one protocol, which enforces the transfer
+requirement from the opening. Before training, freeze a named set of external tasks with their prompts, scoring
+rules and the smallest effect that would count, for instance short rule application tasks written
+in prose and short code execution tasks. Evaluate every arm on those tasks and on fresh Opulse
+libraries. Include an arm trained on the same number of tokens of ordinary data and an arm with no
+extra training, and repeat across operator seeds and training seeds. A difference that appears only
+on Opulse libraries is a fact about Opulse.</p>
+<p>Figure 5 groups the five proposals by what they do with a model, and lists for each the regularity
+it would reveal and the decision it would inform.</p>
+<figure class="op-blogfig">
+<p><img alt="Map of the proposed experiments" class="op-fig-d" src="../assets/blog/fig5.svg#only-light" />
+<img alt="Map of the proposed experiments" class="op-fig-d" src="../assets/blog/fig5-dark.svg#only-dark" />
+<img alt="Map of the proposed experiments" class="op-fig-m" src="../assets/blog/fig5-m.svg#only-light" />
+<img alt="Map of the proposed experiments" class="op-fig-m" src="../assets/blog/fig5-m-dark.svg#only-dark" /></p>
+<figcaption><b>Figure 5.</b> Five proposed experiments. Each is tied to a regularity it would reveal and a decision it would inform. Together they cover evaluating existing models, training new ones and looking inside them.</figcaption>
+</figure>
+<h3 id="when-should-a-rule-live-in-the-weights">When should a rule live in the weights?<a class="headerlink" href="#when-should-a-rule-live-in-the-weights" title="Permanent link">&para;</a></h3>
+<p>A rule can be trained into a model or supplied in its context each time it is needed. Training pays
+once, in examples and compute; supplying the definition adds prompt tokens to every query. Which is
+cheaper depends on the accuracy required and on how many queries will follow.
+<a href="https://arxiv.org/abs/2312.05934">Ovadia et al.</a> <a href="#ref-12">12</a> compared retrieval with unsupervised fine tuning
+for factual knowledge and found retrieval ahead. That does not settle the trade for newly defined,
+executable rules, partly because on natural data nobody knows how often a model has seen a given
+rule.</p>
+<p>In Opulse that count can be assigned. Starting from one model, an external sampler gives each
+operator 10, 100 or 1,000 training uses. Saved test expressions are then posed without definitions
+(<code>--context none</code>), which tests the trained rules, and with definitions in the prompt
+(<code>--context full</code>), with unrelated definitions of the same length as a control. At a fixed accuracy
+target and query volume, convert training compute and inference tokens to one stated cost unit and
+report where the cheaper option changes. The same choice matters when a rule changes. A second
+measurement uses contrast pairs
+(<code>--family contrast</code>): the same expression under the same symbols, with one definition swapped so
+the answer changes. It records how often a model gives the old answer while the new definition is
+in front of it. If practice raises that rate, the next comparison is between keeping changeable
+rules in context and training on examples in which a supplied rule overrides a practised one. The
+<a href="../guide/visual-tour/#test-a-model-in-context">visual tour</a> shows a contrast pair.</p>
+<h3 id="should-common-concepts-subsidise-rare-ones">Should common concepts subsidise rare ones?<a class="headerlink" href="#should-common-concepts-subsidise-rare-ones" title="Permanent link">&para;</a></h3>
+<p>Frequent concepts may help a model learn rare ones.
+<a href="https://arxiv.org/abs/2604.22951">Wang, Dang, Lee and Lyu</a> <a href="#ref-13">13</a> report that training on power law
+distributions of skills outperforms uniform training on compositional tasks such as state tracking.
+Their explanation is an asymmetry: frequent compositions are learned first and become stepping
+stones for rare ones. Whether that holds when skills form a growing graph of defined concepts, with
+branches and recursion, is open.</p>
+<p><code>--operator-frequency zipf:ALPHA</code> ranks operators within each kind in random order and draws rank r
+with weight proportional to r^-ALPHA, keeping the total share of defined operators as under
+<code>uniform</code>; rotating <code>--frequency-seed</code> keeps any one operator from always being common. Exposure is
+the hard part to count. An operator can appear inside the definition of a common one and
+run on only some of its inputs. So each operator gets three counts: direct uses in training
+expressions, appearances in definitions shown during training, and executions inside derivations
+that were part of the training text. The three counts move together through the graph, so a fitted
+curve cannot price indirect exposure. Comparing <code>uniform</code> with <code>zipf</code> arms answers the first
+question; whether a gain comes through indirect exposure needs a second test. That test keeps the
+same target operators
+in every arm, holds their direct uses, their shown definitions and the total tokens fixed, and
+varies only how often training derivations execute them inside dependents. A gain would justify
+testing a frequent core on the external tasks; a loss would call for a separate test of a minimum
+exposure per concept.</p>
+<h3 id="how-many-derivation-tokens-is-a-training-example-worth">How many derivation tokens is a training example worth?<a class="headerlink" href="#how-many-derivation-tokens-is-a-training-example-worth" title="Permanent link">&para;</a></h3>
+<p>Written steps cost tokens, and the question is which of them earn their cost.
+<a href="https://arxiv.org/abs/2405.14838">Deng, Choi and Shieber</a> <a href="#ref-14">14</a> trained models to internalise chain of
+thought by removing written steps gradually, and report that a GPT2 Small <a href="#ref-15">15</a> model solved 9 by 9
+multiplication with up to 99% accuracy without intermediate steps. On their tasks, the written
+steps could go.</p>
+<p>Save one pool of expressions and render every item three ways: answer only, a coarse derivation in
+which lower layers are known, and a full derivation. Every step that remains in any rendering is
+correct. The arms differ in length, so two comparisons are needed: one at an equal number of
+problems, and one at equal tokens, with a declared filler (for example, more answer only problems)
+making up the difference in the shorter arms. Results are grouped by the measured length of each
+reference derivation. Under the declared filler and budget, this tests, within each length group, whether
+full derivations pay for their tokens on Opulse; a policy for real solutions also needs the external
+tasks.</p>
+<h3 id="does-an-edit-reach-what-was-built-on-it">Does an edit reach what was built on it?<a class="headerlink" href="#does-an-edit-reach-what-was-built-on-it" title="Permanent link">&para;</a></h3>
+<p>When a definition changes, operators above it may change too, though not on every input.
+<a href="https://arxiv.org/abs/2307.12976">RippleEdits</a> <a href="#ref-16">16</a> built 5,000 factual edits with their expected
+consequences and found that established editing methods handle the consequences poorly, while a
+simple in context editing baseline did best. In natural knowledge, which facts an edit implies is
+itself debatable.</p>
+<p>In an Opulse library it can be computed. After one number in a low layer definition changes,
+<code>examples/edit_propagation.py</code> recomputes each dependent operator on a fixed sample of inputs and
+lists its values before and after, with its distance from the edit in the dependency graph. The
+test uses two kinds of input at each distance: inputs whose answers change after the edit, and
+inputs whose answers do not. Correct answers on both kinds show behaviour consistent with
+propagation on those inputs; errors on the unchanged kind show a model that changes too much.
+Accuracy on the edited operator itself is reported alongside, with the edit given in context in one
+condition and trained into the weights in another. The
+<a href="../guide/visual-tour/#edit-one-operator">visual tour</a> shows one edit recomputed through its
+dependents.</p>
+<h3 id="can-interpretability-methods-be-tested-against-exact-reference-values">Can interpretability methods be tested against exact reference values?<a class="headerlink" href="#can-interpretability-methods-be-tested-against-exact-reference-values" title="Permanent link">&para;</a></h3>
+<p>An exact label for an intermediate value makes a probe easy to score. It does not show that the
+model uses that value. <a href="https://arxiv.org/abs/1909.03368">Hewitt and Liang</a> <a href="#ref-17">17</a> introduced control
+tasks, pairing word types with random outputs, and found that standard probes lack selectivity: a
+probe can score well without the representation encoding the property. <a href="https://arxiv.org/abs/2311.17030">Makelov, Lange and
+Nanda</a> <a href="#ref-18">18</a> showed that a subspace activation patch can change the
+output as if a feature had changed while acting through a different pathway.</p>
+<p>Exact reference values are a weaker kind of ground truth than a known mechanism.
+<a href="https://arxiv.org/abs/2301.05062">Tracr</a> <a href="#ref-19">19</a> compiles programs into transformer weights, so the
+mechanism is known by construction. Opulse gives the exact answer and the exact intermediate values
+of one reference computation, with the mechanism left to training. A trained model may compute differently.</p>
+<p>The opening example shows how to choose inputs in which a reference intermediate value and the
+final answer vary independently. Past two applications of <code>◆₁</code>, the final answer no longer depends on
+the count, so a probe that recovers the count there cannot be reading it off the answer. Pairs in
+which an intermediate value changes while the answer stays fixed, and pairs in which the answer
+changes while the intermediate value stays fixed, separate the two, provided prompt length and
+notation are matched across each pair. A probe at a stated token and layer is compared with equally
+small probes on the operand tokens, on the answer, and on shuffled targets. For patching, the
+candidate state is swapped between prompts that differ in one reference value, the predicted effect
+is checked across several downstream contexts and in reverse, and matched positions elsewhere serve
+as controls. Success is evidence that the intervention influences the output as the abstraction
+predicts. It does not make the reference value a variable inside the model.</p>
+<p>Physics of Language Models shows where such tests can lead. With probes on their grade school
+models, <a href="https://arxiv.org/abs/2407.20311">Ye et al.</a> decoded the necessary parameters before the
+model began its solution, and decoded which parameters depend on which before the question appeared,
+although fitting the training solutions never required that. These are statements about what a
+probe can decode. A future extension of this test asks the analogous question for rules. It starts with a prompt that binds several names to
+expressions over new operators and then asks for one: are the dependencies among all bindings
+decodable before the question arrives? Whether unused values are also computed is a separate,
+stronger question. This prompt format is not part of Opulse yet; it needs a prompt builder and an
+alignment of each binding to its tokens.</p>
+<p>These questions, and the design behind them, have a history, which the next section traces.</p>
+<h2 id="where-this-comes-from">Where this comes from<a class="headerlink" href="#where-this-comes-from" title="Permanent link">&para;</a></h2>
+<p>The questions are old. What Opulse adds is generated rules with exact semantics and separately
+controlled factors. Figure 6 pairs each older idea with the part of Opulse that corresponds to it.</p>
+<figure class="op-blogfig">
+<p><img alt="Older ideas and their counterparts in Opulse" class="op-fig-d" src="../assets/blog/fig6.svg#only-light" />
+<img alt="Older ideas and their counterparts in Opulse" class="op-fig-d" src="../assets/blog/fig6-dark.svg#only-dark" />
+<img alt="Older ideas and their counterparts in Opulse" class="op-fig-m" src="../assets/blog/fig6-m.svg#only-light" />
+<img alt="Older ideas and their counterparts in Opulse" class="op-fig-m" src="../assets/blog/fig6-m-dark.svg#only-dark" /></p>
+<figcaption><b>Figure 6.</b> Lineage. Each part of Opulse continues an older idea; what Opulse adds is generated rules with exact semantics and separately controlled factors. The paragraphs below give the sources.</figcaption>
+</figure>
+<p><strong>Computable functions.</strong> The three forms come from the theory of computable functions. Kleene's construction, as presented
+in the <a href="https://plato.stanford.edu/entries/recursive-functions/">Stanford Encyclopedia of Philosophy</a> <a href="#ref-20">20</a>,
+closes a set of initial functions under composition and primitive recursion and then adds unbounded
+minimisation. McCarthy, in
+<a href="https://courses.grainger.illinois.edu/cs421/sp2011/project/mccarthy-basis.pdf">A Basis for a Mathematical Theory of Computation</a> <a href="#ref-21">21</a>,
+used a trio that reads like a program: composition, conditional expressions and recursive
+definition. He showed that with only successor and equality as base functions, this trio reaches
+every partial recursive function. Opulse follows McCarthy's trio and confines its recursion to
+templates that always terminate.</p>
+<p><strong>Concept discovery.</strong> Lenat's
+<a href="https://en.wikisource.org/wiki/An_Artificial_Intelligence_Approach_to_Discovery_in_Mathematics_as_Heuristic_Search">AM</a> <a href="#ref-22">22</a>
+started in 1976 from 115 elementary concepts of set theory and a few hundred heuristics, defined new
+concepts by modifying old ones, and rediscovered the natural numbers and the primes. Eight years
+later <a href="https://doi.org/10.1016/0004-3702(84)90016-X">Lenat and Brown</a> <a href="#ref-23">23</a> gave much of the credit to the
+representation. A concept in AM was a LISP function of a few lines, and mutating such tiny programs
+tended to give meaningful related concepts, whereas mutating a two page program "is doomed to almost
+always giving garbage". Opulse makes the same bet on purpose, with a small grammar in which every
+accepted draft terminates. It also records the definitions behind each task, so a rule a learner
+proposes can be tested against the rule that produced the data.</p>
+<p><strong>Learning rules from queries.</strong> <a href="https://doi.org/10.1016/S0019-9958(67)91165-5">Gold</a> <a href="#ref-24">24</a> showed that
+from positive examples alone, even the regular languages cannot be identified in the limit.
+<a href="https://doi.org/10.1016/0890-5401(87)90052-6">Angluin's L*</a> <a href="#ref-25">25</a> changed the protocol: a learner that
+asks membership queries and receives counterexamples to its conjectures learns the minimal
+automaton of a regular language in time polynomial in its number of states and the length of the
+longest counterexample. The Opulse interpreter answers value queries exactly, and where z3 supports
+the operators, the equivalence checker returns counterexamples within the configured value range.
+Active and passive rule learning can therefore be compared on generated functions, without
+importing the guarantees of L*.</p>
+<p><strong>Diagnostic tasks.</strong> <a href="https://arxiv.org/abs/1502.05698">bAbI</a> <a href="#ref-26">26</a> grouped small question answering tasks
+by the reasoning each was meant to require, such as chaining facts or deduction. Within three years
+<a href="https://arxiv.org/abs/1711.08028">recurrent relational networks</a> <a href="#ref-27">27</a> were reported to solve all twenty
+consistently, and from then on the set could not separate that model from stronger ones. Opulse
+tasks record their properties, so results can be grouped by the difficulty being tested. A new seed
+gives new definitions, and <code>opulse bench leakage</code> flags test operators whose definitions, up to
+renaming, or whose values on a fixed sample also occur in a training library. All libraries share
+one grammar, though, and a model can learn the grammar; generalisation to new definitions still has
+to be measured.</p>
+<p><strong>Self improvement.</strong> Schmidhuber's <a href="https://arxiv.org/abs/cs/0309048">Gödel machine</a> <a href="#ref-28">28</a> rewrites its own
+code once it has proved that the rewrite is useful. Opulse proves something much narrower: that a
+candidate operator is well formed and its values are computed correctly. A model that proposes
+operators can use the interpreter as its referee, but whether an operator helps has to be measured.</p>
+<p>Three older ideas connect to the experiments: two run through those above, and the third suggests
+one more. Anderson's knowledge compilation is the question
+behind derivation granularity. Doyle's <a href="https://doi.org/10.1016/0004-3702(79)90008-0">truth maintenance system</a> <a href="#ref-29">29</a>
+recorded a justification for each belief so that revising one could update the rest, which is the
+question behind edit propagation. And in <a href="https://doi.org/10.1016/0010-0277(93)90058-4">Elman's</a> <a href="#ref-30">30</a>
+experiments, a recurrent network learned a complex grammar only when training began with simple
+sentences or with limited memory; with prerequisites on record, ordering by layer can be tested at
+equal budgets.</p>
+<h2 id="limits">Limits<a class="headerlink" href="#limits" title="Permanent link">&para;</a></h2>
+<p>Opulse recomputes every value and step it writes with its reference interpreter, and its tests
+compare that interpreter with compiled code and solvers across 298 configurations. That establishes
+agreement with a specification, as far as tests can. Whether the specification resembles anything
+a model meets outside the laboratory is a separate question.</p>
+<p>The world is small on purpose. Values are integers or NaN, most operators take one or two arguments,
+recursion follows a few templates and unfolds a handful of times, and the text is formal notation.
+A model that learns to apply Opulse definitions has learned to apply definitions in this notation;
+how much carries over is what the external tasks measure.</p>
+<p>Some checks are sampled. The variety check and the behavioural part of the leakage check evaluate
+operators on a fixed sample of inputs, so a clean leakage report lowers the chance that two
+operators compute the same function without proving that they differ everywhere. The opening
+operator shows how much a domain can hide: <code>◆₂</code> looks like a four step recursion, and with its first
+argument at 31 it returns the same value for nineteen consecutive inputs.</p>
+<p>Options set bounds or targets, not guarantees. <code>--max-layer 3</code> allows layer 3 without guaranteeing it, and a requested
+share of recursive definitions is a target the generator can miss. Each task records what it
+actually contains, so analyses should group items by measured properties such as actual dependency
+depth, actual unfolding count and reference derivation length.</p>
+<h2 id="open-questions">Open questions<a class="headerlink" href="#open-questions" title="Permanent link">&para;</a></h2>
+<p>Three questions seem to me the most worth answering first.</p>
+<p>Does practice make a model stop reading? If a model has applied a rule a thousand times and a prompt
+then changes the rule, does it follow the prompt or its habit, and can training on contrast pairs
+keep it reading?</p>
+<p>Does indirect exposure count? A low level concept can also be used inside its dependents. If a
+model practises a rule mostly through its dependents, how does that compare with direct practice?</p>
+<p>Which atoms make a world whose lessons transfer? The integer atoms here were chosen for convenience.
+Some other choice may yield regularities that hold on rules written in prose or code; another may
+yield a world that only teaches itself. Comparing starting atom sets under the shared protocol, on
+the same frozen external tasks, would tell them apart. Finding out is part of building the
+laboratory.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><span id="ref-1"></span> Nikhil Kandpal, Haikang Deng, Adam Roberts, et al. “Large Language Models Struggle to Learn Long-Tail Knowledge.” <em>arXiv preprint arXiv:2211.08411</em>, 2022. <a href="https://arxiv.org/abs/2211.08411">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-2"></span> Chujie Zheng, Zhenru Zhang, Beichen Zhang, et al. “ProcessBench: Identifying Process Errors in Mathematical Reasoning.” <em>arXiv preprint arXiv:2412.06559</em>, 2024. <a href="https://arxiv.org/abs/2412.06559">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-3"></span> Hugh Zhang, Jeff Da, Dean Lee, et al. “A Careful Examination of Large Language Model Performance on Grade School Arithmetic.” <em>arXiv preprint arXiv:2405.00332</em>, 2024. <a href="https://arxiv.org/abs/2405.00332">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-4"></span> Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, et al. “Training Verifiers to Solve Math Word Problems.” <em>arXiv preprint arXiv:2110.14168</em>, 2021. <a href="https://arxiv.org/abs/2110.14168">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-5"></span> Zeyuan Allen-Zhu. “ICML 2024 Tutorial: Physics of Language Models.” <em>ICML 2024 tutorial project page</em>, 2024. <a href="https://physics.allen-zhu.com/">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-6"></span> Tian Ye, Zicheng Xu, Yuanzhi Li, et al. “Physics of Language Models: Part 2.1, Grade-School Math and the Hidden Reasoning Process.” <em>arXiv preprint arXiv:2407.20311</em>, 2024. <a href="https://arxiv.org/abs/2407.20311">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-7"></span> Zeyuan Allen-Zhu and Yuanzhi Li. “Physics of Language Models: Part 3.1, Knowledge Storage and Extraction.” <em>arXiv preprint arXiv:2309.14316</em>, 2023. <a href="https://arxiv.org/abs/2309.14316">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-8"></span> Tian Ye, Zicheng Xu, Yuanzhi Li, et al. “Physics of Language Models: Part 2.2, How to Learn From Mistakes on Grade-School Math Problems.” <em>arXiv preprint arXiv:2408.16293</em>, 2024. <a href="https://arxiv.org/abs/2408.16293">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-9"></span> Alethea Power, Yuri Burda, Harri Edwards, et al. “Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets.” <em>arXiv preprint arXiv:2201.02177</em>, 2022. <a href="https://arxiv.org/abs/2201.02177">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-10"></span> Leonardo de Moura and Nikolaj Bjørner. “Z3: An Efficient SMT Solver.” <em>Tools and Algorithms for the Construction and Analysis of Systems</em>, 2008. <a href="https://www.microsoft.com/en-us/research/publication/z3-an-efficient-smt-solver/">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-11"></span> John R. Anderson. “Acquisition of Cognitive Skill.” <em>Psychological Review 89(4), pp. 369 to 406</em>, 1982. <a href="https://doi.org/10.1037/0033-295X.89.4.369">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-12"></span> Oded Ovadia, Menachem Brief, Moshik Mishaeli, et al. “Fine-Tuning or Retrieval? Comparing Knowledge Injection in LLMs.” <em>arXiv preprint arXiv:2312.05934</em>, 2023. <a href="https://arxiv.org/abs/2312.05934">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-13"></span> Zixuan Wang, Xingyu Dang, Jason D. Lee, et al. “The Power of Power Law: Asymmetry Enables Compositional Reasoning.” <em>arXiv preprint arXiv:2604.22951</em>, 2026. <a href="https://arxiv.org/abs/2604.22951">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-14"></span> Yuntian Deng, Yejin Choi, and Stuart Shieber. “From Explicit CoT to Implicit CoT: Learning to Internalize CoT Step by Step.” <em>arXiv preprint arXiv:2405.14838</em>, 2024. <a href="https://arxiv.org/abs/2405.14838">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-15"></span> Alec Radford, Jeffrey Wu, Rewon Child, et al. “Language Models are Unsupervised Multitask Learners.” <em>OpenAI</em>, 2019. <a href="https://github.com/openai/gpt-2">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-16"></span> Roi Cohen, Eden Biran, Ori Yoran, et al. “Evaluating the Ripple Effects of Knowledge Editing in Language Models.” <em>arXiv preprint arXiv:2307.12976</em>, 2023. <a href="https://arxiv.org/abs/2307.12976">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-17"></span> John Hewitt and Percy Liang. “Designing and Interpreting Probes with Control Tasks.” <em>arXiv preprint arXiv:1909.03368</em>, 2019. <a href="https://arxiv.org/abs/1909.03368">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-18"></span> Aleksandar Makelov, Georg Lange, and Neel Nanda. “Is This the Subspace You Are Looking for? An Interpretability Illusion for Subspace Activation Patching.” <em>arXiv preprint arXiv:2311.17030</em>, 2023. <a href="https://arxiv.org/abs/2311.17030">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-19"></span> David Lindner, János Kramár, Sebastian Farquhar, et al. “Tracr: Compiled Transformers as a Laboratory for Interpretability.” <em>arXiv preprint arXiv:2301.05062</em>, 2023. <a href="https://arxiv.org/abs/2301.05062">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-20"></span> Walter Dean and Alberto Naibo. “Recursive Functions.” <em>The Stanford Encyclopedia of Philosophy, Summer 2025 edition</em>, 2025. <a href="https://plato.stanford.edu/archives/sum2025/entries/recursive-functions/">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-21"></span> John McCarthy. “A Basis for a Mathematical Theory of Computation.” <em>Computer Programming and Formal Systems</em>, 1963. <a href="https://courses.grainger.illinois.edu/cs421/sp2011/project/mccarthy-basis.pdf">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-22"></span> Douglas B. Lenat. “AM: An Artificial Intelligence Approach to Discovery in Mathematics as Heuristic Search.” <em>Stanford Artificial Intelligence Laboratory Memo AIM-286</em>, 1976. <a href="https://en.wikisource.org/wiki/An_Artificial_Intelligence_Approach_to_Discovery_in_Mathematics_as_Heuristic_Search">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-23"></span> Douglas B. Lenat and John Seely Brown. “Why AM and Eurisko Appear to Work.” <em>Artificial Intelligence 23(3), pp. 269 to 294</em>, 1984. <a href="https://doi.org/10.1016/0004-3702(84)90016-X">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-24"></span> E. Mark Gold. “Language Identification in the Limit.” <em>Information and Control 10(5), pp. 447 to 474</em>, 1967. <a href="https://doi.org/10.1016/S0019-9958(67)91165-5">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-25"></span> Dana Angluin. “Learning Regular Sets from Queries and Counterexamples.” <em>Information and Computation 75(2), pp. 87 to 106</em>, 1987. <a href="https://doi.org/10.1016/0890-5401(87)90052-6">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-26"></span> Jason Weston, Antoine Bordes, Sumit Chopra, et al. “Towards AI-Complete Question Answering: A Set of Prerequisite Toy Tasks.” <em>arXiv preprint arXiv:1502.05698</em>, 2015. <a href="https://arxiv.org/abs/1502.05698">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-27"></span> Rasmus Berg Palm, Ulrich Paquet, and Ole Winther. “Recurrent Relational Networks.” <em>arXiv preprint arXiv:1711.08028</em>, 2017. <a href="https://arxiv.org/abs/1711.08028">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-28"></span> Juergen Schmidhuber. “Goedel Machines: Self-Referential Universal Problem Solvers Making Provably Optimal Self-Improvements.” <em>arXiv preprint arXiv:cs/0309048</em>, 2003. <a href="https://arxiv.org/abs/cs/0309048">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-29"></span> Jon Doyle. “A Truth Maintenance System.” <em>Artificial Intelligence 12(3), pp. 231 to 272</em>, 1979. <a href="https://doi.org/10.1016/0004-3702(79)90008-0">Source</a>.</p>
+</li>
+<li>
+<p><span id="ref-30"></span> Jeffrey L. Elman. “Learning and Development in Neural Networks: The Importance of Starting Small.” <em>Cognition 48(1), pp. 71 to 99</em>, 1993. <a href="https://doi.org/10.1016/0010-0277(93)90058-4">Source</a>.</p>
+</li>
+</ol>
+<h2 id="acknowledgements">Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permanent link">&para;</a></h2>
+<!-- acknowledgements list -->
+
+<h2 id="citation">Citation<a class="headerlink" href="#citation" title="Permanent link">&para;</a></h2>
+<p>Please cite this post as:</p>
+<p>Ma Kaijing. "A Laboratory for Data Laws." Blog post, 2026. https://mkj69.github.io/opulse/blog/</p>
+<div class="language-bibtex highlight"><pre><span></span><code><span class="nc">@misc</span><span class="p">{</span><span class="nl">ma2026laboratory</span><span class="p">,</span>
+<span class="w">  </span><span class="na">author</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="s">{Ma, Kaijing}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">title</span><span class="w">        </span><span class="p">=</span><span class="w"> </span><span class="s">{A Laboratory for Data Laws}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">year</span><span class="w">         </span><span class="p">=</span><span class="w"> </span><span class="s">{2026}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">howpublished</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{\url{https://mkj69.github.io/opulse/blog/}}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">note</span><span class="w">         </span><span class="p">=</span><span class="w"> </span><span class="s">{Blog post}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../glossary/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Glossary">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Glossary
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../stitching/" class="md-footer__link md-footer__link--next" aria-label="Next: Stitching">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Stitching
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 The Opulse Authors · Code: <a href="https://github.com/mkj69/opulse/blob/main/LICENSE">Apache 2.0</a> · Docs and data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/mkj69/opulse" target="_blank" rel="noopener" title="Opulse on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../assets/js/kinds-legend.js"></script>
+      
+        <script src="../assets/js/layout.js"></script>
+      
+        <script src="../assets/js/atoms-legend.js"></script>
+      
+        <script src="../assets/js/opulse-anim.js"></script>
+      
+        <script src="../assets/js/opulse-vis.js"></script>
+      
+        <script src="../assets/js/stepview.js"></script>
+      
+        <script src="../assets/js/playground.js"></script>
+      
+        <script src="../assets/js/worlds/core.js"></script>
+      
+        <script src="../assets/js/granularity.js"></script>
+      
+        <script src="../assets/js/granularity-anim.js"></script>
+      
+        <script src="../assets/js/home-examples.js"></script>
+      
+        <script src="../assets/js/lineage.js"></script>
+      
+        <script src="../assets/js/expviz.js"></script>
+      
+        <script src="../assets/js/blogfig.js"></script>
+      
+        <script src="../assets/js/stitch.js"></script>
+      
+        <script src="../assets/js/opulse-video.js"></script>
+      
+        <script src="../assets/js/challenge-answer.js"></script>
+      
+        <script src="../assets/js/challenge-modes.js"></script>
+      
+        <script src="../assets/js/challenge.js"></script>
+      
+        <script src="../assets/js/learn.js"></script>
+      
+    
+  </body>
+</html>

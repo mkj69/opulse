@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 942 282" width="942" height="282" role="img" aria-label="The laboratory: change one option, hold the rest fixed, measure">
+<title>The laboratory: change one option, hold the rest fixed, measure</title>
+<rect x="0.0" y="0.0" width="400.0" height="199.1" rx="8" fill="#f8fafc" stroke="#d5dbe3" stroke-width="1"/>
+<g transform="translate(0.0,0.0)">
+<text x="14.0" y="25.3" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="700" fill="#4f46e5" text-anchor="start">Change one option</text>
+</g>
+<g transform="translate(14.0,38.5)">
+<text x="0.0" y="10.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#475569" text-anchor="start">atoms</text>
+<line x1="2.0" y1="29.5" x2="105.3" y2="29.5" stroke="#94a3b8" stroke-width="3"/>
+<circle cx="38.2" cy="29.5" r="7" fill="#ffffff" stroke="#94a3b8" stroke-width="1.25"/>
+<text x="131.3" y="10.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#475569" text-anchor="start">composition</text>
+<line x1="133.3" y1="29.5" x2="236.7" y2="29.5" stroke="#94a3b8" stroke-width="3"/>
+<circle cx="169.5" cy="29.5" r="7" fill="#ffffff" stroke="#94a3b8" stroke-width="1.25"/>
+<text x="262.7" y="10.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#475569" text-anchor="start">depth</text>
+<line x1="264.7" y1="29.5" x2="368.0" y2="29.5" stroke="#94a3b8" stroke-width="3"/>
+<circle cx="300.8" cy="29.5" r="7" fill="#ffffff" stroke="#94a3b8" stroke-width="1.25"/>
+<text x="0.0" y="62.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="700" fill="#0f172a" text-anchor="start">frequency</text>
+<line x1="2.0" y1="81.5" x2="105.3" y2="81.5" stroke="#94a3b8" stroke-width="3"/>
+<line x1="2.0" y1="81.5" x2="84.7" y2="81.5" stroke="#4f46e5" stroke-width="3"/>
+<circle cx="38.2" cy="81.5" r="4" fill="#f8fafc" stroke="#4f46e5" stroke-width="1" stroke-dasharray="2 1.5"/>
+<circle cx="84.7" cy="81.5" r="7" fill="#4f46e5" stroke="#4f46e5" stroke-width="1.25"/>
+<text x="131.3" y="62.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#475569" text-anchor="start">notation</text>
+<line x1="133.3" y1="81.5" x2="236.7" y2="81.5" stroke="#94a3b8" stroke-width="3"/>
+<circle cx="169.5" cy="81.5" r="7" fill="#ffffff" stroke="#94a3b8" stroke-width="1.25"/>
+<text x="262.7" y="62.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#475569" text-anchor="start">granularity</text>
+<line x1="264.7" y1="81.5" x2="368.0" y2="81.5" stroke="#94a3b8" stroke-width="3"/>
+<circle cx="300.8" cy="81.5" r="7" fill="#ffffff" stroke="#94a3b8" stroke-width="1.25"/>
+</g>
+<line x1="404.0" y1="99.6" x2="428.0" y2="99.6" stroke="#475569" stroke-width="1.25"/>
+<polygon points="428.0,99.6 422.8,102.6 422.8,96.6" fill="#475569"/>
+<rect x="432.0" y="0.0" width="238.0" height="199.1" rx="8" fill="#f8fafc" stroke="#d5dbe3" stroke-width="1"/>
+<g transform="translate(432.0,0.0)">
+<text x="14.0" y="25.3" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="700" fill="#0f172a" text-anchor="start">Hold fixed</text>
+</g>
+<g transform="translate(446.0,38.5)">
+<rect x="0.0" y="2.4" width="7.0" height="7.0" rx="1.5" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="16.0" y="10.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">the other five options</text>
+<rect x="0.0" y="26.1" width="7.0" height="7.0" rx="1.5" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="16.0" y="34.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">one semantics, one interpreter</text>
+<rect x="0.0" y="49.7" width="7.0" height="7.0" rx="1.5" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="16.0" y="58.1" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">the token budget</text>
+<rect x="0.0" y="73.3" width="7.0" height="7.0" rx="1.5" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="16.0" y="81.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">evaluation tasks, frozen in</text>
+<text x="16.0" y="100.3" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">advance</text>
+<rect x="0.0" y="115.6" width="7.0" height="7.0" rx="1.5" fill="#475569" stroke="none" stroke-width="0"/>
+<text x="16.0" y="123.9" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">operator and training seeds,</text>
+<text x="16.0" y="142.6" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">repeated</text>
+</g>
+<line x1="674.0" y1="99.6" x2="698.0" y2="99.6" stroke="#475569" stroke-width="1.25"/>
+<polygon points="698.0,99.6 692.8,102.6 692.8,96.6" fill="#475569"/>
+<rect x="702.0" y="0.0" width="238.0" height="199.1" rx="8" fill="#f8fafc" stroke="#d5dbe3" stroke-width="1"/>
+<g transform="translate(702.0,0.0)">
+<text x="14.0" y="25.3" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="700" fill="#4f46e5" text-anchor="start">Measure</text>
+</g>
+<g transform="translate(716.0,38.5)">
+<circle cx="3.5" cy="6.3" r="3.5" fill="#4f46e5" stroke="none" stroke-width="0"/>
+<text x="16.0" y="10.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">accuracy on fresh Opulse</text>
+<text x="16.0" y="29.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">libraries</text>
+<circle cx="3.5" cy="48.6" r="3.5" fill="#4f46e5" stroke="none" stroke-width="0"/>
+<text x="16.0" y="53.1" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">accuracy on external tasks</text>
+<circle cx="3.5" cy="72.2" r="3.5" fill="#4f46e5" stroke="none" stroke-width="0"/>
+<text x="16.0" y="76.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">the first wrong step</text>
+<circle cx="3.5" cy="95.9" r="3.5" fill="#4f46e5" stroke="none" stroke-width="0"/>
+<text x="16.0" y="100.3" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">probes and patches against</text>
+<text x="16.0" y="118.9" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">reference values</text>
+</g>
+<rect x="0.0" y="211.1" width="940.0" height="67.3" rx="8" fill="#ffffff" stroke="#4f46e5" stroke-width="1" stroke-dasharray="5 4"/>
+<g transform="translate(0.0,211.1)">
+<text x="14.0" y="25.3" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14.5" font-weight="700" fill="#4f46e5" text-anchor="start">Audit</text>
+</g>
+<g transform="translate(14.0,249.6)">
+<text x="0.0" y="10.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">Every task records its features, so a sample can be checked for side effects of the change.</text>
+</g>
+</svg>

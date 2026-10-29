@@ -1,0 +1,43 @@
+.op-home-examples { margin: 0.5rem 0 1rem; }
+.op-home-tabs { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.75rem; }
+.op-home-tab {
+  border: 1px solid var(--op-card-border, var(--md-default-fg-color--lightest));
+  border-radius: 999px; padding: 0.38rem 0.85rem; background: transparent;
+  color: var(--md-default-fg-color--light); font: inherit; font-size: 0.78rem; font-weight: 650;
+  cursor: pointer;
+}
+.op-home-tab[aria-selected="true"] {
+  background: var(--md-accent-fg-color); border-color: var(--md-accent-fg-color); color: var(--md-accent-bg-color);
+}
+.op-home-tab:focus-visible { outline: 2px solid var(--md-accent-fg-color); outline-offset: 2px; }
+.op-home-panel[hidden] { display: none; }
+.op-home-panel { margin: 0; }
+.op-home-def { margin: 0 0 0.5rem; padding: 0.65rem 0.8rem; overflow-x: auto; }
+.op-home-def code { font-family: var(--md-code-font-family); font-size: 0.76rem; }
+.op-home-sentence, .op-home-expression { margin: 0.35rem 0; }
+.op-home-expression { color: var(--md-default-fg-color--light); }
+.op-home-expression code { color: var(--md-default-fg-color); }
+.op-home-panel .op-granim { margin: 0.7rem 0 0.8rem; }
+
+.op-angle-cards { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0.35rem; margin: 0.75rem 0 0.9rem; }
+.op-angle-card { display: flex; flex-direction: column; gap: 0.4rem; min-height: 5.5rem; padding: 0.55rem; border: 1px solid var(--op-card-border); border-radius: 0.4rem; background: var(--op-card-bg); color: var(--md-default-fg-color); font-size: 0.7rem; line-height: 1.35; text-decoration: none; }
+.op-angle-card strong { font-size: 0.76rem; }
+.op-angle-card:hover, .op-angle-card:focus-visible { border-color: var(--md-accent-fg-color); }
+.op-angle-card:focus-visible { outline: 2px solid var(--md-accent-fg-color); outline-offset: 2px; }
+.op-flagships { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.op-flagships .op-card { min-width: 0; display: flex; flex-direction: column; gap: 0.55rem; }
+.md-typeset .op-flagships .op-card h3, .md-typeset .op-flagships .op-card p { margin: 0; }
+.op-puzzle-examples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.25rem 0.5rem; }
+.op-puzzle-examples span { min-width: 0; }
+.op-puzzle-examples code, .op-flagships p code { white-space: normal; }
+.op-puzzle-reveal { margin-top: auto; border-top: 1px solid var(--op-card-border); padding-top: 0.45rem; font-size: 0.78rem; }
+.op-puzzle-reveal summary { cursor: pointer; color: var(--md-accent-fg-color); font-weight: 650; }
+.op-puzzle-reveal summary:focus-visible { outline: 2px solid var(--md-accent-fg-color); outline-offset: 2px; }
+.md-typeset .op-puzzle-reveal p { margin: 0.45rem 0 0; }
+.op-puzzle-more { font-size: 0.78rem; font-weight: 650; }
+@media (max-width: 45em) {
+  .op-angle-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .op-flagships { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 28em) { .op-angle-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
