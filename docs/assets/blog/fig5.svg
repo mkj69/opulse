@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 942 325" width="942" height="325" role="img" aria-label="Map of the proposed experiments by mode">
+<title>Map of the proposed experiments by mode</title>
+<rect x="0.0" y="0.0" width="940.0" height="32.0" rx="8" fill="none" stroke="#0f172a" stroke-width="1" stroke-dasharray="5 4"/>
+<text x="470.0" y="20.9" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="700" fill="#0f172a" text-anchor="middle">Proposals. None of these has been run.</text>
+<text x="0.0" y="56.0" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="700" fill="#475569" text-anchor="start">MODE</text>
+<text x="164.0" y="56.0" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="700" fill="#475569" text-anchor="start">QUESTION</text>
+<text x="464.0" y="56.0" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="700" fill="#475569" text-anchor="start">REVEALS</text>
+<text x="709.0" y="56.0" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="700" fill="#475569" text-anchor="start">INFORMS</text>
+<line x1="0.0" y1="66.0" x2="940.0" y2="66.0" stroke="#94a3b8" stroke-width="1"/>
+<text x="164.0" y="86.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">Does an edit reach what was built on it?</text>
+<text x="164.0" y="105.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="400" fill="#475569" text-anchor="start">(also trains)</text>
+<text x="464.0" y="86.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">how far an edit reaches in the</text>
+<text x="464.0" y="105.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">dependency graph</text>
+<text x="709.0" y="86.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">give edits in context or train them</text>
+<text x="709.0" y="105.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">in</text>
+<text x="0.0" y="86.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="700" fill="#0f172a" text-anchor="start">Evaluate</text>
+<text x="0.0" y="105.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="400" fill="#475569" text-anchor="start">existing models</text>
+<line x1="0.0" y1="116.8" x2="940.0" y2="116.8" stroke="#94a3b8" stroke-width="1"/>
+<text x="164.0" y="137.6" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">When should a rule live in the weights?</text>
+<text x="164.0" y="156.2" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="400" fill="#475569" text-anchor="start">(also evaluates)</text>
+<text x="464.0" y="137.6" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">accuracy against training uses per</text>
+<text x="464.0" y="156.2" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">rule</text>
+<text x="709.0" y="137.6" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">train a rule in or supply it in</text>
+<text x="709.0" y="156.2" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">context</text>
+<line x1="150.0" y1="167.5" x2="940.0" y2="167.5" stroke="#d5dbe3" stroke-width="1"/>
+<text x="164.0" y="188.3" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">Should common concepts subsidise rare</text>
+<text x="164.0" y="206.9" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">ones?</text>
+<text x="464.0" y="188.3" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">the value of practice inside</text>
+<text x="464.0" y="206.9" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">dependents</text>
+<text x="709.0" y="188.3" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">a frequent core or a minimum per</text>
+<text x="709.0" y="206.9" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">concept</text>
+<line x1="150.0" y1="218.3" x2="940.0" y2="218.3" stroke="#d5dbe3" stroke-width="1"/>
+<text x="164.0" y="239.1" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">How many derivation tokens is an example</text>
+<text x="164.0" y="257.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">worth?</text>
+<text x="464.0" y="239.1" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">the depth at which full derivations</text>
+<text x="464.0" y="257.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">pay</text>
+<text x="709.0" y="239.1" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">how much of each solution to write</text>
+<text x="709.0" y="257.7" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">out</text>
+<text x="0.0" y="137.6" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="700" fill="#0f172a" text-anchor="start">Train</text>
+<text x="0.0" y="156.2" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="400" fill="#475569" text-anchor="start">new models</text>
+<line x1="0.0" y1="269.0" x2="940.0" y2="269.0" stroke="#94a3b8" stroke-width="1"/>
+<text x="164.0" y="289.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">Can probes be tested against exact values?</text>
+<text x="464.0" y="289.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">what probes decode and patches</text>
+<text x="464.0" y="308.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">change</text>
+<text x="709.0" y="289.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="400" fill="#0f172a" text-anchor="start">which probes and patches to trust</text>
+<text x="0.0" y="289.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="13.5" font-weight="700" fill="#0f172a" text-anchor="start">Observe</text>
+<text x="0.0" y="308.4" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12" font-weight="400" fill="#475569" text-anchor="start">inside models</text>
+<line x1="0.0" y1="319.8" x2="940.0" y2="319.8" stroke="#94a3b8" stroke-width="1"/>
+</svg>

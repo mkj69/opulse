@@ -1,0 +1,24 @@
+name: Propose a world
+description: Share a set of atoms Opulse could compose.
+body:
+  - type: textarea
+    id: atoms
+    attributes:
+      label: Atoms
+      description: List each operation, its symbol and one sentence stating its rule. Mention any undefined inputs.
+    validations:
+      required: true
+  - type: textarea
+    id: value_types
+    attributes:
+      label: Value types
+      description: Describe the inputs and outputs, with one small example value.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is this world interesting?
+      description: What kinds of compositions or questions would these atoms make possible?
+    validations:
+      required: true

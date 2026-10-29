@@ -1,0 +1,57 @@
+# Opulse generation settings. Every key is optional; omitted keys use the
+# defaults in src/opulse/config.py.
+
+semantics:
+  mode: exact              # exact: overflow and division by zero give NaN; legacy: reproduce old data
+  bound: 2147483647        # largest absolute value; every command (equivalences included) uses it
+
+symbols:
+  left_operand: a
+  right_operand: b
+  left_paren: "("
+  right_paren: ")"
+  equals: "="
+  nan: NaN
+  inf: Inf
+  neg_inf: -Inf
+
+numerals:
+  max_base: 16
+  digits: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+operators:
+  naming: shape_index       # shape_index or legacy
+  shape_sets: [shapes, suits]
+  shape_chars: ""            # additional shape glyphs
+  index_chars: "₀₁₂₃₄₅₆₇₈₉"  # ordered index alphabet
+  definition_layout: compact # compact or piecewise
+  piecewise_min_length: 120
+  symbol_min_len: 1
+  symbol_max_len: 3
+  symbol_sets: [math, arrows, shapes]   # legacy mode named sets
+  symbol_chars: ""             # more legacy characters, listed directly
+  symbol_blocks: []            # legacy mode raw Unicode ranges
+  symbol_ascii: ""             # extra ASCII characters in legacy mode
+  exclude_confusable: true     # filter lookalikes in legacy mode
+  max_if_branches: 10
+  condition_min: 0         # branch thresholds are non-negative; prefix "-" supplies negatives
+  condition_max: 100
+
+recursion:
+  modulus_min: 3           # recursive operators unfold at most modulus-1 times
+  modulus_max: 9
+  constant_min: -100
+  constant_max: 100
+
+expressions:
+  variables: [a, b]
+  value_min: 0
+  value_max: 100
+  max_depth: 3
+  type_weights: {binary: 0.7, unary_prefix: 0.2, unary_postfix: 0.1, atom: 0.1}
+  atom_weights: {variable: 0.8, number: 0.2}
+  numeral_base: 10
+  random_numeral_base: false
+  result_base: 10
+  random_result_base: false
+  cot_base: 10

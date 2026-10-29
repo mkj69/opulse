@@ -1,0 +1,33 @@
+WEBVTT
+
+2
+00:00:06.300 --> 00:00:13.700
+Start with a few atoms: small operations you choose.
+
+3
+00:00:14.300 --> 00:00:23.700
+Substitution: a new operator is written with the atoms.
+
+4
+00:00:24.300 --> 00:00:32.700
+Choice: a test picks which case to use.
+
+5
+00:00:33.300 --> 00:00:43.700
+Recursion: an operator calls itself until a base case.
+
+6
+00:00:44.300 --> 00:00:56.700
+Each layer builds on the ones below. Concepts without limit.
+
+7
+00:00:57.300 --> 00:01:06.700
+Every step is checked by the interpreter.
+
+8
+00:01:07.300 --> 00:01:18.700
+Six ways to test reasoning.
+
+9
+00:01:19.300 --> 00:01:29.700
+The same structure works in any world.

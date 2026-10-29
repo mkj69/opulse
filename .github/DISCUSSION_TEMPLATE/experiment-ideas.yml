@@ -1,0 +1,30 @@
+title: "Experiment idea: "
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What would you like to learn?
+    validations:
+      required: true
+  - type: textarea
+    id: design
+    attributes:
+      label: Design
+      description: Describe the worlds, data, comparison and controls you would use.
+    validations:
+      required: true
+  - type: textarea
+    id: measure
+    attributes:
+      label: Measure
+      description: What outcome would you record, and on which tasks?
+    validations:
+      required: true
+  - type: textarea
+    id: interpretation
+    attributes:
+      label: What would the result tell us?
+      description: Explain what a positive or negative result would mean to you.
+    validations:
+      required: true

@@ -1,0 +1,6 @@
+# Settings for very large operator sets (tens to hundreds of thousands of operators).
+# Same semantics as the default; the only change is a cheaper acceptance check:
+# unreachable branches are still rejected, but proving a branch body always NaN
+# (which needs z3 to encode whole, deeply nested bodies) is skipped.
+operators:
+  undefined_branch_check: false

@@ -1,0 +1,74 @@
+{
+  "+": {
+    "name": "addition",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a + b is integer addition.",
+    "plain_zh": "a + b 是整数加法。",
+    "example": "2 + 3 = 5"
+  },
+  "-": {
+    "name": "subtraction",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a - b is integer subtraction.",
+    "plain_zh": "a - b 是整数减法。",
+    "example": "1 - 4 = -3"
+  },
+  "- (unary)": {
+    "name": "negation",
+    "arity": 1,
+    "signature": "int → int",
+    "plain": "- a is the negation of a.",
+    "plain_zh": "- a 是 a 的相反数。",
+    "example": "- 3 = -3"
+  },
+  "⋀": {
+    "name": "logic and",
+    "arity": 2,
+    "signature": "bool × bool → bool",
+    "plain": "a ⋀ b is true exactly when both a and b are true.",
+    "plain_zh": "a ⋀ b 在 a 和 b 都为真时为真。",
+    "example": "true ⋀ false = false"
+  },
+  "⋁": {
+    "name": "logic or",
+    "arity": 2,
+    "signature": "bool × bool → bool",
+    "plain": "a ⋁ b is true exactly when a or b is true.",
+    "plain_zh": "a ⋁ b 在 a 或 b 为真时为真。",
+    "example": "true ⋁ false = true"
+  },
+  "¬": {
+    "name": "logic not",
+    "arity": 1,
+    "signature": "bool → bool",
+    "plain": "¬ a is true exactly when a is false.",
+    "plain_zh": "¬ a 在 a 为假时为真。",
+    "example": "true ¬ = false"
+  },
+  "→": {
+    "name": "logic implies",
+    "arity": 2,
+    "signature": "bool × bool → bool",
+    "plain": "a → b is false exactly when a is true and b is false.",
+    "plain_zh": "a → b 只在 a 为真而 b 为假时为假。",
+    "example": "true → false = false"
+  },
+  "≢": {
+    "name": "logic xor",
+    "arity": 2,
+    "signature": "bool × bool → bool",
+    "plain": "a ≢ b is true exactly when a and b differ.",
+    "plain_zh": "a ≢ b 在 a 和 b 真假不同时为真。",
+    "example": "true ≢ false = true"
+  },
+  "⇔": {
+    "name": "logic equal",
+    "arity": 2,
+    "signature": "bool × bool → bool",
+    "plain": "a ⇔ b is true exactly when a and b have the same truth value.",
+    "plain_zh": "a ⇔ b 在 a 和 b 真假相同时为真。",
+    "example": "false ⇔ false = true"
+  }
+}

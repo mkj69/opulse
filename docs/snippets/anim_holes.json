@@ -1,0 +1,1 @@
+{"expression": "# (# x)", "target": 120, "steps": [{"symbol": "#", "known": {}, "position": 0, "target": 120, "candidates": [15], "complete": true}, {"symbol": "#", "known": {}, "position": 0, "target": 15, "candidates": [5], "complete": true}], "solutions": [5], "unique": true, "domain": [-2147483647, 2147483647]}

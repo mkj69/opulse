@@ -1,0 +1,198 @@
+# Project information
+site_name: 'Opulse'
+site_description: 'Compose new mathematics from atomic operations, and generate exactly verified data about it.'
+site_url: 'https://mkj69.github.io/opulse/'
+
+# Repository
+repo_name: 'mkj69/opulse'
+repo_url: 'https://github.com/mkj69/opulse'
+edit_uri: 'edit/main/docs/'
+
+# Copyright
+copyright: '© 2026 The Opulse Authors · Code: <a href="https://github.com/mkj69/opulse/blob/main/LICENSE">Apache 2.0</a> · Docs and data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>'
+
+# Configuration
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/mkj69/opulse
+      name: Opulse on GitHub
+
+theme:
+  name: 'material'
+  custom_dir: overrides
+  language: en
+  palette:
+    # Light by default; the toggle switches to dark and the choice is remembered.
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: 'Inter'
+    code: 'JetBrains Mono'
+  logo: 'assets/images/logo.svg'
+  favicon: 'assets/images/logo.svg'
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+extra_css:
+  - assets/css/atoms-legend.css
+  - assets/css/custom.css
+  - assets/css/kinds-legend.css
+  - assets/css/opulse-vis.css
+  - assets/css/stepview.css
+  - assets/css/playground.css
+  - assets/css/worlds.css
+  - assets/css/worlds-tasks.css
+  - assets/css/granularity.css
+  - assets/css/granularity-anim.css
+  - assets/css/home-examples.css
+  - assets/css/lineage.css
+  - assets/css/expviz.css
+  - assets/css/blogfig.css
+  - assets/css/stitch.css
+  - assets/css/opulse-video.css
+  - assets/css/scales.css
+  - assets/css/opgraph.css
+  - assets/css/challenge.css
+  - assets/css/learn.css
+
+extra_javascript:
+  - assets/js/kinds-legend.js
+  - assets/js/layout.js
+  - assets/js/atoms-legend.js
+  - assets/js/opulse-anim.js
+  - assets/js/opulse-vis.js
+  - assets/js/stepview.js
+  - assets/js/playground.js
+  - assets/js/worlds/core.js
+  - assets/js/granularity.js
+  - assets/js/granularity-anim.js
+  - assets/js/home-examples.js
+  - assets/js/lineage.js
+  - assets/js/expviz.js
+  - assets/js/blogfig.js
+  - assets/js/stitch.js
+  - assets/js/opulse-video.js
+  - assets/js/challenge-answer.js
+  - assets/js/challenge-modes.js
+  - assets/js/challenge.js
+  - assets/js/learn.js
+
+hooks:
+  - tools/mkdocs_hooks.py
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            show_root_heading: true
+            show_source: false
+            members_order: source
+            show_signature_annotations: true
+            separate_signature: true
+
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: false
+      pygments_lang_class: true  # adds language-opulse etc. (docs/assets/css/custom.css)
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      base_path: ["."]
+      check_paths: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+
+exclude_docs: |
+  snippets/
+  about/changelog.md
+
+nav:
+  - Home: index.md
+  - Why:
+      - Why Opulse: why.md
+      - Lineage: lineage.md
+  - Learn: learn.md
+  - Tour: guide/visual-tour.md
+  - Challenge: challenge.md
+  - Worlds: worlds/index.md
+  - Playground: guide/playground.md
+  - Glossary: glossary.md
+  - Blog:
+      - A Laboratory for Data Laws: blog/index.md
+      - Stitching: stitching/index.md
+      - Experiment ideas: experiments.md
+  - Docs:
+      - Glossary: glossary.md
+      - Getting started:
+          - Installation: getting-started/installation.md
+          - Quickstart: getting-started/quickstart.md
+          - Concepts: getting-started/concepts.md
+          - Notebooks: getting-started/notebooks.md
+      - Guide:
+          - Atoms and presets: guide/atoms.md
+          - Preset worlds: guide/presets.md
+          - Typed values: guide/types.md
+          - Definitions: guide/definitions.md
+          - Views of a definition: guide/views.md
+          - Skeletons: guide/skeletons.md
+          - Generation: guide/generation.md
+          - Expressions: guide/expressions.md
+          - Derivations at any granularity: guide/step-by-step.md
+          - Benchmark: guide/benchmark.md
+          - Discovery: guide/discovery.md
+          - Training integrations:
+              - Evaluation frameworks: guide/integrations.md
+              - Hugging Face dataset export: guide/export.md
+              - Pretraining corpora and probes: guide/corpora.md
+              - Pretraining: guide/pretraining.md
+          - Environments: guide/environments.md
+          - Exact checks:
+              - Solving for unknowns: guide/solving.md
+              - Laws and equivalence: guide/properties.md
+              - SMT-LIB export: guide/smt.md
+          - Interpretability: guide/interpretability.md
+          - Compiled models: guide/compiled-models.md
+          - Handwired language model studies: guide/handwired.md
+          - Notation: guide/notation.md
+          - Operator names: guide/naming.md
+          - Reports and tools: guide/visualization.md
+          - Python API: guide/python-api.md
+      - Reference:
+          - Command line: reference/cli.md
+          - Configuration: reference/configuration.md
+          - Semantics: reference/semantics.md
+          - Python API: api/index.md
+      - About:
+          - Correctness: about/correctness.md
+          - Performance: about/benchmarks.md
+  - Join us: contribute.md

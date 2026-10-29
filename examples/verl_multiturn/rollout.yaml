@@ -1,0 +1,17 @@
+# Merge these values into a verl 0.9.1 PPO or GRPO training config.
+actor_rollout_ref:
+  rollout:
+    mode: async
+    multi_turn:
+      enable: true
+      format: hermes
+      tool_config_path: examples/verl_multiturn/tools.yaml
+      max_parallel_calls: 1
+      max_assistant_turns: 21
+      max_user_turns: 21
+    agent:
+      default_agent_loop: tool_agent
+reward:
+  custom_reward_function:
+    path: examples/verl_multiturn/reward.py
+    name: compute_score

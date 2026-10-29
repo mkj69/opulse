@@ -1,0 +1,50 @@
+{
+  "∧": {
+    "name": "bit and",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a ∧ b is bitwise AND on nonnegative integers.",
+    "plain_zh": "a ∧ b 是两个非负整数的按位与。",
+    "example": "12 ∧ 10 = 8"
+  },
+  "∨": {
+    "name": "bit or",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a ∨ b is bitwise OR on nonnegative integers.",
+    "plain_zh": "a ∨ b 是两个非负整数的按位或。",
+    "example": "12 ∨ 10 = 14"
+  },
+  "⊻": {
+    "name": "bit xor",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a ⊻ b is bitwise XOR on nonnegative integers.",
+    "plain_zh": "a ⊻ b 是两个非负整数的按位异或。",
+    "example": "12 ⊻ 10 = 6"
+  },
+  "⇐": {
+    "name": "shift left",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a ⇐ b shifts nonnegative a left by b bits; counts above 31 give NaN.",
+    "plain_zh": "a ⇐ b 把非负整数 a 左移 b 位，b 大于 31 时得 NaN。",
+    "example": "5 ⇐ 2 = 20"
+  },
+  "⇒": {
+    "name": "shift right",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a ⇒ b shifts nonnegative a right by b bits.",
+    "plain_zh": "a ⇒ b 把非负整数 a 右移 b 位。",
+    "example": "44 ⇒ 2 = 11"
+  },
+  "♯": {
+    "name": "bit count",
+    "arity": 1,
+    "signature": "int → int",
+    "plain": "a ♯ counts the one bits of nonnegative a; negative inputs give NaN.",
+    "plain_zh": "a ♯ 是非负整数 a 的二进制里 1 的个数。",
+    "example": "13 ♯ = 3"
+  }
+}

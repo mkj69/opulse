@@ -1,0 +1,1 @@
+::: opulse.language.narrate

@@ -1,0 +1,11 @@
+# Start from atoms: use with
+#   opulse operators --config configs/atomic.yaml --set atomic ...
+# The initial set holds only  - a (neg), a ⁺ (succ), a ⁻ (pred), a « (double), a » (half),
+# a ° (parity); everything else, addition included, has to be defined layer by layer.
+# Recursion steps with the atoms themselves (template B written with ⁻ / ⁺).
+
+recursion:
+  style: peano
+  direct_bound: 8          # |v| <= 8 unfolds; beyond, no branch matches (NaN)
+  constant_min: -100
+  constant_max: 100

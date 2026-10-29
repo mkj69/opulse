@@ -1,0 +1,138 @@
+{
+  "+": {
+    "name": "addition",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a + b is integer addition.",
+    "plain_zh": "a + b 是整数加法。",
+    "example": "2 + 3 = 5"
+  },
+  "-": {
+    "name": "subtraction",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a - b is integer subtraction.",
+    "plain_zh": "a - b 是整数减法。",
+    "example": "4 - 1 = 3"
+  },
+  "%": {
+    "name": "remainder",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a % b is the remainder a - b * (a / b), with the sign of a (-7 % 2 = -1); b = 0 gives NaN.",
+    "plain_zh": "a % b 是余数，符号与 a 相同，b = 0 时得 NaN。",
+    "example": "7 % 3 = 1"
+  },
+  "- (unary)": {
+    "name": "negation",
+    "arity": 1,
+    "signature": "int → int",
+    "plain": "- a is the negation of a.",
+    "plain_zh": "- a 是 a 的相反数。",
+    "example": "- 3 = -3"
+  },
+  "♯": {
+    "name": "pitch transpose",
+    "arity": 2,
+    "signature": "note × int → note",
+    "plain": "a ♯ b moves MIDI note a by b semitones; a result outside 0 through 127 gives NaN.",
+    "plain_zh": "a ♯ b 将音高 a 移动 b 个半音，超出 MIDI 范围时得到 NaN。",
+    "example": "60 ♯ 7 = 67"
+  },
+  "⇈": {
+    "name": "pitch octave up",
+    "arity": 1,
+    "signature": "note → note",
+    "plain": "a ⇈ raises MIDI note a by 12 semitones; a result above 127 gives NaN.",
+    "plain_zh": "a ⇈ 将音高 a 升高一个八度，超过 127 时得到 NaN。",
+    "example": "60 ⇈ = 72"
+  },
+  "⇊": {
+    "name": "pitch octave down",
+    "arity": 1,
+    "signature": "note → note",
+    "plain": "a ⇊ lowers MIDI note a by 12 semitones; a result below 0 gives NaN.",
+    "plain_zh": "a ⇊ 将音高 a 降低一个八度，低于 0 时得到 NaN。",
+    "example": "72 ⇊ = 60"
+  },
+  "⟷": {
+    "name": "pitch interval",
+    "arity": 2,
+    "signature": "note × note → int",
+    "plain": "a ⟷ b is the signed number of semitones from note a to note b.",
+    "plain_zh": "a ⟷ b 是从音高 a 到 b 的有符号半音数。",
+    "example": "60 ⟷ 67 = 7"
+  },
+  "⇅": {
+    "name": "pitch invert",
+    "arity": 2,
+    "signature": "melody × note → melody",
+    "plain": "a ⇅ b reflects every pitch in melody a around MIDI note b and keeps durations; an out of range pitch gives NaN.",
+    "plain_zh": "a ⇅ b 以音高 b 为轴翻转旋律 a 的每个音高，保留时值。",
+    "example": "[[60, 1], [64, 1], [67, 2]] ⇅ 64 = [{\"p\":68,\"d\":1},{\"p\":64,\"d\":1},{\"p\":61,\"d\":2}]"
+  },
+  "⟲": {
+    "name": "pitch retrograde",
+    "arity": 1,
+    "signature": "melody → melody",
+    "plain": "a ⟲ reverses the order of melody a, keeping each note with its duration.",
+    "plain_zh": "a ⟲ 逆序排列旋律 a 的音符及其时值。",
+    "example": "[[60, 1], [64, 1], [67, 2]] ⟲ = [{\"p\":67,\"d\":2},{\"p\":64,\"d\":1},{\"p\":60,\"d\":1}]"
+  },
+  "♬": {
+    "name": "pitch scale step",
+    "arity": 1,
+    "signature": "note → note",
+    "plain": "a ♬ is the next higher note in C major; no higher MIDI note gives NaN.",
+    "plain_zh": "a ♬ 是当前调式中比 a 高的下一个音。",
+    "example": "64 ♬ = 65"
+  },
+  "△": {
+    "name": "pitch major triad",
+    "arity": 1,
+    "signature": "note → melody",
+    "plain": "a △ builds a three note major triad at MIDI note a with intervals 0, 4, 7 and one beat each; an out of range pitch gives NaN.",
+    "plain_zh": "a △ 构成以 a 为根音、间隔为 0、4、7 个半音的大三和弦。",
+    "example": "60 △ = [{\"p\":60,\"d\":1},{\"p\":64,\"d\":1},{\"p\":67,\"d\":1}]"
+  },
+  "▽": {
+    "name": "pitch minor triad",
+    "arity": 1,
+    "signature": "note → melody",
+    "plain": "a ▽ builds a three note minor triad at MIDI note a with intervals 0, 3, 7 and one beat each; an out of range pitch gives NaN.",
+    "plain_zh": "a ▽ 构成以 a 为根音、间隔为 0、3、7 个半音的小三和弦。",
+    "example": "57 ▽ = [{\"p\":57,\"d\":1},{\"p\":60,\"d\":1},{\"p\":64,\"d\":1}]"
+  },
+  "⥁": {
+    "name": "pitch repeat",
+    "arity": 2,
+    "signature": "melody × int → melody",
+    "plain": "a ⥁ b repeats melody a b times for b from 0 through 16; other counts give NaN.",
+    "plain_zh": "a ⥁ b 将旋律 a 重复 b 次，b 可取 0 到 16。",
+    "example": "[[55, 1]] ⥁ 3 = [{\"p\":55,\"d\":1},{\"p\":55,\"d\":1},{\"p\":55,\"d\":1}]"
+  },
+  "⋈": {
+    "name": "pitch concat",
+    "arity": 2,
+    "signature": "melody × melody → melody",
+    "plain": "a ⋈ b plays melody a followed by melody b.",
+    "plain_zh": "a ⋈ b 依次连接旋律 a 和 b。",
+    "example": "[[55, 1]] ⋈ [[62, 1], [65, 2]] = [{\"p\":55,\"d\":1},{\"p\":62,\"d\":1},{\"p\":65,\"d\":2}]"
+  },
+  "≎": {
+    "name": "pitch melody equal",
+    "arity": 2,
+    "signature": "melody × melody → bool",
+    "plain": "a ≎ b is true when melodies a and b have the same pitches and beat durations.",
+    "plain_zh": "a ≎ b 在两段旋律的音高与时值完全相同时为真。",
+    "example": "[[60, 1], [64, 1], [67, 2]] ≎ [[60, 1], [64, 1], [67, 2]] = true"
+  },
+  "≐": {
+    "name": "pitch note equal",
+    "arity": 2,
+    "signature": "note × note → bool",
+    "plain": "a ≐ b is true when the two MIDI notes have the same pitch.",
+    "plain_zh": "a ≐ b 在两个 MIDI 音符的音高相同时为真。",
+    "example": "60 ≐ 72 = false"
+  }
+}

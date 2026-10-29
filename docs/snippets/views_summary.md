@@ -1,0 +1,3 @@
+- The smallest value is -2, at (0) (observed on 247 inputs).
+- The largest value is -2, at (0) (observed on 247 inputs).
+- Recursion: `a ◆₁₁` calls itself in cases 2 and 3; case 1 makes no self-call. Each self-call passes `(a % 9) - 1` for a (case 2); `(a % 9) + 1` for a (case 3). The guards compare `a % 9` with constants. The measure `|a % 9|` is a nonnegative integer that is strictly smaller at every self-call with defined arguments (proved by z3 over the value domain), so the recursion stops. At most 8 nested self-calls happen (proved). A NaN argument makes the first comparison NaN, so such a call is NaN at once.

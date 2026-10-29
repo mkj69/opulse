@@ -1,0 +1,37 @@
+entities: [Ana, Bo, Cora, Dev, Eli, Faye, Gio, Hana, Ivo, Jae, Kira, Luz]
+relations:
+  parent:
+    Ana: Cora
+    Bo: Cora
+    Cora: Hana
+    Dev: Hana
+    Eli: Kira
+    Faye: Kira
+    Gio: Luz
+    Hana: Luz
+  colleague:
+    Ana: Dev
+    Bo: Eli
+    Cora: Faye
+    Dev: Gio
+    Eli: Hana
+    Faye: Ivo
+    Gio: Jae
+    Hana: Kira
+    Ivo: Luz
+    Jae: Ana
+    Kira: Bo
+    Luz: Cora
+  neighbour:
+    Ana: Bo
+    Bo: Ana
+    Cora: Dev
+    Dev: Cora
+    Eli: Faye
+    Faye: Eli
+    Gio: Hana
+    Hana: Gio
+    Ivo: Jae
+    Jae: Ivo
+    Kira: Luz
+    Luz: Kira

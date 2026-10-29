@@ -1,0 +1,22 @@
+.og{--og-atom:#94a3b8;--og-simple:var(--op-cyan,#07899e);--og-branch:var(--op-amber,#b56e00);--og-recursive:var(--op-magenta,#a63799);color:var(--md-default-fg-color);margin:.5rem 0 1.2rem}
+[data-md-color-scheme="slate"] .og{--og-atom:#475569}
+.og-tools{display:flex;align-items:center;gap:.35rem;margin:.4rem 0;flex-wrap:wrap}
+.og-search{font:inherit;min-width:9rem;flex:1 1 10rem;max-width:22rem;padding:.46rem .65rem;border:1px solid var(--md-default-fg-color--lighter);border-radius:7px;background:var(--md-default-bg-color);color:inherit}
+.og-button{font:inherit;min-width:2.8rem;min-height:2.7rem;padding:.35rem .65rem;border:1px solid var(--md-default-fg-color--lighter);border-radius:7px;background:var(--md-default-bg-color);color:inherit;cursor:pointer}
+.og-button:hover{border-color:var(--md-accent-fg-color)}
+.og-button:focus-visible,.og-search:focus-visible,.og-viewport:focus-visible{outline:2px solid var(--md-accent-fg-color);outline-offset:2px}
+.og-viewport{position:relative;width:100%;height:clamp(320px,58vh,570px);overflow:hidden;border:1px solid var(--md-default-fg-color--lightest);border-radius:9px;background:color-mix(in srgb,var(--md-default-fg-color) 2%,var(--md-default-bg-color));touch-action:none;cursor:grab}
+.og-viewport:active{cursor:grabbing}
+.og-surface{display:block;width:100%;height:100%}
+.og-detail{min-height:5rem;margin-top:.4rem;padding:.55rem .7rem;border:1px solid var(--md-default-fg-color--lightest);border-radius:8px;overflow-wrap:anywhere}
+.og-detail code{display:block;margin:.35rem 0;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--md-default-fg-color)}
+.og-detail p{margin:.3rem 0}
+@media(max-width:600px){.og-viewport{height:390px}.og-button{min-width:3.1rem;min-height:3.1rem}.og-search{min-height:3.1rem}}
+.scales-growth .sg-kind-list{max-width:48rem;gap:.4rem;margin:.65rem 0}
+.scales-growth .sg-kind-row{grid-template-columns:5.8rem minmax(0,1fr) 3.5rem;gap:.55rem}
+.scales-growth .sg-kind-row b{text-align:right;font-variant-numeric:tabular-nums}
+.scales-growth .sg-kind-track{height:.9rem;border-radius:6px}
+.scales-growth .sg-summary{display:inline-block;padding:.4rem .65rem;border:1px solid var(--sg-line);border-radius:7px;background:color-mix(in srgb,var(--sg-fg) 3%,var(--sg-bg))}
+.scales-growth .sg-scroll table{max-width:48rem;margin:.35rem 0 .8rem}
+.scales-growth .sg-scroll tbody tr:nth-child(even){background:color-mix(in srgb,var(--sg-fg) 3%,var(--sg-bg))}
+.scales-growth .sg-scroll th,.scales-growth .sg-scroll td{padding:.34rem .5rem}

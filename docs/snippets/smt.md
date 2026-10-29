@@ -1,0 +1,6 @@
+```lisp
+; ♣₂₅: a ♣₂₅ = { - 2, if a % 9 == 0; & (((a % 9) - 1) ♣₂₅), if a % 9 > 0; & (((a % 9) + 1) ♣₂₅), if a % 9 < 0 }
+(define-funs-rec ((op_vSGEK9n4ny_d ((a_d Bool) (a Int)) Bool) (op_vSGEK9n4ny_v ((a_d Bool) (a Int)) Int))
+  ((ite (not (and a_d (base_mod_d a 9))) false (ite (= (base_mod_v a 9) 0) (base_neg_d 2) (ite (not (and a_d (base_mod_d a 9))) false (ite (> (base_mod_v a 9) 0) (and (op_vSGEK9n4ny_d (and (and a_d (base_mod_d a 9)) (base_sub_d (base_mod_v a 9) 1)) (base_sub_v (base_mod_v a 9) 1)) (base_digitsum_d (op_vSGEK9n4ny_v (and (and a_d (base_mod_d a 9)) (base_sub_d (base_mod_v a 9) 1)) (base_sub_v (base_mod_v a 9) 1)))) (ite (not (and a_d (base_mod_d a 9))) false (ite (< (base_mod_v a 9) 0) (and (op_vSGEK9n4ny_d (and (and a_d (base_mod_d a 9)) (base_add_d (base_mod_v a 9) 1)) (base_add_v (base_mod_v a 9) 1)) (base_digitsum_d (op_vSGEK9n4ny_v (and (and a_d (base_mod_d a 9)) (base_add_d (base_mod_v a 9) 1)) (base_add_v (base_mod_v a 9) 1)))) false))))))
+   (ite (= (base_mod_v a 9) 0) (base_neg_v 2) (ite (> (base_mod_v a 9) 0) (base_digitsum_v (op_vSGEK9n4ny_v (and (and a_d (base_mod_d a 9)) (base_sub_d (base_mod_v a 9) 1)) (base_sub_v (base_mod_v a 9) 1))) (ite (< (base_mod_v a 9) 0) (base_digitsum_v (op_vSGEK9n4ny_v (and (and a_d (base_mod_d a 9)) (base_add_d (base_mod_v a 9) 1)) (base_add_v (base_mod_v a 9) 1))) 0)))))
+```

@@ -1,0 +1,9 @@
+# Use with: opulse operators --preset perm --cards 5 --config configs/presets/perm.yaml
+semantics:
+  mode: exact
+  bound: 2147483647
+recursion:
+  style: direct
+  direct_bound: 4
+expressions:
+  max_depth: 3

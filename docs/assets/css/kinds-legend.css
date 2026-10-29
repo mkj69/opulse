@@ -1,0 +1,23 @@
+:root {
+  --op-kind-substitution: var(--op-cyan);
+  --op-kind-branch: var(--op-amber);
+  --op-kind-recursion: var(--op-magenta);
+}
+.kinds-legend { margin: .7rem 0 1rem; font-size: .78rem; color: var(--md-default-fg-color); }
+.kinds-legend .kl-shell { display: block; border: 1px solid var(--op-card-border); border-radius: .55rem; padding: .55rem .7rem; background: var(--op-card-bg); }
+.kinds-legend details.kl-shell { display: block; }
+.kinds-legend summary { cursor: pointer; font-weight: 700; }
+.kinds-legend .kl-title { display: block; margin-bottom: .4rem; }
+.kinds-legend .kl-kinds { display: grid; gap: .35rem; }
+.kinds-legend .kl-kind { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem .5rem; min-width: 0; }
+.kinds-legend .kl-simple { --kl-color: var(--op-kind-substitution); }
+.kinds-legend .kl-branch { --kl-color: var(--op-kind-branch); }
+.kinds-legend .kl-recursive { --kl-color: var(--op-kind-recursion); }
+.kinds-legend .kl-chip { flex: none; border: 1px solid var(--kl-color); border-radius: 1rem; padding: .06rem .45rem; color: var(--kl-color); font-weight: 700; }
+.kinds-legend .kl-meaning { flex: 1 1 12rem; }
+.kinds-legend code { white-space: normal; overflow-wrap: anywhere; font-size: .9em; }
+.kinds-legend .kl-read { margin-top: .45rem; }
+.kinds-legend .kl-forms { display: grid; gap: .25rem; margin-top: .35rem; }
+.kinds-legend .kl-forms > div { display: flex; flex-wrap: wrap; gap: .3rem .65rem; }
+.kinds-legend .kl-forms code { min-width: 9rem; }
+.op-combine .op-card a.kl-card-link { font-size: .8em; }

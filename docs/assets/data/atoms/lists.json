@@ -1,0 +1,98 @@
+{
+  "+": {
+    "name": "addition",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a + b is integer addition.",
+    "plain_zh": "a + b 是整数加法。",
+    "example": "2 + 5 = 7"
+  },
+  "-": {
+    "name": "subtraction",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a - b is integer subtraction.",
+    "plain_zh": "a - b 是整数减法。",
+    "example": "9 - 4 = 5"
+  },
+  "%": {
+    "name": "remainder",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a % b is the remainder a - b * (a / b), with the sign of a (-7 % 2 = -1); b = 0 gives NaN.",
+    "plain_zh": "a % b 是余数 a - b * (a / b)，符号与 a 相同，b = 0 时结果为 NaN。",
+    "example": "7 % 3 = 1"
+  },
+  "- (unary)": {
+    "name": "negation",
+    "arity": 1,
+    "signature": "int → int",
+    "plain": "- a is the negation of a.",
+    "plain_zh": "- a 是 a 的相反数。",
+    "example": "- 4 = -4"
+  },
+  "⊲": {
+    "name": "list cons",
+    "arity": 2,
+    "signature": "int × list[int] → list[int]",
+    "plain": "a ⊲ b places integer a before the elements of list b.",
+    "plain_zh": "a ⊲ b 把整数 a 放到列表 b 的最前面。",
+    "example": "9 ⊲ [2, 3] = [{\"t\":\"int\",\"v\":9},{\"t\":\"int\",\"v\":2},{\"t\":\"int\",\"v\":3}]"
+  },
+  "⌃": {
+    "name": "list head",
+    "arity": 1,
+    "signature": "list[int] → int",
+    "plain": "a ⌃ is the first integer in a; an empty list gives NaN.",
+    "plain_zh": "a ⌃ 是列表 a 的第一个元素，空列表得 NaN。",
+    "example": "[7, 8, 9] ⌃ = 7"
+  },
+  "⌄": {
+    "name": "list tail",
+    "arity": 1,
+    "signature": "list[int] → list[int]",
+    "plain": "a ⌄ removes the first element of a; an empty list stays empty.",
+    "plain_zh": "a ⌄ 去掉列表 a 的第一个元素，空列表保持为空。",
+    "example": "[7, 8, 9] ⌄ = [{\"t\":\"int\",\"v\":8},{\"t\":\"int\",\"v\":9}]"
+  },
+  "ℒ": {
+    "name": "list length",
+    "arity": 1,
+    "signature": "list[int] → int",
+    "plain": "a ℒ is the number of integers in list a.",
+    "plain_zh": "a ℒ 是列表 a 的元素个数。",
+    "example": "[3, 1, 4] ℒ = 3"
+  },
+  "⊞": {
+    "name": "list append",
+    "arity": 2,
+    "signature": "list[int] × list[int] → list[int]",
+    "plain": "a ⊞ b joins list a followed by list b.",
+    "plain_zh": "a ⊞ b 把列表 b 接在 a 后面。",
+    "example": "[1, 2] ⊞ [3] = [{\"t\":\"int\",\"v\":1},{\"t\":\"int\",\"v\":2},{\"t\":\"int\",\"v\":3}]"
+  },
+  "Σ": {
+    "name": "list sum",
+    "arity": 1,
+    "signature": "list[int] → int",
+    "plain": "a Σ is the sum of the integers in list a.",
+    "plain_zh": "a Σ 是列表 a 所有元素之和。",
+    "example": "[3, 1, 4] Σ = 8"
+  },
+  "⊙": {
+    "name": "list at",
+    "arity": 2,
+    "signature": "list[int] × int → int",
+    "plain": "a ⊙ b is element b of a, counting from zero; an invalid index gives NaN.",
+    "plain_zh": "a ⊙ b 是列表 a 中下标为 b 的元素，下标从零数，越界得 NaN。",
+    "example": "[10, 20, 30] ⊙ 2 = 30"
+  },
+  "≍": {
+    "name": "list equal",
+    "arity": 2,
+    "signature": "list[int] × list[int] → bool",
+    "plain": "a ≍ b is true exactly when lists a and b have the same elements in order.",
+    "plain_zh": "a ≍ b 在两个列表元素和顺序都相同时为真。",
+    "example": "[1, 2] ≍ [1, 2] = true"
+  }
+}

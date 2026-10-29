@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 362 344" width="362" height="344" role="img" aria-label="Granularity: one coarse step equals a block of finer steps, down to atoms">
+<title>Granularity: one coarse step equals a block of finer steps, down to atoms</title>
+<text x="43.0" y="14.0" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="700" fill="#e5e7eb" text-anchor="middle">◆₂ known</text>
+<text x="43.0" y="32.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#a3adbf" text-anchor="middle">3 lines</text>
+<text x="156.0" y="14.0" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="700" fill="#e5e7eb" text-anchor="middle">◆₁ known</text>
+<text x="156.0" y="32.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#a3adbf" text-anchor="middle">19 lines</text>
+<text x="290.0" y="14.0" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="14" font-weight="700" fill="#e5e7eb" text-anchor="middle">atoms only</text>
+<text x="290.0" y="32.8" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#a3adbf" text-anchor="middle">39 lines</text>
+<rect x="106.0" y="56.0" width="100.0" height="32.0" rx="8" fill="#e879f9" stroke="none" stroke-width="0" fill-opacity="0.13"/>
+<rect x="106.0" y="56.0" width="100.0" height="32.0" rx="8" fill="none" stroke="#e879f9" stroke-width="1.25"/>
+<text x="114.0" y="76.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="400" fill="#e5e7eb" text-anchor="start">unfold ◆₂</text>
+<rect x="106.0" y="96.0" width="100.0" height="32.0" rx="8" fill="#22d3ee" stroke="none" stroke-width="0" fill-opacity="0.13"/>
+<rect x="106.0" y="96.0" width="100.0" height="32.0" rx="8" fill="none" stroke="#22d3ee" stroke-width="1.25"/>
+<text x="114.0" y="116.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="400" fill="#e5e7eb" text-anchor="start">◆₁ 50 ⇒ 45</text>
+<rect x="106.0" y="136.0" width="100.0" height="32.0" rx="8" fill="#22d3ee" stroke="none" stroke-width="0" fill-opacity="0.13"/>
+<rect x="106.0" y="136.0" width="100.0" height="32.0" rx="8" fill="none" stroke="#22d3ee" stroke-width="1.25"/>
+<text x="114.0" y="156.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="400" fill="#e5e7eb" text-anchor="start">◆₁ 45 ⇒ 60</text>
+<rect x="106.0" y="176.0" width="100.0" height="32.0" rx="8" fill="#22d3ee" stroke="none" stroke-width="0" fill-opacity="0.13"/>
+<rect x="106.0" y="176.0" width="100.0" height="32.0" rx="8" fill="none" stroke="#22d3ee" stroke-width="1.25"/>
+<text x="114.0" y="196.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="400" fill="#e5e7eb" text-anchor="start">◆₁ 60 ⇒ 60</text>
+<rect x="106.0" y="216.0" width="100.0" height="32.0" rx="8" fill="#22d3ee" stroke="none" stroke-width="0" fill-opacity="0.13"/>
+<rect x="106.0" y="216.0" width="100.0" height="32.0" rx="8" fill="none" stroke="#22d3ee" stroke-width="1.25"/>
+<text x="114.0" y="236.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="400" fill="#e5e7eb" text-anchor="start">◆₁ 60 ⇒ 60</text>
+<text x="156.0" y="268.0" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#a3adbf" text-anchor="middle">13 + 4 = 17</text>
+<rect x="2.0" y="128.0" width="82.0" height="48.0" rx="8" fill="#e879f9" stroke="none" stroke-width="0" fill-opacity="0.13"/>
+<rect x="2.0" y="128.0" width="82.0" height="48.0" rx="8" fill="none" stroke="#e879f9" stroke-width="1.25"/>
+<text x="10.0" y="147.0" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="700" fill="#e5e7eb" text-anchor="start">31 ◆₂ 50</text>
+<text x="10.0" y="165.6" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="700" fill="#e5e7eb" text-anchor="start">⇒ 60</text>
+<text x="43.0" y="194.0" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#a3adbf" text-anchor="middle">1 step</text>
+<path d="M 107 56 Q 97 56 97 62 L 97 146.0 Q 97 152.0 89 152.0 Q 97 152.0 97 158.0 L 97 242 Q 97 248 107 248" fill="none" stroke="#e879f9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="84.0" y1="152.0" x2="89.0" y2="152.0" stroke="#e879f9" stroke-width="1.25"/>
+<rect x="226.0" y="80.0" width="128.0" height="32.0" rx="8" fill="#0d1328" stroke="#22d3ee" stroke-width="1.25"/>
+<text x="234.0" y="100.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="400" fill="#e5e7eb" text-anchor="start">unfold ◆₁</text>
+<rect x="226.0" y="120.0" width="128.0" height="32.0" rx="8" fill="#0d1328" stroke="#64748b" stroke-width="1"/>
+<text x="234.0" y="140.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="400" fill="#e5e7eb" text-anchor="start">50 + 50 ⇒ 100</text>
+<rect x="226.0" y="160.0" width="128.0" height="32.0" rx="8" fill="#0d1328" stroke="#64748b" stroke-width="1"/>
+<text x="234.0" y="180.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="400" fill="#e5e7eb" text-anchor="start">100 $ ⇒ 3</text>
+<rect x="226.0" y="200.0" width="128.0" height="32.0" rx="8" fill="#0d1328" stroke="#64748b" stroke-width="1"/>
+<text x="234.0" y="220.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="400" fill="#e5e7eb" text-anchor="start">&amp; 5 ⇒ 5</text>
+<rect x="226.0" y="240.0" width="128.0" height="32.0" rx="8" fill="#0d1328" stroke="#64748b" stroke-width="1"/>
+<text x="234.0" y="260.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="400" fill="#e5e7eb" text-anchor="start"># 5 ⇒ 15</text>
+<rect x="226.0" y="280.0" width="128.0" height="32.0" rx="8" fill="#0d1328" stroke="#64748b" stroke-width="1"/>
+<text x="234.0" y="300.7" font-family="'JetBrains Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13.5" font-weight="400" fill="#e5e7eb" text-anchor="start">3 * 15 ⇒ 45</text>
+<path d="M 227 80 Q 217 80 217 86 L 217 106.0 Q 217 112.0 209 112.0 Q 217 112.0 217 118.0 L 217 306 Q 217 312 227 312" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="206.0" y1="112.0" x2="209.0" y2="112.0" stroke="#22d3ee" stroke-width="1.25"/>
+<text x="290.0" y="332.0" font-family="'Helvetica Neue', Helvetica, Arial, 'DejaVu Sans', sans-serif" font-size="12.5" font-weight="400" fill="#a3adbf" text-anchor="middle">6 steps</text>
+</svg>

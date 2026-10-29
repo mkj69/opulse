@@ -1,0 +1,11 @@
+# Use with: opulse operators --preset logic --config configs/presets/logic.yaml
+recursion:
+  style: direct
+  direct_bound: 3
+operators:
+  symbol_sets: [shapes]
+  symbol_min_len: 1
+  symbol_max_len: 3
+  max_if_branches: 2
+expressions:
+  max_depth: 2

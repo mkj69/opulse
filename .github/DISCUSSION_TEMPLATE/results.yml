@@ -1,0 +1,30 @@
+title: "Experiment result: "
+body:
+  - type: input
+    id: idea
+    attributes:
+      label: Which experiment idea?
+      description: Link the original discussion or describe the question you tested.
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: Setup
+      description: Include the world, data, seed, model or method, and comparison.
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Results, positive or negative
+      description: Give the measures and what you observed. A result with no gain is useful too.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: Link code or data and give the commands and versions needed to repeat the experiment.
+    validations:
+      required: true

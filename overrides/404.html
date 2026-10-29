@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+{% block content %}
+  {% if config.theme.language == 'zh' %}
+    <h1>找不到页面</h1>
+    <p>请求的页面不存在。请返回 <a href="{{ config.site_url }}">Opulse 首页</a>，或通过导航查找内容。</p>
+  {% else %}
+    <h1>Page not found</h1>
+    <p>The requested page is unavailable. Return to the <a href="{{ config.site_url }}">Opulse homepage</a> or use the navigation menu to find a topic.</p>
+  {% endif %}
+{% endblock %}

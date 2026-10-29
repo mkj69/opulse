@@ -1,0 +1,31 @@
+name: Wrong derivation step or value
+description: Show us a value or rewrite that looks wrong.
+body:
+  - type: textarea
+    id: expression
+    attributes:
+      label: Expression
+      description: Include the full expression and any input values.
+    validations:
+      required: true
+  - type: textarea
+    id: definitions
+    attributes:
+      label: Definitions
+      description: Paste the atom rules and operator definitions used by this expression, or attach the operator file.
+    validations:
+      required: true
+  - type: textarea
+    id: step
+    attributes:
+      label: Step or value
+      description: Paste the exact rewrite or computed value that looks wrong, with its position in the derivation.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does it look wrong?
+      description: Show the result you expected and how you calculated it. Add the command and seed if you have them.
+    validations:
+      required: true

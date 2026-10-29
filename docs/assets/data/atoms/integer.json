@@ -1,0 +1,82 @@
+{
+  "+": {
+    "name": "addition",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a + b is integer addition.",
+    "plain_zh": "a + b 是整数加法。",
+    "example": "7 + 12 = 19"
+  },
+  "-": {
+    "name": "subtraction",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a - b is integer subtraction.",
+    "plain_zh": "a - b 是整数减法。",
+    "example": "5 - 23 = -18"
+  },
+  "*": {
+    "name": "multiplication",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a * b is integer multiplication.",
+    "plain_zh": "a * b 是整数乘法。",
+    "example": "(-3) * 7 = -21"
+  },
+  "/": {
+    "name": "division",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a / b divides and rounds toward zero (-7 / 2 = -3); b = 0 gives NaN.",
+    "plain_zh": "a / b 是向零取整的除法，b = 0 时结果为 NaN。",
+    "example": "(-7) / 2 = -3"
+  },
+  "%": {
+    "name": "remainder",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a % b is the remainder a - b * (a / b), with the sign of a (-7 % 2 = -1); b = 0 gives NaN.",
+    "plain_zh": "a % b 是余数 a - b * (a / b)，符号与 a 相同，b = 0 时结果为 NaN。",
+    "example": "(-7) % 2 = -1"
+  },
+  "- (unary)": {
+    "name": "negation",
+    "arity": 1,
+    "signature": "int → int",
+    "plain": "- a is the negation of a.",
+    "plain_zh": "- a 是 a 的相反数。",
+    "example": "- 15 = -15"
+  },
+  "@": {
+    "name": "reverse decimal digits",
+    "arity": 1,
+    "signature": "int → int",
+    "plain": "a @ reverses the decimal digits of |a| and keeps the sign of a (120 @ = 21, -123 @ = -321).",
+    "plain_zh": "a @ 把 |a| 的十进制数字倒过来写，再保留 a 的符号。",
+    "example": "120 @ = 21"
+  },
+  "#": {
+    "name": "signed triangular number",
+    "arity": 1,
+    "signature": "int → int",
+    "plain": "# a is sign(a) * |a| * (|a| + 1) / 2, computed exactly; only its result is checked against the bound (# 4 = 10, # -4 = -10).",
+    "plain_zh": "# a 是带符号三角数 sign(a) * |a| * (|a| + 1) / 2。",
+    "example": "# 4 = 10"
+  },
+  "$": {
+    "name": "one-bit count",
+    "arity": 1,
+    "signature": "int → int",
+    "plain": "a $ is the number of 1 bits in the binary form of |a| (7 $ = 3).",
+    "plain_zh": "a $ 是 |a| 的二进制里 1 的个数。",
+    "example": "13 $ = 3"
+  },
+  "&": {
+    "name": "signed digit sum",
+    "arity": 1,
+    "signature": "int → int",
+    "plain": "& a is sign(a) times the sum of the decimal digits of |a| (& -123 = -6).",
+    "plain_zh": "& a 是 |a| 的各位数字之和，再乘上 a 的符号。",
+    "example": "& (-123) = -6"
+  }
+}

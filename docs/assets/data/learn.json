@@ -1,0 +1,3509 @@
+[
+  {
+    "id": "atoms",
+    "rule": "",
+    "expression": "(3 + 4) * 2",
+    "world": "",
+    "mode": "atom",
+    "value": "14",
+    "steps": [
+      {
+        "index": 1,
+        "kind": "eval",
+        "symbol": "+",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "add",
+        "inputs": [
+          "3",
+          "4"
+        ],
+        "parameters": [],
+        "before": "(3 + 4) * 2",
+        "focus": [
+          0,
+          7
+        ],
+        "after": "7 * 2",
+        "new": [
+          0,
+          1
+        ],
+        "replacement": "7",
+        "output": "7",
+        "depth": 0,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 2,
+        "kind": "eval",
+        "symbol": "*",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "mul",
+        "inputs": [
+          "7",
+          "2"
+        ],
+        "parameters": [],
+        "before": "7 * 2",
+        "focus": [
+          0,
+          5
+        ],
+        "after": "14",
+        "new": [
+          0,
+          2
+        ],
+        "replacement": "14",
+        "output": "14",
+        "depth": 0,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      }
+    ],
+    "exercise": {
+      "expression": "4 * 3",
+      "value": "12",
+      "steps": [
+        {
+          "index": 1,
+          "kind": "eval",
+          "symbol": "*",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "mul",
+          "inputs": [
+            "4",
+            "3"
+          ],
+          "parameters": [],
+          "before": "4 * 3",
+          "focus": [
+            0,
+            5
+          ],
+          "after": "12",
+          "new": [
+            0,
+            2
+          ],
+          "replacement": "12",
+          "output": "12",
+          "depth": 0,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "substitution",
+    "rule": "a ◆ b = { (a + b) * 2 }",
+    "expression": "3 ◆ 4",
+    "world": "",
+    "mode": "substitution",
+    "value": "14",
+    "steps": [
+      {
+        "index": 1,
+        "kind": "expand",
+        "symbol": "◆",
+        "shape": "binary",
+        "operator_kind": "simple",
+        "atom": null,
+        "inputs": [
+          "3",
+          "4"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "value": "3"
+          },
+          {
+            "name": "b",
+            "value": "4"
+          }
+        ],
+        "before": "3 ◆ 4",
+        "focus": [
+          0,
+          5
+        ],
+        "after": "(3 + 4) * 2",
+        "new": [
+          0,
+          11
+        ],
+        "replacement": "(3 + 4) * 2",
+        "output": null,
+        "depth": 0,
+        "branches": [
+          {
+            "index": 1,
+            "condition": null,
+            "else": false,
+            "truth": true,
+            "body": "(a + b) * 2",
+            "comparisons": []
+          }
+        ],
+        "branch_index": 1,
+        "branch_count": 1,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 2,
+        "kind": "eval",
+        "symbol": "+",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "add",
+        "inputs": [
+          "3",
+          "4"
+        ],
+        "parameters": [],
+        "before": "(3 + 4) * 2",
+        "focus": [
+          0,
+          7
+        ],
+        "after": "7 * 2",
+        "new": [
+          0,
+          1
+        ],
+        "replacement": "7",
+        "output": "7",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 3,
+        "kind": "eval",
+        "symbol": "*",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "mul",
+        "inputs": [
+          "7",
+          "2"
+        ],
+        "parameters": [],
+        "before": "7 * 2",
+        "focus": [
+          0,
+          5
+        ],
+        "after": "14",
+        "new": [
+          0,
+          2
+        ],
+        "replacement": "14",
+        "output": "14",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      }
+    ],
+    "exercise": {
+      "expression": "5 ◆ 1",
+      "value": "12",
+      "steps": [
+        {
+          "index": 1,
+          "kind": "expand",
+          "symbol": "◆",
+          "shape": "binary",
+          "operator_kind": "simple",
+          "atom": null,
+          "inputs": [
+            "5",
+            "1"
+          ],
+          "parameters": [
+            {
+              "name": "a",
+              "value": "5"
+            },
+            {
+              "name": "b",
+              "value": "1"
+            }
+          ],
+          "before": "5 ◆ 1",
+          "focus": [
+            0,
+            5
+          ],
+          "after": "(5 + 1) * 2",
+          "new": [
+            0,
+            11
+          ],
+          "replacement": "(5 + 1) * 2",
+          "output": null,
+          "depth": 0,
+          "branches": [
+            {
+              "index": 1,
+              "condition": null,
+              "else": false,
+              "truth": true,
+              "body": "(a + b) * 2",
+              "comparisons": []
+            }
+          ],
+          "branch_index": 1,
+          "branch_count": 1,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 2,
+          "kind": "eval",
+          "symbol": "+",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "add",
+          "inputs": [
+            "5",
+            "1"
+          ],
+          "parameters": [],
+          "before": "(5 + 1) * 2",
+          "focus": [
+            0,
+            7
+          ],
+          "after": "6 * 2",
+          "new": [
+            0,
+            1
+          ],
+          "replacement": "6",
+          "output": "6",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 3,
+          "kind": "eval",
+          "symbol": "*",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "mul",
+          "inputs": [
+            "6",
+            "2"
+          ],
+          "parameters": [],
+          "before": "6 * 2",
+          "focus": [
+            0,
+            5
+          ],
+          "after": "12",
+          "new": [
+            0,
+            2
+          ],
+          "replacement": "12",
+          "output": "12",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "layers",
+    "rule": "a ◆ b = { (a + b) * 2 }\na ♣ b = { (a ◆ b) - a }",
+    "expression": "3 ♣ 4",
+    "world": "",
+    "mode": "layers",
+    "value": "11",
+    "steps": [
+      {
+        "index": 1,
+        "kind": "expand",
+        "symbol": "♣",
+        "shape": "binary",
+        "operator_kind": "simple",
+        "atom": null,
+        "inputs": [
+          "3",
+          "4"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "value": "3"
+          },
+          {
+            "name": "b",
+            "value": "4"
+          }
+        ],
+        "before": "3 ♣ 4",
+        "focus": [
+          0,
+          5
+        ],
+        "after": "(3 ◆ 4) - 3",
+        "new": [
+          0,
+          11
+        ],
+        "replacement": "(3 ◆ 4) - 3",
+        "output": null,
+        "depth": 0,
+        "branches": [
+          {
+            "index": 1,
+            "condition": null,
+            "else": false,
+            "truth": true,
+            "body": "(a ◆ b) - a",
+            "comparisons": []
+          }
+        ],
+        "branch_index": 1,
+        "branch_count": 1,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 2,
+        "kind": "expand",
+        "symbol": "◆",
+        "shape": "binary",
+        "operator_kind": "simple",
+        "atom": null,
+        "inputs": [
+          "3",
+          "4"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "value": "3"
+          },
+          {
+            "name": "b",
+            "value": "4"
+          }
+        ],
+        "before": "(3 ◆ 4) - 3",
+        "focus": [
+          0,
+          7
+        ],
+        "after": "((3 + 4) * 2) - 3",
+        "new": [
+          0,
+          13
+        ],
+        "replacement": "(3 + 4) * 2",
+        "output": null,
+        "depth": 1,
+        "branches": [
+          {
+            "index": 1,
+            "condition": null,
+            "else": false,
+            "truth": true,
+            "body": "(a + b) * 2",
+            "comparisons": []
+          }
+        ],
+        "branch_index": 1,
+        "branch_count": 1,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 3,
+        "kind": "eval",
+        "symbol": "+",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "add",
+        "inputs": [
+          "3",
+          "4"
+        ],
+        "parameters": [],
+        "before": "((3 + 4) * 2) - 3",
+        "focus": [
+          1,
+          8
+        ],
+        "after": "(7 * 2) - 3",
+        "new": [
+          1,
+          2
+        ],
+        "replacement": "7",
+        "output": "7",
+        "depth": 2,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 4,
+        "kind": "eval",
+        "symbol": "*",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "mul",
+        "inputs": [
+          "7",
+          "2"
+        ],
+        "parameters": [],
+        "before": "(7 * 2) - 3",
+        "focus": [
+          0,
+          7
+        ],
+        "after": "14 - 3",
+        "new": [
+          0,
+          2
+        ],
+        "replacement": "14",
+        "output": "14",
+        "depth": 2,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 5,
+        "kind": "eval",
+        "symbol": "-",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "sub",
+        "inputs": [
+          "14",
+          "3"
+        ],
+        "parameters": [],
+        "before": "14 - 3",
+        "focus": [
+          0,
+          6
+        ],
+        "after": "11",
+        "new": [
+          0,
+          2
+        ],
+        "replacement": "11",
+        "output": "11",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      }
+    ],
+    "exercise": {
+      "expression": "5 ♣ 2",
+      "value": "9",
+      "steps": [
+        {
+          "index": 1,
+          "kind": "expand",
+          "symbol": "♣",
+          "shape": "binary",
+          "operator_kind": "simple",
+          "atom": null,
+          "inputs": [
+            "5",
+            "2"
+          ],
+          "parameters": [
+            {
+              "name": "a",
+              "value": "5"
+            },
+            {
+              "name": "b",
+              "value": "2"
+            }
+          ],
+          "before": "5 ♣ 2",
+          "focus": [
+            0,
+            5
+          ],
+          "after": "(5 ◆ 2) - 5",
+          "new": [
+            0,
+            11
+          ],
+          "replacement": "(5 ◆ 2) - 5",
+          "output": null,
+          "depth": 0,
+          "branches": [
+            {
+              "index": 1,
+              "condition": null,
+              "else": false,
+              "truth": true,
+              "body": "(a ◆ b) - a",
+              "comparisons": []
+            }
+          ],
+          "branch_index": 1,
+          "branch_count": 1,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 2,
+          "kind": "expand",
+          "symbol": "◆",
+          "shape": "binary",
+          "operator_kind": "simple",
+          "atom": null,
+          "inputs": [
+            "5",
+            "2"
+          ],
+          "parameters": [
+            {
+              "name": "a",
+              "value": "5"
+            },
+            {
+              "name": "b",
+              "value": "2"
+            }
+          ],
+          "before": "(5 ◆ 2) - 5",
+          "focus": [
+            0,
+            7
+          ],
+          "after": "((5 + 2) * 2) - 5",
+          "new": [
+            0,
+            13
+          ],
+          "replacement": "(5 + 2) * 2",
+          "output": null,
+          "depth": 1,
+          "branches": [
+            {
+              "index": 1,
+              "condition": null,
+              "else": false,
+              "truth": true,
+              "body": "(a + b) * 2",
+              "comparisons": []
+            }
+          ],
+          "branch_index": 1,
+          "branch_count": 1,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 3,
+          "kind": "eval",
+          "symbol": "+",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "add",
+          "inputs": [
+            "5",
+            "2"
+          ],
+          "parameters": [],
+          "before": "((5 + 2) * 2) - 5",
+          "focus": [
+            1,
+            8
+          ],
+          "after": "(7 * 2) - 5",
+          "new": [
+            1,
+            2
+          ],
+          "replacement": "7",
+          "output": "7",
+          "depth": 2,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 4,
+          "kind": "eval",
+          "symbol": "*",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "mul",
+          "inputs": [
+            "7",
+            "2"
+          ],
+          "parameters": [],
+          "before": "(7 * 2) - 5",
+          "focus": [
+            0,
+            7
+          ],
+          "after": "14 - 5",
+          "new": [
+            0,
+            2
+          ],
+          "replacement": "14",
+          "output": "14",
+          "depth": 2,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 5,
+          "kind": "eval",
+          "symbol": "-",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "sub",
+          "inputs": [
+            "14",
+            "5"
+          ],
+          "parameters": [],
+          "before": "14 - 5",
+          "focus": [
+            0,
+            6
+          ],
+          "after": "9",
+          "new": [
+            0,
+            1
+          ],
+          "replacement": "9",
+          "output": "9",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "branch_equal",
+    "rule": "a ▲ b = { a - b, if a >= b; b - a, else }",
+    "expression": "3 ▲ 3",
+    "world": "",
+    "mode": "boundary",
+    "value": "0",
+    "steps": [
+      {
+        "index": 1,
+        "kind": "expand",
+        "symbol": "▲",
+        "shape": "binary",
+        "operator_kind": "branch",
+        "atom": null,
+        "inputs": [
+          "3",
+          "3"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "value": "3"
+          },
+          {
+            "name": "b",
+            "value": "3"
+          }
+        ],
+        "before": "3 ▲ 3",
+        "focus": [
+          0,
+          5
+        ],
+        "after": "3 - 3",
+        "new": [
+          0,
+          5
+        ],
+        "replacement": "3 - 3",
+        "output": null,
+        "depth": 0,
+        "branches": [
+          {
+            "index": 1,
+            "condition": "a >= b",
+            "substituted": "3 >= 3",
+            "truth": true,
+            "body": "a - b",
+            "comparisons": [
+              {
+                "text": "3 >= 3",
+                "left": "3",
+                "op": ">=",
+                "right": "3",
+                "truth": true
+              }
+            ],
+            "else": false
+          }
+        ],
+        "branch_index": 1,
+        "branch_count": 2,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 2,
+        "kind": "eval",
+        "symbol": "-",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "sub",
+        "inputs": [
+          "3",
+          "3"
+        ],
+        "parameters": [],
+        "before": "3 - 3",
+        "focus": [
+          0,
+          5
+        ],
+        "after": "0",
+        "new": [
+          0,
+          1
+        ],
+        "replacement": "0",
+        "output": "0",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      }
+    ],
+    "exercise": {
+      "expression": "4 ▲ 4",
+      "value": "0",
+      "steps": [
+        {
+          "index": 1,
+          "kind": "expand",
+          "symbol": "▲",
+          "shape": "binary",
+          "operator_kind": "branch",
+          "atom": null,
+          "inputs": [
+            "4",
+            "4"
+          ],
+          "parameters": [
+            {
+              "name": "a",
+              "value": "4"
+            },
+            {
+              "name": "b",
+              "value": "4"
+            }
+          ],
+          "before": "4 ▲ 4",
+          "focus": [
+            0,
+            5
+          ],
+          "after": "4 - 4",
+          "new": [
+            0,
+            5
+          ],
+          "replacement": "4 - 4",
+          "output": null,
+          "depth": 0,
+          "branches": [
+            {
+              "index": 1,
+              "condition": "a >= b",
+              "substituted": "4 >= 4",
+              "truth": true,
+              "body": "a - b",
+              "comparisons": [
+                {
+                  "text": "4 >= 4",
+                  "left": "4",
+                  "op": ">=",
+                  "right": "4",
+                  "truth": true
+                }
+              ],
+              "else": false
+            }
+          ],
+          "branch_index": 1,
+          "branch_count": 2,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 2,
+          "kind": "eval",
+          "symbol": "-",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "sub",
+          "inputs": [
+            "4",
+            "4"
+          ],
+          "parameters": [],
+          "before": "4 - 4",
+          "focus": [
+            0,
+            5
+          ],
+          "after": "0",
+          "new": [
+            0,
+            1
+          ],
+          "replacement": "0",
+          "output": "0",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "recursion",
+    "rule": "a ★ b = { 0, if b <= 0; (a ★ (b - 1)) + a, else }",
+    "expression": "2 ★ 3",
+    "world": "",
+    "mode": "recursion",
+    "value": "6",
+    "steps": [
+      {
+        "index": 1,
+        "kind": "expand",
+        "symbol": "★",
+        "shape": "binary",
+        "operator_kind": "recursive",
+        "atom": null,
+        "inputs": [
+          "2",
+          "3"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "value": "2"
+          },
+          {
+            "name": "b",
+            "value": "3"
+          }
+        ],
+        "before": "2 ★ 3",
+        "focus": [
+          0,
+          5
+        ],
+        "after": "(2 ★ (3 - 1)) + 2",
+        "new": [
+          0,
+          17
+        ],
+        "replacement": "(2 ★ (3 - 1)) + 2",
+        "output": null,
+        "depth": 0,
+        "branches": [
+          {
+            "index": 1,
+            "condition": "b <= 0",
+            "substituted": "3 <= 0",
+            "truth": false,
+            "body": "0",
+            "comparisons": [
+              {
+                "text": "3 <= 0",
+                "left": "3",
+                "op": "<=",
+                "right": "0",
+                "truth": false
+              }
+            ],
+            "else": false
+          },
+          {
+            "index": 2,
+            "condition": null,
+            "else": true,
+            "truth": true,
+            "body": "(a ★ (b - 1)) + a",
+            "comparisons": []
+          }
+        ],
+        "branch_index": 2,
+        "branch_count": 2,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 2,
+        "kind": "eval",
+        "symbol": "-",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "sub",
+        "inputs": [
+          "3",
+          "1"
+        ],
+        "parameters": [],
+        "before": "(2 ★ (3 - 1)) + 2",
+        "focus": [
+          5,
+          12
+        ],
+        "after": "(2 ★ 2) + 2",
+        "new": [
+          5,
+          6
+        ],
+        "replacement": "2",
+        "output": "2",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 3,
+        "kind": "expand",
+        "symbol": "★",
+        "shape": "binary",
+        "operator_kind": "recursive",
+        "atom": null,
+        "inputs": [
+          "2",
+          "2"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "value": "2"
+          },
+          {
+            "name": "b",
+            "value": "2"
+          }
+        ],
+        "before": "(2 ★ 2) + 2",
+        "focus": [
+          0,
+          7
+        ],
+        "after": "((2 ★ (2 - 1)) + 2) + 2",
+        "new": [
+          0,
+          19
+        ],
+        "replacement": "(2 ★ (2 - 1)) + 2",
+        "output": null,
+        "depth": 1,
+        "branches": [
+          {
+            "index": 1,
+            "condition": "b <= 0",
+            "substituted": "2 <= 0",
+            "truth": false,
+            "body": "0",
+            "comparisons": [
+              {
+                "text": "2 <= 0",
+                "left": "2",
+                "op": "<=",
+                "right": "0",
+                "truth": false
+              }
+            ],
+            "else": false
+          },
+          {
+            "index": 2,
+            "condition": null,
+            "else": true,
+            "truth": true,
+            "body": "(a ★ (b - 1)) + a",
+            "comparisons": []
+          }
+        ],
+        "branch_index": 2,
+        "branch_count": 2,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 4,
+        "kind": "eval",
+        "symbol": "-",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "sub",
+        "inputs": [
+          "2",
+          "1"
+        ],
+        "parameters": [],
+        "before": "((2 ★ (2 - 1)) + 2) + 2",
+        "focus": [
+          6,
+          13
+        ],
+        "after": "((2 ★ 1) + 2) + 2",
+        "new": [
+          6,
+          7
+        ],
+        "replacement": "1",
+        "output": "1",
+        "depth": 2,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 5,
+        "kind": "expand",
+        "symbol": "★",
+        "shape": "binary",
+        "operator_kind": "recursive",
+        "atom": null,
+        "inputs": [
+          "2",
+          "1"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "value": "2"
+          },
+          {
+            "name": "b",
+            "value": "1"
+          }
+        ],
+        "before": "((2 ★ 1) + 2) + 2",
+        "focus": [
+          1,
+          8
+        ],
+        "after": "(((2 ★ (1 - 1)) + 2) + 2) + 2",
+        "new": [
+          1,
+          20
+        ],
+        "replacement": "(2 ★ (1 - 1)) + 2",
+        "output": null,
+        "depth": 2,
+        "branches": [
+          {
+            "index": 1,
+            "condition": "b <= 0",
+            "substituted": "1 <= 0",
+            "truth": false,
+            "body": "0",
+            "comparisons": [
+              {
+                "text": "1 <= 0",
+                "left": "1",
+                "op": "<=",
+                "right": "0",
+                "truth": false
+              }
+            ],
+            "else": false
+          },
+          {
+            "index": 2,
+            "condition": null,
+            "else": true,
+            "truth": true,
+            "body": "(a ★ (b - 1)) + a",
+            "comparisons": []
+          }
+        ],
+        "branch_index": 2,
+        "branch_count": 2,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 6,
+        "kind": "eval",
+        "symbol": "-",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "sub",
+        "inputs": [
+          "1",
+          "1"
+        ],
+        "parameters": [],
+        "before": "(((2 ★ (1 - 1)) + 2) + 2) + 2",
+        "focus": [
+          7,
+          14
+        ],
+        "after": "(((2 ★ 0) + 2) + 2) + 2",
+        "new": [
+          7,
+          8
+        ],
+        "replacement": "0",
+        "output": "0",
+        "depth": 3,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 7,
+        "kind": "expand",
+        "symbol": "★",
+        "shape": "binary",
+        "operator_kind": "recursive",
+        "atom": null,
+        "inputs": [
+          "2",
+          "0"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "value": "2"
+          },
+          {
+            "name": "b",
+            "value": "0"
+          }
+        ],
+        "before": "(((2 ★ 0) + 2) + 2) + 2",
+        "focus": [
+          2,
+          9
+        ],
+        "after": "((0 + 2) + 2) + 2",
+        "new": [
+          2,
+          3
+        ],
+        "replacement": "0",
+        "output": "0",
+        "depth": 3,
+        "branches": [
+          {
+            "index": 1,
+            "condition": "b <= 0",
+            "substituted": "0 <= 0",
+            "truth": true,
+            "body": "0",
+            "comparisons": [
+              {
+                "text": "0 <= 0",
+                "left": "0",
+                "op": "<=",
+                "right": "0",
+                "truth": true
+              }
+            ],
+            "else": false
+          }
+        ],
+        "branch_index": 1,
+        "branch_count": 2,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 8,
+        "kind": "eval",
+        "symbol": "+",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "add",
+        "inputs": [
+          "0",
+          "2"
+        ],
+        "parameters": [],
+        "before": "((0 + 2) + 2) + 2",
+        "focus": [
+          1,
+          8
+        ],
+        "after": "(2 + 2) + 2",
+        "new": [
+          1,
+          2
+        ],
+        "replacement": "2",
+        "output": "2",
+        "depth": 3,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 9,
+        "kind": "eval",
+        "symbol": "+",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "add",
+        "inputs": [
+          "2",
+          "2"
+        ],
+        "parameters": [],
+        "before": "(2 + 2) + 2",
+        "focus": [
+          0,
+          7
+        ],
+        "after": "4 + 2",
+        "new": [
+          0,
+          1
+        ],
+        "replacement": "4",
+        "output": "4",
+        "depth": 2,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 10,
+        "kind": "eval",
+        "symbol": "+",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "add",
+        "inputs": [
+          "4",
+          "2"
+        ],
+        "parameters": [],
+        "before": "4 + 2",
+        "focus": [
+          0,
+          5
+        ],
+        "after": "6",
+        "new": [
+          0,
+          1
+        ],
+        "replacement": "6",
+        "output": "6",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      }
+    ],
+    "exercise": {
+      "expression": "3 ★ 4",
+      "value": "12",
+      "steps": [
+        {
+          "index": 1,
+          "kind": "expand",
+          "symbol": "★",
+          "shape": "binary",
+          "operator_kind": "recursive",
+          "atom": null,
+          "inputs": [
+            "3",
+            "4"
+          ],
+          "parameters": [
+            {
+              "name": "a",
+              "value": "3"
+            },
+            {
+              "name": "b",
+              "value": "4"
+            }
+          ],
+          "before": "3 ★ 4",
+          "focus": [
+            0,
+            5
+          ],
+          "after": "(3 ★ (4 - 1)) + 3",
+          "new": [
+            0,
+            17
+          ],
+          "replacement": "(3 ★ (4 - 1)) + 3",
+          "output": null,
+          "depth": 0,
+          "branches": [
+            {
+              "index": 1,
+              "condition": "b <= 0",
+              "substituted": "4 <= 0",
+              "truth": false,
+              "body": "0",
+              "comparisons": [
+                {
+                  "text": "4 <= 0",
+                  "left": "4",
+                  "op": "<=",
+                  "right": "0",
+                  "truth": false
+                }
+              ],
+              "else": false
+            },
+            {
+              "index": 2,
+              "condition": null,
+              "else": true,
+              "truth": true,
+              "body": "(a ★ (b - 1)) + a",
+              "comparisons": []
+            }
+          ],
+          "branch_index": 2,
+          "branch_count": 2,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 2,
+          "kind": "eval",
+          "symbol": "-",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "sub",
+          "inputs": [
+            "4",
+            "1"
+          ],
+          "parameters": [],
+          "before": "(3 ★ (4 - 1)) + 3",
+          "focus": [
+            5,
+            12
+          ],
+          "after": "(3 ★ 3) + 3",
+          "new": [
+            5,
+            6
+          ],
+          "replacement": "3",
+          "output": "3",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 3,
+          "kind": "expand",
+          "symbol": "★",
+          "shape": "binary",
+          "operator_kind": "recursive",
+          "atom": null,
+          "inputs": [
+            "3",
+            "3"
+          ],
+          "parameters": [
+            {
+              "name": "a",
+              "value": "3"
+            },
+            {
+              "name": "b",
+              "value": "3"
+            }
+          ],
+          "before": "(3 ★ 3) + 3",
+          "focus": [
+            0,
+            7
+          ],
+          "after": "((3 ★ (3 - 1)) + 3) + 3",
+          "new": [
+            0,
+            19
+          ],
+          "replacement": "(3 ★ (3 - 1)) + 3",
+          "output": null,
+          "depth": 1,
+          "branches": [
+            {
+              "index": 1,
+              "condition": "b <= 0",
+              "substituted": "3 <= 0",
+              "truth": false,
+              "body": "0",
+              "comparisons": [
+                {
+                  "text": "3 <= 0",
+                  "left": "3",
+                  "op": "<=",
+                  "right": "0",
+                  "truth": false
+                }
+              ],
+              "else": false
+            },
+            {
+              "index": 2,
+              "condition": null,
+              "else": true,
+              "truth": true,
+              "body": "(a ★ (b - 1)) + a",
+              "comparisons": []
+            }
+          ],
+          "branch_index": 2,
+          "branch_count": 2,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 4,
+          "kind": "eval",
+          "symbol": "-",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "sub",
+          "inputs": [
+            "3",
+            "1"
+          ],
+          "parameters": [],
+          "before": "((3 ★ (3 - 1)) + 3) + 3",
+          "focus": [
+            6,
+            13
+          ],
+          "after": "((3 ★ 2) + 3) + 3",
+          "new": [
+            6,
+            7
+          ],
+          "replacement": "2",
+          "output": "2",
+          "depth": 2,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 5,
+          "kind": "expand",
+          "symbol": "★",
+          "shape": "binary",
+          "operator_kind": "recursive",
+          "atom": null,
+          "inputs": [
+            "3",
+            "2"
+          ],
+          "parameters": [
+            {
+              "name": "a",
+              "value": "3"
+            },
+            {
+              "name": "b",
+              "value": "2"
+            }
+          ],
+          "before": "((3 ★ 2) + 3) + 3",
+          "focus": [
+            1,
+            8
+          ],
+          "after": "(((3 ★ (2 - 1)) + 3) + 3) + 3",
+          "new": [
+            1,
+            20
+          ],
+          "replacement": "(3 ★ (2 - 1)) + 3",
+          "output": null,
+          "depth": 2,
+          "branches": [
+            {
+              "index": 1,
+              "condition": "b <= 0",
+              "substituted": "2 <= 0",
+              "truth": false,
+              "body": "0",
+              "comparisons": [
+                {
+                  "text": "2 <= 0",
+                  "left": "2",
+                  "op": "<=",
+                  "right": "0",
+                  "truth": false
+                }
+              ],
+              "else": false
+            },
+            {
+              "index": 2,
+              "condition": null,
+              "else": true,
+              "truth": true,
+              "body": "(a ★ (b - 1)) + a",
+              "comparisons": []
+            }
+          ],
+          "branch_index": 2,
+          "branch_count": 2,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 6,
+          "kind": "eval",
+          "symbol": "-",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "sub",
+          "inputs": [
+            "2",
+            "1"
+          ],
+          "parameters": [],
+          "before": "(((3 ★ (2 - 1)) + 3) + 3) + 3",
+          "focus": [
+            7,
+            14
+          ],
+          "after": "(((3 ★ 1) + 3) + 3) + 3",
+          "new": [
+            7,
+            8
+          ],
+          "replacement": "1",
+          "output": "1",
+          "depth": 3,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 7,
+          "kind": "expand",
+          "symbol": "★",
+          "shape": "binary",
+          "operator_kind": "recursive",
+          "atom": null,
+          "inputs": [
+            "3",
+            "1"
+          ],
+          "parameters": [
+            {
+              "name": "a",
+              "value": "3"
+            },
+            {
+              "name": "b",
+              "value": "1"
+            }
+          ],
+          "before": "(((3 ★ 1) + 3) + 3) + 3",
+          "focus": [
+            2,
+            9
+          ],
+          "after": "((((3 ★ (1 - 1)) + 3) + 3) + 3) + 3",
+          "new": [
+            2,
+            21
+          ],
+          "replacement": "(3 ★ (1 - 1)) + 3",
+          "output": null,
+          "depth": 3,
+          "branches": [
+            {
+              "index": 1,
+              "condition": "b <= 0",
+              "substituted": "1 <= 0",
+              "truth": false,
+              "body": "0",
+              "comparisons": [
+                {
+                  "text": "1 <= 0",
+                  "left": "1",
+                  "op": "<=",
+                  "right": "0",
+                  "truth": false
+                }
+              ],
+              "else": false
+            },
+            {
+              "index": 2,
+              "condition": null,
+              "else": true,
+              "truth": true,
+              "body": "(a ★ (b - 1)) + a",
+              "comparisons": []
+            }
+          ],
+          "branch_index": 2,
+          "branch_count": 2,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 8,
+          "kind": "eval",
+          "symbol": "-",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "sub",
+          "inputs": [
+            "1",
+            "1"
+          ],
+          "parameters": [],
+          "before": "((((3 ★ (1 - 1)) + 3) + 3) + 3) + 3",
+          "focus": [
+            8,
+            15
+          ],
+          "after": "((((3 ★ 0) + 3) + 3) + 3) + 3",
+          "new": [
+            8,
+            9
+          ],
+          "replacement": "0",
+          "output": "0",
+          "depth": 4,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 9,
+          "kind": "expand",
+          "symbol": "★",
+          "shape": "binary",
+          "operator_kind": "recursive",
+          "atom": null,
+          "inputs": [
+            "3",
+            "0"
+          ],
+          "parameters": [
+            {
+              "name": "a",
+              "value": "3"
+            },
+            {
+              "name": "b",
+              "value": "0"
+            }
+          ],
+          "before": "((((3 ★ 0) + 3) + 3) + 3) + 3",
+          "focus": [
+            3,
+            10
+          ],
+          "after": "(((0 + 3) + 3) + 3) + 3",
+          "new": [
+            3,
+            4
+          ],
+          "replacement": "0",
+          "output": "0",
+          "depth": 4,
+          "branches": [
+            {
+              "index": 1,
+              "condition": "b <= 0",
+              "substituted": "0 <= 0",
+              "truth": true,
+              "body": "0",
+              "comparisons": [
+                {
+                  "text": "0 <= 0",
+                  "left": "0",
+                  "op": "<=",
+                  "right": "0",
+                  "truth": true
+                }
+              ],
+              "else": false
+            }
+          ],
+          "branch_index": 1,
+          "branch_count": 2,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 10,
+          "kind": "eval",
+          "symbol": "+",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "add",
+          "inputs": [
+            "0",
+            "3"
+          ],
+          "parameters": [],
+          "before": "(((0 + 3) + 3) + 3) + 3",
+          "focus": [
+            2,
+            9
+          ],
+          "after": "((3 + 3) + 3) + 3",
+          "new": [
+            2,
+            3
+          ],
+          "replacement": "3",
+          "output": "3",
+          "depth": 4,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 11,
+          "kind": "eval",
+          "symbol": "+",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "add",
+          "inputs": [
+            "3",
+            "3"
+          ],
+          "parameters": [],
+          "before": "((3 + 3) + 3) + 3",
+          "focus": [
+            1,
+            8
+          ],
+          "after": "(6 + 3) + 3",
+          "new": [
+            1,
+            2
+          ],
+          "replacement": "6",
+          "output": "6",
+          "depth": 3,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 12,
+          "kind": "eval",
+          "symbol": "+",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "add",
+          "inputs": [
+            "6",
+            "3"
+          ],
+          "parameters": [],
+          "before": "(6 + 3) + 3",
+          "focus": [
+            0,
+            7
+          ],
+          "after": "9 + 3",
+          "new": [
+            0,
+            1
+          ],
+          "replacement": "9",
+          "output": "9",
+          "depth": 2,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 13,
+          "kind": "eval",
+          "symbol": "+",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "add",
+          "inputs": [
+            "9",
+            "3"
+          ],
+          "parameters": [],
+          "before": "9 + 3",
+          "focus": [
+            0,
+            5
+          ],
+          "after": "12",
+          "new": [
+            0,
+            2
+          ],
+          "replacement": "12",
+          "output": "12",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "prefix",
+    "rule": "◇ a = { (a * a) + a }",
+    "expression": "◇ 4",
+    "world": "",
+    "mode": "prefix",
+    "value": "20",
+    "steps": [
+      {
+        "index": 1,
+        "kind": "expand",
+        "symbol": "◇",
+        "shape": "prefix",
+        "operator_kind": "simple",
+        "atom": null,
+        "inputs": [
+          "4"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "value": "4"
+          }
+        ],
+        "before": "◇ 4",
+        "focus": [
+          0,
+          3
+        ],
+        "after": "(4 * 4) + 4",
+        "new": [
+          0,
+          11
+        ],
+        "replacement": "(4 * 4) + 4",
+        "output": null,
+        "depth": 0,
+        "branches": [
+          {
+            "index": 1,
+            "condition": null,
+            "else": false,
+            "truth": true,
+            "body": "(a * a) + a",
+            "comparisons": []
+          }
+        ],
+        "branch_index": 1,
+        "branch_count": 1,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 2,
+        "kind": "eval",
+        "symbol": "*",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "mul",
+        "inputs": [
+          "4",
+          "4"
+        ],
+        "parameters": [],
+        "before": "(4 * 4) + 4",
+        "focus": [
+          0,
+          7
+        ],
+        "after": "16 + 4",
+        "new": [
+          0,
+          2
+        ],
+        "replacement": "16",
+        "output": "16",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 3,
+        "kind": "eval",
+        "symbol": "+",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "add",
+        "inputs": [
+          "16",
+          "4"
+        ],
+        "parameters": [],
+        "before": "16 + 4",
+        "focus": [
+          0,
+          6
+        ],
+        "after": "20",
+        "new": [
+          0,
+          2
+        ],
+        "replacement": "20",
+        "output": "20",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      }
+    ],
+    "exercise": {
+      "expression": "◇ 3",
+      "value": "12",
+      "steps": [
+        {
+          "index": 1,
+          "kind": "expand",
+          "symbol": "◇",
+          "shape": "prefix",
+          "operator_kind": "simple",
+          "atom": null,
+          "inputs": [
+            "3"
+          ],
+          "parameters": [
+            {
+              "name": "a",
+              "value": "3"
+            }
+          ],
+          "before": "◇ 3",
+          "focus": [
+            0,
+            3
+          ],
+          "after": "(3 * 3) + 3",
+          "new": [
+            0,
+            11
+          ],
+          "replacement": "(3 * 3) + 3",
+          "output": null,
+          "depth": 0,
+          "branches": [
+            {
+              "index": 1,
+              "condition": null,
+              "else": false,
+              "truth": true,
+              "body": "(a * a) + a",
+              "comparisons": []
+            }
+          ],
+          "branch_index": 1,
+          "branch_count": 1,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 2,
+          "kind": "eval",
+          "symbol": "*",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "mul",
+          "inputs": [
+            "3",
+            "3"
+          ],
+          "parameters": [],
+          "before": "(3 * 3) + 3",
+          "focus": [
+            0,
+            7
+          ],
+          "after": "9 + 3",
+          "new": [
+            0,
+            1
+          ],
+          "replacement": "9",
+          "output": "9",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 3,
+          "kind": "eval",
+          "symbol": "+",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "add",
+          "inputs": [
+            "9",
+            "3"
+          ],
+          "parameters": [],
+          "before": "9 + 3",
+          "focus": [
+            0,
+            5
+          ],
+          "after": "12",
+          "new": [
+            0,
+            2
+          ],
+          "replacement": "12",
+          "output": "12",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "postfix",
+    "rule": "a ♠ = { (a * 2) + 1 }",
+    "expression": "4 ♠",
+    "world": "",
+    "mode": "postfix",
+    "value": "9",
+    "steps": [
+      {
+        "index": 1,
+        "kind": "expand",
+        "symbol": "♠",
+        "shape": "postfix",
+        "operator_kind": "simple",
+        "atom": null,
+        "inputs": [
+          "4"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "value": "4"
+          }
+        ],
+        "before": "4 ♠",
+        "focus": [
+          0,
+          3
+        ],
+        "after": "(4 * 2) + 1",
+        "new": [
+          0,
+          11
+        ],
+        "replacement": "(4 * 2) + 1",
+        "output": null,
+        "depth": 0,
+        "branches": [
+          {
+            "index": 1,
+            "condition": null,
+            "else": false,
+            "truth": true,
+            "body": "(a * 2) + 1",
+            "comparisons": []
+          }
+        ],
+        "branch_index": 1,
+        "branch_count": 1,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 2,
+        "kind": "eval",
+        "symbol": "*",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "mul",
+        "inputs": [
+          "4",
+          "2"
+        ],
+        "parameters": [],
+        "before": "(4 * 2) + 1",
+        "focus": [
+          0,
+          7
+        ],
+        "after": "8 + 1",
+        "new": [
+          0,
+          1
+        ],
+        "replacement": "8",
+        "output": "8",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 3,
+        "kind": "eval",
+        "symbol": "+",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "add",
+        "inputs": [
+          "8",
+          "1"
+        ],
+        "parameters": [],
+        "before": "8 + 1",
+        "focus": [
+          0,
+          5
+        ],
+        "after": "9",
+        "new": [
+          0,
+          1
+        ],
+        "replacement": "9",
+        "output": "9",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      }
+    ],
+    "exercise": {
+      "expression": "3 ♠",
+      "value": "7",
+      "steps": [
+        {
+          "index": 1,
+          "kind": "expand",
+          "symbol": "♠",
+          "shape": "postfix",
+          "operator_kind": "simple",
+          "atom": null,
+          "inputs": [
+            "3"
+          ],
+          "parameters": [
+            {
+              "name": "a",
+              "value": "3"
+            }
+          ],
+          "before": "3 ♠",
+          "focus": [
+            0,
+            3
+          ],
+          "after": "(3 * 2) + 1",
+          "new": [
+            0,
+            11
+          ],
+          "replacement": "(3 * 2) + 1",
+          "output": null,
+          "depth": 0,
+          "branches": [
+            {
+              "index": 1,
+              "condition": null,
+              "else": false,
+              "truth": true,
+              "body": "(a * 2) + 1",
+              "comparisons": []
+            }
+          ],
+          "branch_index": 1,
+          "branch_count": 1,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 2,
+          "kind": "eval",
+          "symbol": "*",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "mul",
+          "inputs": [
+            "3",
+            "2"
+          ],
+          "parameters": [],
+          "before": "(3 * 2) + 1",
+          "focus": [
+            0,
+            7
+          ],
+          "after": "6 + 1",
+          "new": [
+            0,
+            1
+          ],
+          "replacement": "6",
+          "output": "6",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 3,
+          "kind": "eval",
+          "symbol": "+",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "add",
+          "inputs": [
+            "6",
+            "1"
+          ],
+          "parameters": [],
+          "before": "6 + 1",
+          "focus": [
+            0,
+            5
+          ],
+          "after": "7",
+          "new": [
+            0,
+            1
+          ],
+          "replacement": "7",
+          "output": "7",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "call",
+    "rule": "⊙(a, b, c) = { (a + b) - c }",
+    "expression": "⊙(4, 3, 2)",
+    "world": "",
+    "mode": "call",
+    "value": "5",
+    "steps": [
+      {
+        "index": 1,
+        "kind": "expand",
+        "symbol": "⊙",
+        "shape": null,
+        "operator_kind": "simple",
+        "atom": null,
+        "inputs": [
+          "4",
+          "3",
+          "2"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "value": "4"
+          },
+          {
+            "name": "b",
+            "value": "3"
+          },
+          {
+            "name": "c",
+            "value": "2"
+          }
+        ],
+        "before": "⊙(4)",
+        "focus": [
+          0,
+          4
+        ],
+        "after": "(4 + 3) - 2",
+        "new": [
+          0,
+          11
+        ],
+        "replacement": "(4 + 3) - 2",
+        "output": null,
+        "depth": 0,
+        "branches": [
+          {
+            "index": 1,
+            "condition": null,
+            "else": false,
+            "truth": true,
+            "body": "(a + b) - c",
+            "comparisons": []
+          }
+        ],
+        "branch_index": 1,
+        "branch_count": 1,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 2,
+        "kind": "eval",
+        "symbol": "+",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "add",
+        "inputs": [
+          "4",
+          "3"
+        ],
+        "parameters": [],
+        "before": "(4 + 3) - 2",
+        "focus": [
+          0,
+          7
+        ],
+        "after": "7 - 2",
+        "new": [
+          0,
+          1
+        ],
+        "replacement": "7",
+        "output": "7",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 3,
+        "kind": "eval",
+        "symbol": "-",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "sub",
+        "inputs": [
+          "7",
+          "2"
+        ],
+        "parameters": [],
+        "before": "7 - 2",
+        "focus": [
+          0,
+          5
+        ],
+        "after": "5",
+        "new": [
+          0,
+          1
+        ],
+        "replacement": "5",
+        "output": "5",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      }
+    ],
+    "exercise": {
+      "expression": "⊙(3, 5, 4)",
+      "value": "4",
+      "steps": [
+        {
+          "index": 1,
+          "kind": "expand",
+          "symbol": "⊙",
+          "shape": null,
+          "operator_kind": "simple",
+          "atom": null,
+          "inputs": [
+            "3",
+            "5",
+            "4"
+          ],
+          "parameters": [
+            {
+              "name": "a",
+              "value": "3"
+            },
+            {
+              "name": "b",
+              "value": "5"
+            },
+            {
+              "name": "c",
+              "value": "4"
+            }
+          ],
+          "before": "⊙(3)",
+          "focus": [
+            0,
+            4
+          ],
+          "after": "(3 + 5) - 4",
+          "new": [
+            0,
+            11
+          ],
+          "replacement": "(3 + 5) - 4",
+          "output": null,
+          "depth": 0,
+          "branches": [
+            {
+              "index": 1,
+              "condition": null,
+              "else": false,
+              "truth": true,
+              "body": "(a + b) - c",
+              "comparisons": []
+            }
+          ],
+          "branch_index": 1,
+          "branch_count": 1,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 2,
+          "kind": "eval",
+          "symbol": "+",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "add",
+          "inputs": [
+            "3",
+            "5"
+          ],
+          "parameters": [],
+          "before": "(3 + 5) - 4",
+          "focus": [
+            0,
+            7
+          ],
+          "after": "8 - 4",
+          "new": [
+            0,
+            1
+          ],
+          "replacement": "8",
+          "output": "8",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 3,
+          "kind": "eval",
+          "symbol": "-",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "sub",
+          "inputs": [
+            "8",
+            "4"
+          ],
+          "parameters": [],
+          "before": "8 - 4",
+          "focus": [
+            0,
+            5
+          ],
+          "after": "4",
+          "new": [
+            0,
+            1
+          ],
+          "replacement": "4",
+          "output": "4",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "strings",
+    "rule": "a ◆ b = { (a ⊕ b) ⇥ }",
+    "expression": "\"sun\" ◆ \"day\"",
+    "world": "strings",
+    "mode": "transfer",
+    "value": "\"unday\"",
+    "steps": [
+      {
+        "index": 1,
+        "kind": "expand",
+        "symbol": "◆",
+        "shape": "binary",
+        "operator_kind": "simple",
+        "atom": null,
+        "inputs": [
+          "\"sun\"",
+          "\"day\""
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "value": "\"sun\""
+          },
+          {
+            "name": "b",
+            "value": "\"day\""
+          }
+        ],
+        "before": "\"sun\" ◆ \"day\"",
+        "focus": [
+          0,
+          13
+        ],
+        "after": "(\"sun\" ⊕ \"day\") ⇥",
+        "new": [
+          0,
+          17
+        ],
+        "replacement": "(\"sun\" ⊕ \"day\") ⇥",
+        "output": null,
+        "depth": 0,
+        "branches": [
+          {
+            "index": 1,
+            "condition": null,
+            "else": false,
+            "truth": true,
+            "body": "(a ⊕ b) ⇥",
+            "comparisons": []
+          }
+        ],
+        "branch_index": 1,
+        "branch_count": 1,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 2,
+        "kind": "eval",
+        "symbol": "⊕",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "str_concat",
+        "inputs": [
+          "\"sun\"",
+          "\"day\""
+        ],
+        "parameters": [],
+        "before": "(\"sun\" ⊕ \"day\") ⇥",
+        "focus": [
+          0,
+          15
+        ],
+        "after": "\"sunday\" ⇥",
+        "new": [
+          0,
+          8
+        ],
+        "replacement": "\"sunday\"",
+        "output": "\"sunday\"",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 3,
+        "kind": "eval",
+        "symbol": "⇥",
+        "shape": "postfix",
+        "operator_kind": "atom",
+        "atom": "str_drop",
+        "inputs": [
+          "\"sunday\""
+        ],
+        "parameters": [],
+        "before": "\"sunday\" ⇥",
+        "focus": [
+          0,
+          10
+        ],
+        "after": "\"unday\"",
+        "new": [
+          0,
+          7
+        ],
+        "replacement": "\"unday\"",
+        "output": "\"unday\"",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      }
+    ],
+    "exercise": {
+      "expression": "\"red\" ◆ \"wood\"",
+      "value": "\"edwood\"",
+      "steps": [
+        {
+          "index": 1,
+          "kind": "expand",
+          "symbol": "◆",
+          "shape": "binary",
+          "operator_kind": "simple",
+          "atom": null,
+          "inputs": [
+            "\"red\"",
+            "\"wood\""
+          ],
+          "parameters": [
+            {
+              "name": "a",
+              "value": "\"red\""
+            },
+            {
+              "name": "b",
+              "value": "\"wood\""
+            }
+          ],
+          "before": "\"red\" ◆ \"wood\"",
+          "focus": [
+            0,
+            14
+          ],
+          "after": "(\"red\" ⊕ \"wood\") ⇥",
+          "new": [
+            0,
+            18
+          ],
+          "replacement": "(\"red\" ⊕ \"wood\") ⇥",
+          "output": null,
+          "depth": 0,
+          "branches": [
+            {
+              "index": 1,
+              "condition": null,
+              "else": false,
+              "truth": true,
+              "body": "(a ⊕ b) ⇥",
+              "comparisons": []
+            }
+          ],
+          "branch_index": 1,
+          "branch_count": 1,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 2,
+          "kind": "eval",
+          "symbol": "⊕",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "str_concat",
+          "inputs": [
+            "\"red\"",
+            "\"wood\""
+          ],
+          "parameters": [],
+          "before": "(\"red\" ⊕ \"wood\") ⇥",
+          "focus": [
+            0,
+            16
+          ],
+          "after": "\"redwood\" ⇥",
+          "new": [
+            0,
+            9
+          ],
+          "replacement": "\"redwood\"",
+          "output": "\"redwood\"",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 3,
+          "kind": "eval",
+          "symbol": "⇥",
+          "shape": "postfix",
+          "operator_kind": "atom",
+          "atom": "str_drop",
+          "inputs": [
+            "\"redwood\""
+          ],
+          "parameters": [],
+          "before": "\"redwood\" ⇥",
+          "focus": [
+            0,
+            11
+          ],
+          "after": "\"edwood\"",
+          "new": [
+            0,
+            8
+          ],
+          "replacement": "\"edwood\"",
+          "output": "\"edwood\"",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "lists",
+    "rule": "a ◆ b = { (a ⊞ b) ⌄ }",
+    "expression": "[1, 2] ◆ [3, 4]",
+    "world": "lists",
+    "mode": "transfer",
+    "value": "[2, 3, 4]",
+    "steps": [
+      {
+        "index": 1,
+        "kind": "expand",
+        "symbol": "◆",
+        "shape": "binary",
+        "operator_kind": "simple",
+        "atom": null,
+        "inputs": [
+          "[1, 2]",
+          "[3, 4]"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "value": "[1, 2]"
+          },
+          {
+            "name": "b",
+            "value": "[3, 4]"
+          }
+        ],
+        "before": "[1, 2] ◆ [3, 4]",
+        "focus": [
+          0,
+          15
+        ],
+        "after": "([1, 2] ⊞ [3, 4]) ⌄",
+        "new": [
+          0,
+          19
+        ],
+        "replacement": "([1, 2] ⊞ [3, 4]) ⌄",
+        "output": null,
+        "depth": 0,
+        "branches": [
+          {
+            "index": 1,
+            "condition": null,
+            "else": false,
+            "truth": true,
+            "body": "(a ⊞ b) ⌄",
+            "comparisons": []
+          }
+        ],
+        "branch_index": 1,
+        "branch_count": 1,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 2,
+        "kind": "eval",
+        "symbol": "⊞",
+        "shape": "binary",
+        "operator_kind": "atom",
+        "atom": "list_append",
+        "inputs": [
+          "[1, 2]",
+          "[3, 4]"
+        ],
+        "parameters": [],
+        "before": "([1, 2] ⊞ [3, 4]) ⌄",
+        "focus": [
+          0,
+          17
+        ],
+        "after": "[1, 2, 3, 4] ⌄",
+        "new": [
+          0,
+          12
+        ],
+        "replacement": "[1, 2, 3, 4]",
+        "output": "[1, 2, 3, 4]",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 3,
+        "kind": "eval",
+        "symbol": "⌄",
+        "shape": "postfix",
+        "operator_kind": "atom",
+        "atom": "list_tail",
+        "inputs": [
+          "[1, 2, 3, 4]"
+        ],
+        "parameters": [],
+        "before": "[1, 2, 3, 4] ⌄",
+        "focus": [
+          0,
+          14
+        ],
+        "after": "[2, 3, 4]",
+        "new": [
+          0,
+          9
+        ],
+        "replacement": "[2, 3, 4]",
+        "output": "[2, 3, 4]",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      }
+    ],
+    "exercise": {
+      "expression": "[2, 5] ◆ [7]",
+      "value": "[5, 7]",
+      "steps": [
+        {
+          "index": 1,
+          "kind": "expand",
+          "symbol": "◆",
+          "shape": "binary",
+          "operator_kind": "simple",
+          "atom": null,
+          "inputs": [
+            "[2, 5]",
+            "[7]"
+          ],
+          "parameters": [
+            {
+              "name": "a",
+              "value": "[2, 5]"
+            },
+            {
+              "name": "b",
+              "value": "[7]"
+            }
+          ],
+          "before": "[2, 5] ◆ [7]",
+          "focus": [
+            0,
+            12
+          ],
+          "after": "([2, 5] ⊞ [7]) ⌄",
+          "new": [
+            0,
+            16
+          ],
+          "replacement": "([2, 5] ⊞ [7]) ⌄",
+          "output": null,
+          "depth": 0,
+          "branches": [
+            {
+              "index": 1,
+              "condition": null,
+              "else": false,
+              "truth": true,
+              "body": "(a ⊞ b) ⌄",
+              "comparisons": []
+            }
+          ],
+          "branch_index": 1,
+          "branch_count": 1,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 2,
+          "kind": "eval",
+          "symbol": "⊞",
+          "shape": "binary",
+          "operator_kind": "atom",
+          "atom": "list_append",
+          "inputs": [
+            "[2, 5]",
+            "[7]"
+          ],
+          "parameters": [],
+          "before": "([2, 5] ⊞ [7]) ⌄",
+          "focus": [
+            0,
+            14
+          ],
+          "after": "[2, 5, 7] ⌄",
+          "new": [
+            0,
+            9
+          ],
+          "replacement": "[2, 5, 7]",
+          "output": "[2, 5, 7]",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 3,
+          "kind": "eval",
+          "symbol": "⌄",
+          "shape": "postfix",
+          "operator_kind": "atom",
+          "atom": "list_tail",
+          "inputs": [
+            "[2, 5, 7]"
+          ],
+          "parameters": [],
+          "before": "[2, 5, 7] ⌄",
+          "focus": [
+            0,
+            11
+          ],
+          "after": "[5, 7]",
+          "new": [
+            0,
+            6
+          ],
+          "replacement": "[5, 7]",
+          "output": "[5, 7]",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "grid",
+    "rule": "a ◆ = { (a ↻) ↻ }",
+    "expression": "[[1, 2], [3, 4]] ◆",
+    "world": "grid",
+    "mode": "transfer",
+    "value": "[[4, 3], [2, 1]]",
+    "steps": [
+      {
+        "index": 1,
+        "kind": "expand",
+        "symbol": "◆",
+        "shape": "postfix",
+        "operator_kind": "simple",
+        "atom": null,
+        "inputs": [
+          "[[1, 2], [3, 4]]"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "value": "[[1, 2], [3, 4]]"
+          }
+        ],
+        "before": "[[1, 2], [3, 4]] ◆",
+        "focus": [
+          0,
+          18
+        ],
+        "after": "([[1, 2], [3, 4]] ↻) ↻",
+        "new": [
+          0,
+          22
+        ],
+        "replacement": "([[1, 2], [3, 4]] ↻) ↻",
+        "output": null,
+        "depth": 0,
+        "branches": [
+          {
+            "index": 1,
+            "condition": null,
+            "else": false,
+            "truth": true,
+            "body": "(a ↻) ↻",
+            "comparisons": []
+          }
+        ],
+        "branch_index": 1,
+        "branch_count": 1,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 2,
+        "kind": "eval",
+        "symbol": "↻",
+        "shape": "postfix",
+        "operator_kind": "atom",
+        "atom": "grid_rotate",
+        "inputs": [
+          "[[1, 2], [3, 4]]"
+        ],
+        "parameters": [],
+        "before": "([[1, 2], [3, 4]] ↻) ↻",
+        "focus": [
+          0,
+          20
+        ],
+        "after": "[[3, 1], [4, 2]] ↻",
+        "new": [
+          0,
+          16
+        ],
+        "replacement": "[[3, 1], [4, 2]]",
+        "output": "[[3, 1], [4, 2]]",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      },
+      {
+        "index": 3,
+        "kind": "eval",
+        "symbol": "↻",
+        "shape": "postfix",
+        "operator_kind": "atom",
+        "atom": "grid_rotate",
+        "inputs": [
+          "[[3, 1], [4, 2]]"
+        ],
+        "parameters": [],
+        "before": "[[3, 1], [4, 2]] ↻",
+        "focus": [
+          0,
+          18
+        ],
+        "after": "[[4, 3], [2, 1]]",
+        "new": [
+          0,
+          16
+        ],
+        "replacement": "[[4, 3], [2, 1]]",
+        "output": "[[4, 3], [2, 1]]",
+        "depth": 1,
+        "branches": null,
+        "branch_index": null,
+        "branch_count": null,
+        "reason": null,
+        "nan_cause": null
+      }
+    ],
+    "exercise": {
+      "expression": "[[1, 2, 3], [4, 5, 6]] ◆",
+      "value": "[[6, 5, 4], [3, 2, 1]]",
+      "steps": [
+        {
+          "index": 1,
+          "kind": "expand",
+          "symbol": "◆",
+          "shape": "postfix",
+          "operator_kind": "simple",
+          "atom": null,
+          "inputs": [
+            "[[1, 2, 3], [4, 5, 6]]"
+          ],
+          "parameters": [
+            {
+              "name": "a",
+              "value": "[[1, 2, 3], [4, 5, 6]]"
+            }
+          ],
+          "before": "[[1, 2, 3], [4, 5, 6]] ◆",
+          "focus": [
+            0,
+            24
+          ],
+          "after": "([[1, 2, 3], [4, 5, 6]] ↻) ↻",
+          "new": [
+            0,
+            28
+          ],
+          "replacement": "([[1, 2, 3], [4, 5, 6]] ↻) ↻",
+          "output": null,
+          "depth": 0,
+          "branches": [
+            {
+              "index": 1,
+              "condition": null,
+              "else": false,
+              "truth": true,
+              "body": "(a ↻) ↻",
+              "comparisons": []
+            }
+          ],
+          "branch_index": 1,
+          "branch_count": 1,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 2,
+          "kind": "eval",
+          "symbol": "↻",
+          "shape": "postfix",
+          "operator_kind": "atom",
+          "atom": "grid_rotate",
+          "inputs": [
+            "[[1, 2, 3], [4, 5, 6]]"
+          ],
+          "parameters": [],
+          "before": "([[1, 2, 3], [4, 5, 6]] ↻) ↻",
+          "focus": [
+            0,
+            26
+          ],
+          "after": "[[4, 1], [5, 2], [6, 3]] ↻",
+          "new": [
+            0,
+            24
+          ],
+          "replacement": "[[4, 1], [5, 2], [6, 3]]",
+          "output": "[[4, 1], [5, 2], [6, 3]]",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        },
+        {
+          "index": 3,
+          "kind": "eval",
+          "symbol": "↻",
+          "shape": "postfix",
+          "operator_kind": "atom",
+          "atom": "grid_rotate",
+          "inputs": [
+            "[[4, 1], [5, 2], [6, 3]]"
+          ],
+          "parameters": [],
+          "before": "[[4, 1], [5, 2], [6, 3]] ↻",
+          "focus": [
+            0,
+            26
+          ],
+          "after": "[[6, 5, 4], [3, 2, 1]]",
+          "new": [
+            0,
+            22
+          ],
+          "replacement": "[[6, 5, 4], [3, 2, 1]]",
+          "output": "[[6, 5, 4], [3, 2, 1]]",
+          "depth": 1,
+          "branches": null,
+          "branch_index": null,
+          "branch_count": null,
+          "reason": null,
+          "nan_cause": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "next",
+    "rule": "a ◈ b = { a, if a >= b; b, else }",
+    "expression": "4 ◈ 7",
+    "world": "",
+    "mode": "choice",
+    "value": "7",
+    "steps": [
+      {
+        "index": 1,
+        "kind": "expand",
+        "symbol": "◈",
+        "shape": "binary",
+        "operator_kind": "branch",
+        "atom": null,
+        "inputs": [
+          "4",
+          "7"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "value": "4"
+          },
+          {
+            "name": "b",
+            "value": "7"
+          }
+        ],
+        "before": "4 ◈ 7",
+        "focus": [
+          0,
+          5
+        ],
+        "after": "7",
+        "new": [
+          0,
+          1
+        ],
+        "replacement": "7",
+        "output": "7",
+        "depth": 0,
+        "branches": [
+          {
+            "index": 1,
+            "condition": "a >= b",
+            "substituted": "4 >= 7",
+            "truth": false,
+            "body": "a",
+            "comparisons": [
+              {
+                "text": "4 >= 7",
+                "left": "4",
+                "op": ">=",
+                "right": "7",
+                "truth": false
+              }
+            ],
+            "else": false
+          },
+          {
+            "index": 2,
+            "condition": null,
+            "else": true,
+            "truth": true,
+            "body": "b",
+            "comparisons": []
+          }
+        ],
+        "branch_index": 2,
+        "branch_count": 2,
+        "reason": null,
+        "nan_cause": null
+      }
+    ],
+    "exercise": {
+      "expression": "7 ◈ 4",
+      "value": "7",
+      "steps": [
+        {
+          "index": 1,
+          "kind": "expand",
+          "symbol": "◈",
+          "shape": "binary",
+          "operator_kind": "branch",
+          "atom": null,
+          "inputs": [
+            "7",
+            "4"
+          ],
+          "parameters": [
+            {
+              "name": "a",
+              "value": "7"
+            },
+            {
+              "name": "b",
+              "value": "4"
+            }
+          ],
+          "before": "7 ◈ 4",
+          "focus": [
+            0,
+            5
+          ],
+          "after": "7",
+          "new": [
+            0,
+            1
+          ],
+          "replacement": "7",
+          "output": "7",
+          "depth": 0,
+          "branches": [
+            {
+              "index": 1,
+              "condition": "a >= b",
+              "substituted": "7 >= 4",
+              "truth": true,
+              "body": "a",
+              "comparisons": [
+                {
+                  "text": "7 >= 4",
+                  "left": "7",
+                  "op": ">=",
+                  "right": "4",
+                  "truth": true
+                }
+              ],
+              "else": false
+            }
+          ],
+          "branch_index": 1,
+          "branch_count": 2,
+          "reason": null,
+          "nan_cause": null
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,17 @@
+# Use with: opulse operators --preset pitch --config configs/presets/pitch.yaml
+semantics:
+  mode: exact
+  bound: 2147483647
+  max_list_length: 256
+recursion:
+  style: direct
+  direct_bound: 4
+operators:
+  symbol_sets: [shapes, arrows]
+  symbol_min_len: 1
+  symbol_max_len: 1
+  reject_dead_branches: false
+expressions:
+  value_min: 0
+  value_max: 4
+  max_depth: 2

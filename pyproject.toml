@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opulse"
+version = "0.2.0"
+description = "Generate compositional operators, exact expressions, and checked reasoning tasks"
+readme = {file = "README.md", content-type = "text/markdown"}
+authors = [{name = "The Opulse Authors"}]
+license = "Apache-2.0"
+license-files = ["LICENSE", "LICENSE-docs", "LICENSES/CC-BY-4.0.txt"]
+requires-python = ">=3.10"
+keywords = ["synthetic data", "operators", "reasoning", "benchmark", "z3"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Typing :: Typed",
+]
+dependencies = ["pyyaml>=6", "numpy>=1.24", "z3-solver>=4.12", "sympy>=1.12"]
+
+[project.optional-dependencies]
+cython = ["cython>=3"]
+parquet = ["pandas>=2", "pyarrow>=14"]
+dev = ["pytest>=8", "hypothesis>=6", "ruff>=0.5", "tomli>=2; python_version < '3.11'"]
+# MkDocs 2 changes the plugin interface used by this documentation site.
+docs = ["mkdocs>=1.6,<2", "mkdocs-material>=9.5,<10", "mkdocstrings[python]>=0.25", "pygments>=2.15"]
+notebook = ["pygments>=2.15", "ipython>=8"]
+lmeval = ["lm-eval>=0.4.5"]
+inspect = ["inspect-ai>=0.3.100"]
+interp = ["nnsight>=0.5", "torch>=2.4", "transformers>=4.44"]
+
+[project.urls]
+Homepage = "https://github.com/mkj69/opulse"
+Repository = "https://github.com/mkj69/opulse"
+Documentation = "https://mkj69.github.io/opulse/"
+Issues = "https://github.com/mkj69/opulse/issues"
+
+[project.scripts]
+opulse = "opulse.cli.main:main"
+
+[project.entry-points.inspect_ai]
+opulse = "opulse.integrations.inspect_eval"
+
+[project.entry-points."pygments.lexers"]
+opulse = "opulse.display.pygments_lexer:OpulseLexer"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"opulse" = ["py.typed", "data/*.yaml", "data/presets/*.yaml"]
+"opulse.expression" = ["data/english_words.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["slow: examples that execute tutorial notebooks"]

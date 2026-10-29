@@ -1,0 +1,90 @@
+{
+  "+": {
+    "name": "addition",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a + b is integer addition.",
+    "plain_zh": "a + b 是整数加法。",
+    "example": "2 + 3 = 5"
+  },
+  "-": {
+    "name": "subtraction",
+    "arity": 2,
+    "signature": "int × int → int",
+    "plain": "a - b is integer subtraction.",
+    "plain_zh": "a - b 是整数减法。",
+    "example": "4 - 1 = 3"
+  },
+  "- (unary)": {
+    "name": "negation",
+    "arity": 1,
+    "signature": "int → int",
+    "plain": "- a is the negation of a.",
+    "plain_zh": "- a 是 a 的相反数。",
+    "example": "- 3 = -3"
+  },
+  "⤨": {
+    "name": "swap",
+    "arity": 2,
+    "signature": "perm[5] × int → perm[5]",
+    "plain": "a ⤨ b swaps cards at positions b / 5 and b % 5, counting from zero; an invalid position gives NaN.",
+    "plain_zh": "a ⤨ b 交换位置 b / 5 和 b % 5 上的两张卡片（位置从零数），位置无效时得 NaN。",
+    "example": "P[1, 2, 0, 4, 3] ⤨ 7 = [2,1,0,4,3]"
+  },
+  "⤺": {
+    "name": "rotate left",
+    "arity": 1,
+    "signature": "perm[5] → perm[5]",
+    "plain": "a ⤺ moves every card one position left, wrapping the first position to the last.",
+    "plain_zh": "a ⤺ 让每张卡片向左移一格，最左边的卡片绕到最右边。",
+    "example": "P[1, 2, 0, 4, 3] ⤺ = [0,1,4,3,2]"
+  },
+  "↷": {
+    "name": "rotate right",
+    "arity": 1,
+    "signature": "perm[5] → perm[5]",
+    "plain": "a ↷ moves every card one position right, wrapping the last position to the first.",
+    "plain_zh": "a ↷ 让每张卡片向右移一格，最右边的卡片绕到最左边。",
+    "example": "P[1, 2, 0, 4, 3] ↷ = [2,3,1,0,4]"
+  },
+  "⥀": {
+    "name": "perm reverse",
+    "arity": 1,
+    "signature": "perm[5] → perm[5]",
+    "plain": "a ⥀ reverses the positions of all cards.",
+    "plain_zh": "a ⥀ 把所有卡片的位置顺序倒过来。",
+    "example": "P[1, 2, 0, 4, 3] ⥀ = [3,2,4,0,1]"
+  },
+  "∘": {
+    "name": "perm compose",
+    "arity": 2,
+    "signature": "perm[5] × perm[5] → perm[5]",
+    "plain": "a ∘ b moves each card by a first and then by b; the result at card i is b[a[i]].",
+    "plain_zh": "a ∘ b 先按 a 移动卡片，再按 b 移动。",
+    "example": "P[1, 2, 0, 4, 3] ∘ P[4, 3, 2, 1, 0] = [3,2,4,0,1]"
+  },
+  "⤾": {
+    "name": "perm inverse",
+    "arity": 1,
+    "signature": "perm[5] → perm[5]",
+    "plain": "a ⤾ sends each card back to its original position; its value at i is the card at position i in a.",
+    "plain_zh": "a ⤾ 把每张卡片送回原来的位置。",
+    "example": "P[1, 2, 0, 4, 3] ⤾ = [2,0,1,4,3]"
+  },
+  "◎": {
+    "name": "perm apply",
+    "arity": 2,
+    "signature": "perm[5] × int → int",
+    "plain": "a ◎ b is the final position of card b under a; an invalid card number gives NaN.",
+    "plain_zh": "a ◎ b 是卡片 b 在 a 下最后到达的位置，卡片编号无效时得 NaN。",
+    "example": "P[1, 2, 0, 4, 3] ◎ 2 = 0"
+  },
+  "≋": {
+    "name": "perm equal",
+    "arity": 2,
+    "signature": "perm[5] × perm[5] → bool",
+    "plain": "a ≋ b is true exactly when both permutations send every card to the same position.",
+    "plain_zh": "a ≋ b 在两个排列把每张卡片送到同一位置时为真。",
+    "example": "P[1, 2, 0, 4, 3] ≋ P[4, 3, 2, 1, 0] = false"
+  }
+}

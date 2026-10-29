@@ -1,0 +1,20 @@
+tools:
+  - class_name: examples.verl_multiturn.tool.OpulseStepTool
+    config:
+      type: native
+      env: blackbox
+      operators: ops.jsonl
+      env_options:
+        turn_budget: 20
+    tool_schema:
+      type: function
+      function:
+        name: opulse_step
+        description: Apply one action in the Opulse environment.
+        parameters:
+          type: object
+          properties:
+            action:
+              type: string
+              description: A QUERY or SUBMIT action from the episode instructions.
+          required: [action]

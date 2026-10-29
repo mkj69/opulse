@@ -1,0 +1,38 @@
+name: Bug report
+description: Tell us about a command or API call that failed.
+body:
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened?
+      description: Include the error or unexpected output. Remove secrets from logs before posting.
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command or code
+      description: Include the command, seed, config and input files needed to reproduce this.
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Opulse version
+      description: Run `python -m pip show opulse` if Opulse is installed as a package.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include your operating system, Python version and relevant dependencies.
+    validations:
+      required: true

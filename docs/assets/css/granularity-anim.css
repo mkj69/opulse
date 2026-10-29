@@ -1,0 +1,298 @@
+/* Granularity animation (docs/assets/js/granularity-anim.js). Colours come from the theme
+   variables in custom.css, so light and dark follow the site palette. */
+.op-granim {
+  --ga-expand: var(--op-cyan);
+  --ga-branch: var(--op-amber);
+  --ga-recursion: var(--op-magenta);
+  --ga-atom: var(--md-default-fg-color--light);
+  --ga-known: var(--op-indigo);
+  --ga-ok: #15803d;
+  --ga-line: color-mix(in srgb, var(--md-default-fg-color) 14%, transparent);
+  --ga-tint: color-mix(in srgb, var(--md-default-fg-color) 3.5%, transparent);
+  --ga-tint-2: color-mix(in srgb, var(--md-default-fg-color) 6%, transparent);
+  --ga-active: var(--op-indigo);
+  --ga-ease: cubic-bezier(.2, .7, .2, 1);
+  container-type: inline-size;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  margin: 1.2em 0 1.8em;
+  padding: 1rem 1.1rem 0.9rem;
+  border: 1px solid var(--op-card-border, var(--ga-line));
+  border-radius: var(--op-radius, 14px);
+  background: var(--op-card-bg, transparent);
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--md-default-fg-color);
+}
+[data-md-color-scheme="slate"] .op-granim { --ga-ok: #4ade80; }
+.op-granim > .ga-static, .op-granim noscript p { margin: 0; color: var(--md-default-fg-color--light); }
+.op-granim[data-ready="true"] > .ga-static { display: none; }
+.op-granim .ga-error { margin: 0.5rem 0 0; color: var(--md-default-fg-color--light); }
+
+/* ------------------------------------------------------------------ header */
+.op-granim .ga-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem 1rem; }
+.op-granim .ga-modes { display: inline-flex; padding: 2px; border-radius: 999px; background: var(--ga-tint-2); }
+.op-granim .ga-mode {
+  border: 0; border-radius: 999px; padding: 0.3rem 0.85rem; background: transparent; cursor: pointer;
+  font: inherit; font-weight: 600; color: var(--md-default-fg-color--light); transition: background .25s, color .25s;
+}
+.op-granim .ga-mode[aria-pressed="true"] {
+  background: var(--md-default-bg-color); color: var(--md-default-fg-color);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12), 0 0 0 1px var(--ga-line);
+}
+.op-granim .ga-mode:focus-visible, .op-granim .ga-btn:focus-visible, .op-granim .ga-ztoggle:focus-visible {
+  outline: 2px solid var(--ga-active); outline-offset: 2px;
+}
+.op-granim .ga-legend { display: flex; flex-wrap: wrap; gap: 0.25rem 0.85rem; color: var(--md-default-fg-color--light); font-size: 0.66rem; }
+.op-granim .ga-legend-item { display: inline-flex; align-items: center; gap: 0.32rem; white-space: nowrap; }
+.op-granim .ga-legend-item i { width: 0.55rem; height: 0.55rem; border-radius: 3px; background: var(--k); }
+.op-granim .ga-legend-check .ga-check { width: 0.85rem; height: 0.85rem; }
+.op-granim .ga-caption {
+  margin: 0.75rem 0 0.7rem; min-height: 2.9em; font-size: 0.78rem; line-height: 1.45;
+  color: var(--md-default-fg-color--light);
+}
+
+/* step kinds */
+.op-granim .ga-expand { --k: var(--ga-expand); }
+.op-granim .ga-branch { --k: var(--ga-branch); }
+.op-granim .ga-recursion { --k: var(--ga-recursion); }
+.op-granim .ga-atom { --k: var(--ga-atom); }
+.op-granim .ga-known { --k: var(--ga-known); }
+
+/* ------------------------------------------------------------------ expressions */
+.op-granim .ga-expr { font-family: var(--md-code-font-family); font-size: 0.95em; overflow-wrap: anywhere; }
+.op-granim .ga-sym {
+  font-family: "Opulse Subscripts", "DejaVu Sans", "Noto Sans Symbols 2", "Segoe UI Symbol", "Apple Symbols", var(--md-text-font-family), sans-serif;
+  font-size: 0.98em; line-height: 1; padding: 0 0.04em;
+}
+.op-granim .ga-sym.ga-op-simple { color: var(--ga-expand); }
+.op-granim .ga-sym.ga-op-branch { color: var(--ga-branch); }
+.op-granim .ga-sym.ga-op-recursive { color: var(--ga-recursion); }
+.op-granim .ga-eq { color: var(--md-default-fg-color--lighter); margin-right: 0.1em; }
+.op-granim .ga-hit { border-radius: 4px; padding: 0.05em 0.18em; margin: 0 -0.05em; background: color-mix(in srgb, var(--k) 16%, transparent);
+  box-shadow: inset 0 -1.5px 0 color-mix(in srgb, var(--k) 55%, transparent); }
+.op-granim .ga-hit-atom { --k: var(--ga-atom); }
+.op-granim .ga-hit-known { --k: var(--ga-known); }
+.op-granim .ga-hit-expand { --k: var(--ga-expand); }
+.op-granim .ga-hit-branch { --k: var(--ga-branch); }
+.op-granim .ga-hit-recursion { --k: var(--ga-recursion); }
+
+.op-granim .ga-start, .op-granim .ga-end {
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.2rem 0.6rem; padding: 0.45rem 0.7rem;
+  border-radius: 10px; background: var(--ga-tint-2); font-size: 0.82rem;
+}
+.op-granim .ga-start-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--md-default-fg-color--lighter); }
+.op-granim .ga-end { margin-top: 0.5rem; align-items: center; opacity: 0.35; transition: opacity .5s var(--ga-ease); }
+.op-granim .ga-end .ga-final { font-weight: 700; visibility: hidden; }
+.op-granim .ga-end .ga-check { width: 1rem; height: 1rem; visibility: hidden; }
+.op-granim .ga-end.is-done { opacity: 1; }
+.op-granim .ga-end.is-done .ga-final, .op-granim .ga-end.is-done .ga-check { visibility: visible; }
+
+/* ------------------------------------------------------------------ one step */
+.op-granim .ga-step {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; column-gap: 0.4rem;
+  padding: 0.26rem 0.45rem 0.3rem; border-radius: 7px; border: 1px solid transparent;
+  transition: background .35s var(--ga-ease), border-color .35s var(--ga-ease);
+}
+.op-granim .ga-tag { grid-column: 1; display: flex; align-items: baseline; gap: 0.3rem; min-width: 0; font-size: 0.62rem; color: var(--md-default-fg-color--light); }
+.op-granim .ga-tag-kind {
+  font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--k);
+  padding: 0.02rem 0.32rem; border-radius: 4px; background: color-mix(in srgb, var(--k) 12%, transparent);
+}
+.op-granim .ga-tag .ga-sym { color: var(--md-default-fg-color); }
+.op-granim .ga-ok { grid-column: 2; grid-row: 1; display: inline-flex; }
+.op-granim .ga-check { width: 0.78rem; height: 0.78rem; fill: none; stroke: var(--ga-ok); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.op-granim .ga-ok .ga-check { stroke-dasharray: 14; stroke-dashoffset: 14; transition: stroke-dashoffset .45s var(--ga-ease) .15s; }
+.op-granim .is-done .ga-ok .ga-check { stroke-dashoffset: 0; }
+.op-granim .ga-step > .ga-expr { grid-column: 1 / -1; margin-top: 0.08rem; }
+.op-granim .ga-cond {
+  grid-column: 1 / -1; font-family: var(--md-code-font-family); font-size: 0.86em; color: var(--k);
+  margin-top: 0.05rem;
+}
+.op-granim .ga-cond::before { content: attr(data-if) " "; font-family: var(--md-text-font-family); opacity: 0.8; }
+.op-granim .is-current > .ga-step, .op-granim .is-current > .ga-zrow-inner > .ga-step {
+  background: color-mix(in srgb, var(--k) 9%, var(--md-default-bg-color));
+  border-color: color-mix(in srgb, var(--k) 45%, transparent);
+}
+.op-granim .is-pending > .ga-step { border: 1px dashed color-mix(in srgb, var(--ga-active) 40%, transparent); }
+.op-granim .is-pending > .ga-step > .ga-expr, .op-granim .is-pending > .ga-step > .ga-cond,
+.op-granim .is-pending > .ga-zrow-inner > .ga-step > .ga-expr, .op-granim .is-pending > .ga-zrow-inner > .ga-step > .ga-cond { visibility: hidden; }
+.op-granim .is-pending > .ga-step, .op-granim .is-pending > .ga-zrow-inner > .ga-step { position: relative; }
+.op-granim .is-pending > .ga-step::after, .op-granim .is-pending > .ga-zrow-inner > .ga-step::after {
+  content: ""; position: absolute; left: 0.5rem; right: 30%; top: calc(50% + 0.45rem); height: 0.42rem; border-radius: 3px;
+  background: linear-gradient(90deg, var(--ga-tint-2), color-mix(in srgb, var(--ga-active) 18%, transparent), var(--ga-tint-2));
+  background-size: 200% 100%; animation: ga-wait 1.6s linear infinite;
+}
+@keyframes ga-wait { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+
+/* ------------------------------------------------------------------ side by side */
+/* A step that has not happened yet is a faint empty slot, so the shape of all three
+   derivations is visible from the start. */
+.op-granim [data-ga] > .ga-step { border: 1px dashed color-mix(in srgb, var(--md-default-fg-color) 11%, transparent); }
+.op-granim [data-ga] > .ga-step > * { opacity: 0; transition: opacity .45s var(--ga-ease); }
+.op-granim [data-ga].is-done > .ga-step { border-style: solid; border-color: transparent; }
+.op-granim [data-ga].is-done > .ga-step > *, .op-granim [data-ga].is-pending > .ga-step > .ga-tag { opacity: 1; }
+.op-granim [data-ga].is-current > .ga-step { border-color: color-mix(in srgb, var(--k) 45%, transparent); }
+.op-granim [data-ga] + [data-ga] { margin-top: 0.14rem; }
+
+.op-granim .ga-grid { display: none; margin-top: 0.55rem; }
+.op-granim .ga-heads, .op-granim .ga-band {
+  display: grid; column-gap: 0.55rem;
+  grid-template-columns: 1.3rem minmax(0, 1fr) minmax(0, 1.05fr) minmax(0, 1.25fr);
+}
+.op-granim .ga-heads { padding: 0 0.3rem 0.2rem; }
+.op-granim .ga-heads > :first-child { grid-column: 2; }
+.op-granim .ga-colhead { display: flex; flex-direction: column; gap: 0.05rem; padding: 0 0.45rem; }
+.op-granim .ga-colname { font-size: 0.8rem; font-weight: 700; }
+.op-granim .ga-colsub { color: var(--md-default-fg-color--light); font-size: 0.66rem; }
+.op-granim .ga-colcount { color: var(--md-default-fg-color--lighter); font-size: 0.62rem; font-variant-numeric: tabular-nums; }
+.op-granim .ga-band {
+  grid-template-rows: repeat(var(--rows), auto); row-gap: 0.3rem; margin-top: 0.4rem; padding: 0.4rem 0.3rem;
+  border-radius: 12px; background: var(--ga-tint); box-shadow: inset 0 0 0 1px transparent;
+  transition: background .45s var(--ga-ease), box-shadow .45s var(--ga-ease), opacity .45s var(--ga-ease);
+}
+.op-granim .ga-band:nth-of-type(odd) { background: var(--ga-tint-2); }
+.op-granim .ga-band.is-active {
+  background: color-mix(in srgb, var(--ga-active) 7%, var(--md-default-bg-color));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ga-active) 38%, transparent);
+}
+.op-granim .ga-bandno {
+  grid-column: 1; grid-row: 1 / -1; align-self: stretch; justify-self: center; display: flex; flex-direction: column; align-items: center;
+  font-size: 0.62rem; font-weight: 700; color: var(--md-default-fg-color--lighter); padding-top: 0.32rem;
+}
+.op-granim .ga-bandno::after { content: ""; flex: 1; width: 2px; margin-top: 0.3rem; border-radius: 2px; background: var(--ga-line); transition: background .45s; }
+.op-granim .is-active > .ga-bandno { color: var(--ga-active); }
+.op-granim .is-active > .ga-bandno::after { background: color-mix(in srgb, var(--ga-active) 55%, transparent); }
+.op-granim .ga-coarsecell { grid-column: 2; align-self: start; }
+.op-granim .ga-sub { grid-column: 3; align-self: start; min-width: 0; }
+.op-granim .ga-sub.ga-sub-fine { grid-column: 4; padding-left: 0.45rem; border-left: 2px solid var(--ga-line); border-radius: 2px; }
+.op-granim .ga-band > .ga-sub + .ga-sub.ga-sub-fine { align-self: stretch; }
+
+.op-granim .ga-stack { margin-top: 0.55rem; display: grid; gap: 0.7rem; }
+.op-granim .ga-scol { border-radius: 12px; padding: 0.5rem 0.45rem 0.45rem; border: 1px solid var(--ga-line); }
+.op-granim .ga-scol .ga-colhead { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 0.1rem 0.5rem; padding: 0 0.35rem 0.3rem; }
+.op-granim .ga-scol .ga-colcount { margin-left: auto; }
+.op-granim .ga-sband { display: grid; grid-template-columns: 1.2rem minmax(0, 1fr); column-gap: 0.3rem; padding: 0.3rem 0.2rem; margin-top: 0.3rem; border-radius: 10px; background: var(--ga-tint); transition: background .45s, box-shadow .45s; }
+.op-granim .ga-sband:nth-of-type(even) { background: var(--ga-tint-2); }
+.op-granim .ga-sband.is-active { background: color-mix(in srgb, var(--ga-active) 7%, var(--md-default-bg-color)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ga-active) 38%, transparent); }
+.op-granim .ga-sband .ga-bandno { grid-row: 1; }
+
+@container (min-width: 600px) {
+  .op-granim .ga-grid { display: block; }
+  .op-granim .ga-stack { display: none; }
+}
+
+/* ------------------------------------------------------------------ zoom */
+.op-granim .ga-zroot { margin-top: 0.55rem; }
+.op-granim .ga-zsrc { font-family: var(--md-code-font-family); font-size: 0.95em; padding: 0.15rem 0.45rem 0.25rem; color: var(--md-default-fg-color--light); }
+.op-granim .ga-zsrc-root { font-size: 0.82rem; color: var(--md-default-fg-color); padding: 0.45rem 0.7rem; border-radius: 10px; background: var(--ga-tint-2); margin-bottom: 0.3rem; }
+.op-granim .ga-zrow { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows .45s var(--ga-ease), opacity .4s var(--ga-ease); }
+.op-granim .ga-zrow.is-done, .op-granim .ga-zrow.is-pending { grid-template-rows: 1fr; opacity: 1; }
+.op-granim .ga-zrow-inner { min-height: 0; overflow: hidden; display: flex; align-items: flex-start; gap: 0.15rem; padding-top: 0.12rem; }
+.op-granim .ga-zrow-inner > .ga-step { flex: 1; min-width: 0; }
+.op-granim .ga-ztoggle, .op-granim .ga-ztoggle-space { flex: none; width: 1.35rem; height: 1.35rem; margin-top: 0.25rem; }
+.op-granim .ga-ztoggle {
+  display: inline-grid; place-items: center; padding: 0; border: 1px solid var(--ga-line); border-radius: 6px; background: transparent;
+  color: var(--md-default-fg-color--light); cursor: pointer; transition: background .25s, color .25s;
+}
+.op-granim .ga-ztoggle:hover { background: var(--ga-tint-2); color: var(--md-default-fg-color); }
+.op-granim .ga-ztoggle svg { width: 0.8rem; height: 0.8rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: transform .35s var(--ga-ease); }
+.op-granim .ga-ztoggle[aria-expanded="true"] svg { transform: rotate(90deg); }
+.op-granim .ga-zkids { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s var(--ga-ease); }
+.op-granim .ga-zkids.is-open { grid-template-rows: 1fr; }
+.op-granim .ga-zkids-inner {
+  min-height: 0; overflow: hidden; margin: 0 0 0 0.65rem; padding: 0 0 0 0.75rem;
+  border-left: 2px solid color-mix(in srgb, var(--k, var(--ga-line)) 55%, transparent);
+}
+.op-granim .ga-zkids.is-open > .ga-zkids-inner { padding: 0.15rem 0 0.35rem 0.75rem; }
+.op-granim .ga-zk-simple { --k: var(--ga-expand); }
+.op-granim .ga-zk-branch { --k: var(--ga-branch); }
+.op-granim .ga-zk-recursive { --k: var(--ga-recursion); }
+
+/* ------------------------------------------------------------------ controls */
+.op-granim .ga-controls {
+  display: flex; align-items: center; gap: 0.35rem; margin-top: 0.8rem; padding-top: 0.7rem; border-top: 1px solid var(--ga-line);
+}
+.op-granim .ga-btn {
+  flex: none; display: inline-grid; place-items: center; min-width: 1.9rem; height: 1.9rem; padding: 0 0.45rem;
+  border: 1px solid var(--ga-line); border-radius: 999px; background: transparent; color: var(--md-default-fg-color);
+  font: inherit; font-weight: 600; font-variant-numeric: tabular-nums; cursor: pointer; transition: background .2s, border-color .2s;
+}
+.op-granim .ga-btn:hover { background: var(--ga-tint-2); }
+.op-granim .ga-btn svg { width: 0.85rem; height: 0.85rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.op-granim .ga-play { width: 2.2rem; height: 2.2rem; border: 0; background: var(--ga-active); color: #fff; }
+.op-granim .ga-play:hover { background: color-mix(in srgb, var(--ga-active) 85%, var(--md-default-fg-color)); }
+.op-granim .ga-play svg { fill: currentColor; stroke: none; width: 0.95rem; height: 0.95rem; }
+.op-granim .ga-i-pause, .op-granim.is-playing .ga-i-play { display: none; }
+.op-granim.is-playing .ga-i-pause { display: block; }
+.op-granim .ga-range { flex: 1; min-width: 4rem; margin: 0 0.3rem; accent-color: var(--ga-active); cursor: pointer; }
+.op-granim .ga-pos { flex: none; min-width: 3.2em; text-align: right; color: var(--md-default-fg-color--lighter); font-variant-numeric: tabular-nums; font-size: 0.66rem; }
+
+@container (max-width: 300px) {
+  .op-granim .ga-legend { font-size: 0.62rem; gap: 0.2rem 0.6rem; }
+  .op-granim .ga-mode { padding: 0.28rem 0.7rem; }
+  .op-granim .ga-back { display: none; }
+}
+@media (max-width: 480px) {
+  .op-granim { padding: 0.8rem 0.75rem 0.75rem; margin-left: -0.2rem; margin-right: -0.2rem; }
+}
+
+/* ------------------------------------------------------------------ motion */
+.op-granim.is-frozen *, .op-granim.is-frozen *::after { transition: none !important; animation: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .op-granim *, .op-granim *::after { transition: none !important; animation: none !important; }
+}
+.op-granim [data-ga].is-pending > .ga-step { border: 1px dashed color-mix(in srgb, var(--ga-active) 45%, transparent); }
+.op-granim .ga-tag .ga-sym { font-size: 0.74rem; color: var(--md-default-fg-color--light); }
+.op-granim .ga-zrow.is-pending > .ga-zrow-inner > .ga-step { border: 1px dashed color-mix(in srgb, var(--ga-active) 45%, transparent); }
+/* Narrow screens: slots still to come take one line, so the stacked columns stay short. */
+.op-granim .ga-stack [data-ga]:not(.is-done):not(.is-pending) > .ga-step { height: 1.5rem; overflow: hidden; }
+
+/* ------------------------------------------------------------------ cut chooser */
+/* Same convention as the explorer below: an unfolded operator is filled, a known one (computed
+   in one step) is a dashed outline. */
+.op-granim .ga-cutbar { margin-top: 0.75rem; padding: 0.6rem 0.7rem 0.5rem; border-radius: 12px; background: var(--ga-tint); }
+.op-granim[data-mode="zoom"] .ga-cutbar { display: none; }
+.op-granim .ga-cutrow, .op-granim .ga-presetrow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.6rem; }
+.op-granim .ga-presetrow { margin-top: 0.45rem; }
+.op-granim .ga-cutlabel { flex: none; min-width: 4.6rem; color: var(--md-default-fg-color--light); font-size: 0.66rem; font-weight: 600; }
+.op-granim .ga-chips, .op-granim .ga-presets { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.op-granim .ga-chips { flex: 1 1 0; min-width: 12rem; }
+.op-granim .ga-chip {
+  --k: var(--ga-expand);
+  display: inline-flex; align-items: baseline; gap: 0.4rem; padding: 0.28rem 0.7rem 0.3rem; border-radius: 999px;
+  border: 1.5px solid var(--k); background: color-mix(in srgb, var(--k) 16%, var(--md-default-bg-color));
+  color: var(--md-default-fg-color); font: inherit; line-height: 1.2; cursor: pointer;
+  transition: background .2s, border-color .2s, opacity .2s;
+}
+.op-granim .ga-chip-branch { --k: var(--ga-branch); }
+.op-granim .ga-chip-recursive { --k: var(--ga-recursion); }
+.op-granim .ga-chip-op { font-family: var(--md-code-font-family); font-size: 0.86rem; font-weight: 700; }
+.op-granim .ga-chip-op .ga-sym { color: inherit; }
+.op-granim .ga-chip-state { font-size: 0.64rem; color: var(--md-default-fg-color--light); }
+.op-granim .ga-chip.is-known { border-style: dashed; background: transparent; }
+.op-granim .ga-chip.is-known .ga-chip-op { color: var(--k); }
+.op-granim button.ga-chip:hover { background: color-mix(in srgb, var(--k) 26%, var(--md-default-bg-color)); }
+.op-granim button.ga-chip.is-known:hover { background: color-mix(in srgb, var(--k) 8%, transparent); }
+.op-granim .ga-chip:focus-visible, .op-granim .ga-preset:focus-visible { outline: 2px solid var(--ga-active); outline-offset: 2px; }
+.op-granim .ga-chip-atoms { --k: var(--ga-atom); cursor: default; opacity: 0.8; }
+.op-granim .ga-chip-atoms .ga-chip-op { font-family: inherit; font-size: 0.72rem; }
+.op-granim .ga-cutcount {
+  margin-left: auto; padding: 0.15rem 0.6rem; border-radius: 999px; background: color-mix(in srgb, var(--ga-active) 12%, transparent);
+  color: var(--ga-active); font-size: 0.78rem; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.op-granim .ga-preset {
+  padding: 0.2rem 0.65rem; border: 1px solid var(--ga-line); border-radius: 999px; background: transparent;
+  color: var(--md-default-fg-color--light); font: inherit; font-size: 0.66rem; cursor: pointer; transition: background .2s, color .2s;
+}
+.op-granim .ga-preset:hover { background: var(--ga-tint-2); color: var(--md-default-fg-color); }
+.op-granim .ga-preset[aria-pressed="true"] { border-color: color-mix(in srgb, var(--ga-active) 55%, transparent); color: var(--ga-active); font-weight: 600; }
+.op-granim .ga-hint { margin: 0.5rem 0 0; color: var(--md-default-fg-color--light); font-size: 0.66rem; }
+.op-granim .ga-colhead-medium .ga-colname { color: var(--ga-active); }
+.op-granim .ga-colsub .ga-sym { font-family: var(--md-code-font-family); font-weight: 700; }
+.op-granim .ga-sep { color: var(--md-default-fg-color--lighter); }
+@container (max-width: 420px) {
+  .op-granim .ga-cutlabel { min-width: 0; width: 100%; }
+  .op-granim .ga-cutcount { margin-left: 0; }
+}

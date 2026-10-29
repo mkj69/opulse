@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+outputs/
+crosscheck_disagreements.jsonl
+*.so
+*.c
+*.pyx
+site/
+tools/video/output/

@@ -1,0 +1,24 @@
+Opulse documentation and data license
+=====================================
+
+Copyright 2026 The Opulse Authors
+
+The following material is licensed under the Creative Commons Attribution
+4.0 International License (CC BY 4.0):
+
+  * the documentation sources in docs/ and docs_zh/, and the text of the
+    website built from them;
+  * the figures, animations and other media in docs/assets/ and
+    docs_zh/assets/;
+  * generated datasets and data samples, including files produced by
+    `opulse atoms export`, unless an exporter sets another license.
+
+The full legal code is in LICENSES/CC-BY-4.0.txt and at
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Everything else in this repository, including the source code in src/,
+tools/, tests/ and examples/, is licensed under the Apache License,
+Version 2.0, in LICENSE.
+
+When you reuse the documentation or data, credit "The Opulse Authors"
+and link https://github.com/mkj69/opulse.

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Questions and experiment ideas
+    url: https://github.com/mkj69/opulse/discussions
+    about: Ask a question or share an experiment idea in Discussions.

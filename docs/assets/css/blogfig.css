@@ -1,0 +1,105 @@
+/* Blog figures (docs/blog/index.md): static SVGs and the step checker widget. */
+
+.md-typeset figure.op-blogfig {
+  --op-blogfig-control-fg: var(--md-default-bg-color);
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 1.8em 0 2em;
+}
+.md-typeset figure.op-blogfig > p {
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+}
+/* Keep the control hint readable inside the figure frame. */
+.md-typeset figure.op-blogfig > p.op-hint {
+  margin: 0.4rem 0 0.3rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.md-typeset figure.op-blogfig img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+.md-typeset figure.op-blogfig img.op-fig-m { display: none; }
+
+/* Captions: body-column width at the smaller caption font size. */
+.md-typeset figure.op-blogfig figcaption {
+  max-width: 66.286ch;
+  margin: 0.85em 0 0;
+  font-size: 0.7rem;
+  line-height: 1.55;
+  font-style: normal;
+  text-align: left;
+  color: var(--md-default-fg-color--light);
+}
+html[lang^="zh"] .md-typeset figure.op-blogfig figcaption { max-width: 41.143em; }
+/* Center diagrams on the prose axis within the available content area. */
+@media screen and (min-width: 45em) {
+  .md-main__inner:has(figure.op-blogfig) .md-content { container-type: inline-size; }
+  .md-typeset figure.op-blogfig {
+    width: min(54rem, calc(100cqw - 4rem)); max-width: none;
+    margin-left: 50%; transform: translateX(-50%);
+  }
+  .md-typeset figure.op-blogfig figcaption { margin-inline: auto; }
+}
+.md-typeset figure.op-blogfig figcaption b {
+  color: var(--md-default-fg-color);
+  font-weight: 700;
+}
+
+/* The step checker in the same frame weight as the SVG panels. */
+.md-typeset figure.op-blogfig .opv {
+  margin: 0;
+  padding: 14px 14px 10px;
+  border-radius: 8px;
+  box-shadow: none;
+  font-size: 0.68rem;
+}
+.md-typeset figure.op-blogfig .opv-title { font-size: 0.725rem; }
+.md-typeset figure.op-blogfig .opv-caption { font-size: 0.68rem; }
+.md-typeset figure.op-blogfig .opv-line code { font-size: 0.64rem; }
+.md-typeset figure.op-blogfig .opv-tag { font-size: 0.6rem; }
+.md-typeset figure.op-blogfig .opv-tabs button { font-size: 0.64rem; }
+/* A sheet of fixed height keeps the widget close to the other figures in size;
+   docs/assets/js/blogfig.js keeps the current line in view. */
+.md-typeset figure.op-blogfig .opv-sheet { position: relative; max-height: 11.5rem; overflow-y: auto;
+  border-radius: 8px; }
+/* Flat styling to match the SVG figures: no gradients or glows, readable pending lines. */
+.md-typeset figure.op-blogfig .opv { background: transparent; }
+.md-typeset figure.op-blogfig .opv::before { display: none; }
+.md-typeset figure.op-blogfig .opv-card { border-radius: 8px; }
+.md-typeset figure.op-blogfig .opv-line { opacity: 0.4; }
+.md-typeset figure.op-blogfig .opv-line.opv-on,
+.md-typeset figure.op-blogfig .opv-line.opv-q { opacity: 1; }
+.md-typeset figure.op-blogfig .opv-tabs { border-radius: 8px; }
+.md-typeset figure.op-blogfig .opv-tabs button { border-radius: 6px; }
+.md-typeset figure.op-blogfig .opv-tabs button.opv-active { background: var(--op-indigo); color: var(--op-blogfig-control-fg); box-shadow: none; }
+.md-typeset figure.op-blogfig .opv-bar .opv-play { width: 2rem; height: 2rem; background: var(--op-indigo);
+  color: var(--op-blogfig-control-fg); box-shadow: none; }
+.md-typeset figure.op-blogfig .opv-bar .opv-play:hover { color: var(--op-blogfig-control-fg); }
+.md-typeset figure.op-blogfig .opv-range { background: linear-gradient(90deg, var(--op-indigo) var(--opv-fill, 0%),
+  var(--opv-line) var(--opv-fill, 0%)); }
+.md-typeset figure.op-blogfig .opv-range::-webkit-slider-thumb { border-color: var(--op-indigo); box-shadow: none; }
+.md-typeset figure.op-blogfig .opv-caption { min-height: 0; }
+.md-typeset figure.op-blogfig .opv-summary { min-height: 0; margin-top: 0.3rem; }
+
+@media screen and (max-width: 600px) {
+  .md-typeset figure.op-blogfig img.op-fig-d { display: none; }
+  [data-md-color-scheme="default"] .md-typeset figure.op-blogfig img.op-fig-m[src$="#only-light"],
+  [data-md-color-scheme="slate"] .md-typeset figure.op-blogfig img.op-fig-m[src$="#only-dark"] {
+    display: inline;
+  }
+  .md-typeset figure.op-blogfig .opv { padding: 10px 10px 8px; }
+  .md-typeset figure.op-blogfig .opv-head { flex-wrap: wrap; gap: 0.3rem; }
+  .md-typeset figure.op-blogfig .opv-tabs { display: flex; flex-wrap: wrap; border-radius: 10px; }
+  .md-typeset figure.op-blogfig .opv-tabs button { flex: 1 1 auto; white-space: normal; text-align: center; }
+  .md-typeset figure.op-blogfig .opv-sheet { padding: 0.3rem 0.2rem; max-height: 20rem; }
+  .md-typeset figure.op-blogfig .opv-line { grid-template-columns: 1.1rem minmax(0, 1fr); column-gap: 0.3rem; text-align: left; }
+  .md-typeset figure.op-blogfig .opv-line .opv-tag { display: none; }
+  .md-typeset figure.op-blogfig .opv-line .opv-why { grid-column: 2 / 3; }
+  .md-typeset figure.op-blogfig .opv-line code { font-size: 0.6rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+}

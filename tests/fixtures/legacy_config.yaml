@@ -1,0 +1,13 @@
+variable_atoms:
+  - left_operand: a
+  - right_operand: b
+max_if_branches: 10
+expr_variables: [a, b]
+expr_max_depth: 3
+expr_type_weights:
+  binary: 0.7
+  unary_prefix: 0.2
+  unary_postfix: 0.1
+  atoms: 0.1
+longer_result_compute:
+  base: 10

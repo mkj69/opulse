@@ -1,0 +1,303 @@
+# Homepage explainer. Scene captions become the WebVTT tracks; card scenes carry their text on screen.
+site: http://localhost:8770
+fps: 30
+size: [1920, 1080]
+transition: 0.8        # dip through stage background between scenes, seconds
+state_fade: 0.22       # crossfade between widget states inside a scene, seconds
+poster: {scene: examples_cuts, at: 6.0}  # seconds into the scene, after the final cut appears
+capture:
+  viewport: [1920, 2400]
+  scale: 3
+stage:
+  light:
+    page: "#eef2f8"
+    background: ["#f5f7fb", "#e3e9f3"]
+    shadow: "#0f172a"
+    shadow_opacity: 0.22
+    radius: 14
+  dark:
+    page: "#0a0f1e"
+    background: ["#0a0f1e", "#0f1630"]
+    shadow: "#050815"
+    shadow_opacity: 0.12
+    radius: 14
+# A states scene has a camera. It shows the whole widget for `intro` seconds, then moves in
+# `move` seconds to the focus box named for each state (`views`, else `view`). `width` is the
+# narrowest view in CSS pixels, so the frame shows 1920 / width output pixels per CSS pixel.
+# Time `keys` instead pan across a fixed image.
+scenes:
+  - id: title
+    kind: card
+    duration: 6.5
+    card:
+      en: "Finite atoms, endless concepts.\nEvery step of reasoning, in plain sight."
+    caption:
+      en: ""
+      zh: ""
+
+  - id: growth
+    path: /guide/visual-tour/
+    selector: .scales-growth
+    wait: .scales-growth .sg-graph-scroll svg
+    width: 1500
+    css: |
+      /* Keep the graph on small sets and the layer bars on large sets. */
+      .scales-growth .sg-panel > .sg-kind-list ~ :not(.sg-summary),
+      .scales-growth .sg-panel:has(.sg-graph-scroll) > .sg-kind-list,
+      .scales-growth .sg-panel:has(.sg-graph-scroll) > h3:nth-of-type(2),
+      .scales-growth .sg-panel:has(.sg-graph-scroll) > .sg-summary { display: none !important; }
+    duration: 10
+    hold_first: 1.5
+    hold_last: 2.5
+    states:
+      sequence:
+        - {wait: '.sg-tab:first-child[aria-selected="true"]'}
+        - click: .sg-tab:nth-child(2)
+          wait: 'js: document.querySelector(''.scales-growth .sg-tab:nth-child(2)[aria-selected="true"]'') && document.querySelector(''.scales-growth .sg-meta'')?.textContent.includes(''100 defined operators'')'
+        - click: .sg-tab:nth-child(3)
+          wait: 'js: document.querySelector(''.scales-growth .sg-tab:nth-child(3)[aria-selected="true"]'') && document.querySelector(''.scales-growth .sg-meta'')?.textContent.includes(''1,000 defined operators'')'
+        - click: .sg-tab:nth-child(4)
+          wait: 'js: document.querySelector(''.scales-growth .sg-tab:nth-child(4)[aria-selected="true"]'') && document.querySelector(''.scales-growth .sg-meta'')?.textContent.includes(''10,000 defined operators'')'
+        - {click: .sg-tab:first-child, wait: '.sg-graph-scroll .sg-node.sg-simple', capture: false}
+        - {click: '.sg-graph-scroll .sg-node.sg-simple', wait: '.sg-detail code'}
+    focus:
+      graph: '.sg-tabs, .sg-meta, .sg-graph-scroll, .sg-detail'
+      summary: '.sg-tabs, .sg-meta, .sg-kind-list, .sg-summary'
+    camera: {intro: 0.8, move: 0.4, view: graph, views: {2: summary, 3: summary, 4: graph}, margin: 0.02}
+    caption:
+      en: "Four fixed seed sets show growth from about 10 to 10,000 operators. Select an operator to read its definition and calls."
+      zh: "四个固定种子的集合展示从约十个到一万个运算符的规模。选择运算符可查看定义和调用。"
+
+  - id: examples_scale
+    path: /
+    selector: .op-home-scales
+    wait: ".op-home-scales .oh-tree-section > summary"
+    width: 1200
+    css: &examples_css |
+      .op-home-scales .os-step-list { max-height: 22rem; }
+      .op-home-scales .oh-tree-section { display: none !important; }
+    duration: 7
+    hold_first: 2.5
+    hold_last: 1.6
+    states:
+      sequence:
+        - {click: ".oh-tree-section > summary", wait: ".oh-list .os-step"}
+        - click: '.oh-tabs[aria-label="Operator set size"] .oh-tab:nth-child(2)'
+          wait: 'js: document.querySelector(''.op-home-scales .oh-tabs[aria-label="Operator set size"] .oh-tab:nth-child(2)[aria-selected="true"]'') && document.querySelector(''.op-home-scales .oh-tree-section > summary'')'
+          capture: false
+        - {click: ".oh-tree-section > summary", wait: ".oh-list .os-step"}
+        - click: '.oh-tabs[aria-label="Operator set size"] .oh-tab:nth-child(3)'
+          wait: 'js: document.querySelector(''.op-home-scales .oh-tabs[aria-label="Operator set size"] .oh-tab:nth-child(3)[aria-selected="true"]'') && document.querySelector(''.op-home-scales .oh-tree-section > summary'')'
+          capture: false
+        - {click: ".oh-tree-section > summary", wait: ".oh-list .os-step"}
+        - click: '.oh-tabs[aria-label="Operator set size"] .oh-tab:nth-child(4)'
+          wait: 'js: document.querySelector(''.op-home-scales .oh-tabs[aria-label="Operator set size"] .oh-tab:nth-child(4)[aria-selected="true"]'') && document.querySelector(''.op-home-scales .oh-tree-section > summary'')'
+          capture: false
+        - {click: ".oh-tree-section > summary", wait: ".oh-list .os-step", capture: false}
+        - click: ".oh-presets .oh-preset:first-child"
+          wait: 'js: document.querySelector(''.op-home-scales .oh-presets .oh-preset:first-child[aria-pressed="true"]'') && document.querySelector(''.op-home-scales .oh-count'')?.textContent.trim() === ''1 step'' && document.querySelector(''.op-home-scales .oh-list .os-step'')'
+    focus:
+      example: '.oh-tabs[aria-label="Operator set size"], .oh-example-tabs, .oh-summary, .oh-sentence, .oh-definition, .oh-expression'
+    camera: {intro: 1.8, move: 0.5, width: 1200, margin: 0.02, view: example}
+    caption:
+      en: "The same kind of example at four scales, from about ten operators to about ten thousand."
+      zh: "同类示例跨越四种规模，从约十个运算符到约一万个。"
+
+  - id: examples_cuts
+    path: /
+    selector: .op-home-scales
+    wait: ".op-home-scales .oh-tree-section > summary"
+    width: 1200
+    css: *examples_css
+    transition_in: 0
+    duration: 8
+    hold_first: 1.4
+    hold_last: 2.5
+    states:
+      sequence:
+        - click: '.oh-tabs[aria-label="Operator set size"] .oh-tab:nth-child(4)'
+          wait: 'js: document.querySelector(''.op-home-scales .oh-tabs[aria-label="Operator set size"] .oh-tab:nth-child(4)[aria-selected="true"]'') && document.querySelector(''.op-home-scales .oh-tree-section > summary'')'
+          capture: false
+        - {click: ".oh-tree-section > summary", wait: ".oh-list .os-step", capture: false}
+        - click: ".oh-presets .oh-preset:first-child"
+          wait: 'js: document.querySelector(''.op-home-scales .oh-presets .oh-preset:first-child[aria-pressed="true"]'') && document.querySelector(''.op-home-scales .oh-count'')?.textContent.trim() === ''1 step'' && document.querySelector(''.op-home-scales .oh-list .os-step'')'
+        - click: ".oh-presets .oh-preset:nth-child(9)"
+          wait: 'js: document.querySelector(''.op-home-scales .oh-presets .oh-preset:nth-child(9)[aria-pressed="true"]'') && document.querySelector(''.op-home-scales .oh-count'')?.textContent.trim() === ''5 steps'' && document.querySelector(''.op-home-scales .oh-list .os-step'')'
+        - click: ".oh-presets .oh-preset:nth-child(10)"
+          wait: 'js: document.querySelector(''.op-home-scales .oh-presets .oh-preset:nth-child(10)[aria-pressed="true"]'') && document.querySelector(''.op-home-scales .oh-count'')?.textContent.trim() === ''37 steps'' && document.querySelector(''.op-home-scales .oh-list .os-step'')'
+        - click: ".oh-presets .oh-preset:nth-child(11)"
+          wait: 'js: document.querySelector(''.op-home-scales .oh-presets .oh-preset:nth-child(11)[aria-pressed="true"]'') && document.querySelector(''.op-home-scales .oh-count'')?.textContent.trim() === ''127 steps'' && document.querySelector(''.op-home-scales .oh-list .os-step'')'
+    focus:
+      derivation: '.oh-subhead[id^="oh-cut-"], .oh-presets, .oh-count, .oh-list'
+    camera: {intro: 0, move: 0.6, width: 1200, margin: 0.02, view: derivation}
+    caption:
+      en: "Each cut shows the same derivation in more steps. One coarse step stands for a block of finer steps."
+      zh: "每种粒度都用更多步骤展示同一推导。粗粒度的一步对应细粒度的一段步骤。"
+
+  - id: guess_rule
+    path: /challenge/?mode=induce&c=induce-02
+    selector: '#opulse-challenge .challenge-card'
+    wait: '#opulse-challenge .challenge-card .challenge-induce-query-row'
+    width: 900
+    css: |
+      #opulse-challenge > :not(.challenge-mode-content),
+      #opulse-challenge .challenge-picker { display: none !important; }
+    hide:
+      - '.challenge-why ~ .challenge-actions'
+      - '.challenge-copy-status'
+      - '.challenge-model-grade'
+    duration: 8.5
+    hold_first: 2.8
+    hold_last: 2.5
+    states:
+      sequence:
+        - {wait: '.challenge-induce-table .challenge-induce-query-row'}
+        - {click: '.challenge-actions .challenge-secondary', wait: '.challenge-reveal:not([hidden]) .challenge-reveal-text'}
+        - {wait: '.challenge-why:not([hidden]) .challenge-why-label'}
+    focus:
+      table: '.challenge-induce-table'
+      revealed: '.challenge-induce-query-row, .challenge-reveal'
+      why: '.challenge-reveal, .challenge-why'
+    camera: {intro: 0, move: 0.6, width: 900, margin: 0.04, view: table, views: {1: revealed, 2: why}}
+    caption:
+      en: "Guess the rule: from a few examples, predict new outputs, then state the rule. Opulse checks both."
+      zh: ""
+
+  - id: wrong_step
+    path: /guide/visual-tour/
+    selector: '.scales-tour[data-mode="grade"]'
+    wait: '.scales-tour[data-mode="grade"] .st-grade-row'
+    width: 900
+    css: |
+      .scales-tour[data-mode="grade"] .st-grade-list { max-height: 18rem; }
+      .scales-tour[data-mode="grade"] .st-expression,
+      .scales-tour[data-mode="grade"] .st-line-text { white-space: normal; overflow-wrap: anywhere; }
+    duration: 8
+    hold_first: 1.8
+    hold_last: 3.0
+    states:
+      sequence:
+        - {wait: '.st-grade-list .st-grade-row'}
+        - click: '.st-controls button:nth-child(2)'
+          wait: 'js: document.querySelector(''.scales-tour[data-mode="grade"] .st-final'')?.textContent.includes(''Wrong line 102'') && document.querySelector(''.scales-tour[data-mode="grade"] .st-controls:last-of-type button:last-child'')?.hidden === false'
+          capture: false
+        - click: '.st-controls:last-of-type button:last-child'
+          wait: '.st-grade-list .st-grade-row.st-error .st-verdict'
+    focus:
+      grade: '.st-tabs, .st-stats, .st-expression, .st-controls, .st-grade-list, .st-final'
+    camera: {intro: 0, view: grade, margin: 0.02}
+    caption:
+      en: "The checker accepts the correct derivation. After one value changes, it flags the first wrong line."
+      zh: "检查器通过正确推导。一个数值改变后，它标出第一处错误。"
+
+  - id: world_grid
+    enabled: true
+    path: /worlds/#grid/0
+    selector: '.opulse-worlds .ow-app'
+    wait: '.opulse-worlds .ow-derive-pane .ow-steps li'
+    width: 1200
+    css: &world_css |
+      .opulse-worlds .ow-picker, .opulse-worlds .ow-heading, .opulse-worlds .ow-context, .opulse-worlds .ow-atoms-slot { display: none !important; }
+      .opulse-worlds .ow-panes { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; height: auto !important; min-height: 660px !important; }
+      .opulse-worlds .ow-list-pane { display: none !important; }
+      .opulse-worlds .ow-calls, .opulse-worlds .ow-examples-head, .opulse-worlds .ow-examples { display: none !important; }
+      .opulse-worlds .op-action-canvas { height: 320px !important; }
+    duration: 5
+    hold_first: 2.0
+    hold_last: 1.2
+    states: {range: '.ow-player input[type="range"]', from: 0, to: 3}
+    # Show both complete panes, including any content taller than 660 CSS px.
+    camera: &world_camera {intro: 0, view: full, margin: 0}
+    caption:
+      en: "Grid operators change coloured cells one step at a time."
+      zh: "网格运算符逐步改变彩色单元格。"
+
+  - id: world_pitch
+    enabled: true
+    path: /worlds/#pitch/0
+    selector: '.opulse-worlds .ow-app'
+    wait: '.opulse-worlds .ow-derive-pane .ow-steps li'
+    width: 1200
+    css: *world_css
+    duration: 5
+    hold_first: 2.0
+    hold_last: 1.2
+    states: {range: '.ow-player input[type="range"]', from: 0, to: 3}
+    camera: *world_camera
+    caption:
+      en: "A pitch operator joins and reverses notes in a melody."
+      zh: "音高运算符连接并反转旋律中的音符。"
+
+  - id: world_action
+    enabled: true
+    path: /worlds/#action/0
+    selector: '.opulse-worlds .ow-app'
+    wait: '.opulse-worlds .ow-derive-pane .ow-steps li'
+    width: 1200
+    css: *world_css
+    duration: 5
+    hold_first: 2.0
+    hold_last: 1.2
+    states: {range: '.ow-player input[type="range"]', from: 0, to: 4}
+    camera: *world_camera
+    caption:
+      en: "Action operators turn and move the robot through a block map."
+      zh: "动作运算符让机器人在积木地图中转向和移动。"
+
+  - id: blog_overview
+    path: /blog/
+    match: "figure.op-blogfig"
+    index: 0
+    selector: "#opulse-video-target"
+    wait: "figure.op-blogfig"
+    width: 1300
+    css: "#opulse-video-target { padding: 36px !important; margin: 0 !important; transform: none !important; background: var(--md-default-bg-color) !important; }"
+    duration: 7
+    states: {}
+    focus: {fig: "img"}
+    camera:
+      keys:
+        - {at: 0, view: full}
+        - {at: 1.8, view: full}
+        - {at: 3.0, view: fig}
+    caption:
+      en: "The overview connects generated concepts, a reference interpreter, and checked examples."
+      zh: "概览图连接生成的概念、参考解释器和已检查的示例。"
+
+  - id: experiments
+    path: /blog/
+    match: "figure.op-blogfig"
+    index: 4
+    selector: "#opulse-video-target"
+    wait: "figure.op-blogfig"
+    width: 1300
+    css: "#opulse-video-target { padding: 36px !important; margin: 0 !important; transform: none !important; background: var(--md-default-bg-color) !important; }"
+    duration: 7
+    states: {}
+    focus: {fig: "img"}
+    camera:
+      keys:
+        - {at: 0, view: full}
+        - {at: 1.8, view: full}
+        - {at: 3.0, view: fig}
+    caption:
+      en: "Five proposed experiments each vary a data factor and ask what a model learns."
+      zh: "五个实验设想分别改变一个数据因素，并研究模型学到了什么。"
+
+  - id: six_angles
+    kind: card
+    duration: 4
+    card:
+      en: "Six angles: compute, invert, decide, describe, induce, create.\nEvery answer is checked."
+    caption:
+      en: ""
+      zh: ""
+
+  - id: end
+    kind: card
+    duration: 6
+    card:
+      url: "https://mkj69.github.io/opulse/"
+    caption:
+      en: ""
+      zh: ""

@@ -1,0 +1,16 @@
+# Opt-in settings for grids with at most ten rows and columns.
+semantics:
+  mode: exact
+  bound: 2147483647
+operators:
+  symbol_min_len: 1
+  symbol_max_len: 3
+  symbol_sets: [shapes, arrows]
+  max_if_branches: 2
+recursion:
+  style: direct
+  direct_bound: 4
+expressions:
+  value_min: 0
+  value_max: 3
+  max_depth: 2

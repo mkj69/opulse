@@ -1,0 +1,5 @@
+# MkDocs 2 changes the plugin interface used by this documentation site.
+mkdocs>=1.6,<2
+mkdocs-material>=9.5,<10
+mkdocstrings==1.0.6
+mkdocstrings-python==2.0.9
